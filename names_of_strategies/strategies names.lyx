@@ -1,0 +1,711 @@
+#LyX file created by tex2lyx 1.6.5
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass amsart
+\begin_preamble
+\usepackage{cmap}%\usepackage{amssymb}
+% for latex=>ps one may use [dvips]; latex=>pdf [pdftex]
+% i don't know the meaning but let it be
+\evensidemargin=0pt\oddsidemargin=0pt\topmargin=0pt\textwidth=17cm
+
+\usepackage{ifpdf}\ifpdf\DeclareGraphicsRule{*}{mps}{*}{}\fi
+
+
+\newcounter{zadacha}[section]% new counter "zadacha" will be automatically reset to 0 with new section
+\newcounter{danetka}
+
+\newcommand{\danet}{\par\refstepcounter{danetka}\arabic{danetka}. }\newcommand{\zad}{\par\refstepcounter{zadacha}Задача \arabic{section}.\arabic{zadacha}. }
+
+\renewcommand{\thedanetka}{\thesection.\arabic{danetka}}\renewcommand{\thezadacha}{\thesection.\arabic{zadacha}}
+
+
+
+\end_preamble
+\language russian
+\inputencoding cp1251
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language russian
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+parindent
+\end_layout
+
+\end_inset
+
+=0 pt 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% indent is equal 0
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Названия некоторых стратегий в повторяющейся дилемме заключенного 
+\series default
+
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula $\begin{array}{|c|c|c|}
+\hline 
+ & c & d \\
+\hline
+c & 5;5 & 0;6 \\
+d & 6;0 & 3;3 \\
+\hline
+\end{array}$
+\end_inset
+
+ 
+\newline
+ Стратегия 
+\begin_inset Formula $d$
+\end_inset
+
+ строго доминирует стратегию 
+\begin_inset Formula $c$
+\end_inset
+
+, однако (c;c) - одна из Парето оптимальных точек. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Всегда 
+\begin_inset Quotes ard
+\end_inset
+
+c
+\begin_inset Quotes ald
+\end_inset
+
+
+\family default
+\series default
+\shape default
+ 
+\newline
+ В любой партии делать ход c независимо от предыстории. 
+\newline
+ 
+\series bold
+Всегда 
+\begin_inset Quotes ard
+\end_inset
+
+d
+\begin_inset Quotes ald
+\end_inset
+
+
+\family default
+\series default
+\shape default
+ 
+\newline
+ В любой партии делать ход d независимо от предыстории. 
+\newline
+ 
+\series bold
+Цикл 
+\begin_inset Quotes ard
+\end_inset
+
+ccd
+\begin_inset Quotes ald
+\end_inset
+
+
+\family default
+\series default
+\shape default
+ 
+\newline
+ В первой партии сделать ход c, во второй - c, в третьей d, далее снова играется c, c, d... 
+\newline
+ 
+\series bold
+Наивная стратегия переключения
+\family default
+\series default
+\shape default
+ (naive grim trigger)
+\newline
+ В первой партии cделать ход c. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+, если во всех предыдущих партиях противник делал ход 
+\begin_inset Formula $c$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, если хотя бы в одной предыдущей партии противник сделал ход 
+\begin_inset Formula $d$
+\end_inset
+
+. 
+\newline
+ 
+\series bold
+Стратегия переключения
+\family default
+\series default
+\shape default
+ (grim trigger)
+\newline
+ В первой партии cделать ход c. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+, если во всех предыдущих партиях был исход 
+\begin_inset Formula $(c;c)$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии cделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, если хотя бы в одной предыдущей партии не был сыгран исход 
+\begin_inset Formula $(с;c)$
+\end_inset
+
+. 
+\newline
+ 
+\series bold
+Стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+Зуб за зуб
+\begin_inset Quotes ald
+\end_inset
+
+
+\family default
+\series default
+\shape default
+ (Tit for Tat)
+\newline
+ В первой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии повторить ход противника в предыдущей партии. 
+\newline
+ 
+\series bold
+Стратегия Кнута и Пряника
+\family default
+\series default
+\shape default
+ (Win-Stay, Lose-Shift; Pavlov strategy)
+\newline
+ В первой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+, если в предыдущей партии действия игроков совпали. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, если в предыдущей партии действия игроков не совпали. 
+\newline
+ 
+\series bold
+Стратегия переключения наоборот
+\family default
+\series default
+\shape default
+
+\newline
+ В первой партии cделать ход d. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, если во всех предыдущих партиях был исход 
+\begin_inset Formula $(d;d)$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+, если хотя бы в одной предыдущей партии не был сыгран исход 
+\begin_inset Formula $(d;d)$
+\end_inset
+
+. 
+\newline
+ 
+\series bold
+Стратегия ограниченного возмездия
+\family default
+\series default
+\shape default
+ (limited retaliation)
+\newline
+ Играть ход 
+\begin_inset Formula $c$
+\end_inset
+
+ в первой партии и далее до тех пор, пока исходом игры является 
+\begin_inset Formula $(c;c)$
+\end_inset
+
+. Если произошло исход, отличный от 
+\begin_inset Formula $(c;c)$
+\end_inset
+
+, то в течение 
+\begin_inset Formula $k$
+\end_inset
+
+ ходов подряд делать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, затем вернуться в исходное состояние. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Стратегия 
+\family default
+\series default
+\shape default
+ 
+\newline
+ В первой партии cделать ход c. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+, если во всех предыдущих партиях был исход 
+\begin_inset Formula $(c;c)$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, если хотя в одной предыдущей партии был исход 
+\begin_inset Formula $(d;d)$
+\end_inset
+
+. Если в предыдущих партиях игрались только исходы 
+\begin_inset Formula $(c;d)$
+\end_inset
+
+ или 
+\begin_inset Formula $(d;c)$
+\end_inset
+
+, то сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+ в четной партии и 
+\begin_inset Formula $d$
+\end_inset
+
+ - в нечетной. 
+\newline
+ 
+\series bold
+Стратегия 
+\family default
+\series default
+\shape default
+ 
+\newline
+ В первой партии cделать ход c. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $c$
+\end_inset
+
+, если во всех предыдущих партиях был исход 
+\begin_inset Formula $(c;c)$
+\end_inset
+
+. В 
+\begin_inset Formula $n$
+\end_inset
+
+-ой партии сделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+, если хотя в одной предыдущей партии был исход 
+\begin_inset Formula $(d;d)$
+\end_inset
+
+. Если в предыдущих партиях игрались только исходы 
+\begin_inset Formula $(c;d)$
+\end_inset
+
+ или 
+\begin_inset Formula $(d;c)$
+\end_inset
+
+, то сделать ход 
+\begin_inset Formula $d$
+\end_inset
+
+ в четной партии и 
+\begin_inset Formula $c$
+\end_inset
+
+ - в нечетной. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Обозначения:
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula $a^{t} $
+\end_inset
+
+ - исход базовой игры с номером 
+\begin_inset Formula $t$
+\end_inset
+
+;
+\newline
+ 
+\begin_inset Formula $a_{i}^{t} $
+\end_inset
+
+ - ход сделанный 
+\begin_inset Formula $i$
+\end_inset
+
+ -ым игроком в базовой игре с номером 
+\begin_inset Formula $t$
+\end_inset
+
+.
+\newline
+ 
+\begin_inset Formula $s_{i} $
+\end_inset
+
+ - стратегия 
+\begin_inset Formula $i$
+\end_inset
+
+ -го игрока;
+\newline
+ 
+\begin_inset Formula $h^{t} $
+\end_inset
+
+ - предыстория игры к моменту времени 
+\begin_inset Formula $t$
+\end_inset
+
+ : 
+\begin_inset Formula $h^{t} =\left\{a^{1} ,a^{2} ,...a^{t-1} \right\}$
+\end_inset
+
+ ;
+\newline
+ 
+\begin_inset Formula $s_{i} \left(h^{t} \right)$
+\end_inset
+
+ - ход, предписываемый стратегией 
+\begin_inset Formula $s_{i} $
+\end_inset
+
+ после истории 
+\begin_inset Formula $h^{t} $
+\end_inset
+
+ (в момент 
+\begin_inset Formula $t$
+\end_inset
+
+ );
+\newline
+ 
+\newline
+ 
+\series bold
+Стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+Всегда кооперироваться
+\begin_inset Quotes ald
+\end_inset
+
+
+\family default
+\series default
+\shape default
+ (always cooperate)
+\newline
+ Предписывает всегда играть ход 
+\begin_inset Formula $c$
+\end_inset
+
+ : 
+\begin_inset Formula $s_{i} \left(h^{t} \right)=c,\quad \forall t$
+\end_inset
+
+
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Наивная стратегия переключения
+\family default
+\series default
+\shape default
+ (naive grim trigger)
+\newline
+ Предписывает играть ход 
+\begin_inset Formula $c$
+\end_inset
+
+ в первой партии и далее до тех пор, пока противник играет ход 
+\begin_inset Formula $c$
+\end_inset
+
+ : 
+\begin_inset Formula $s_{i} \left(h^{t} \right)=\left\{\begin{array}{l} 
+c, t=1 \\ 
+c, t>1, \end{array}если $
+\end_inset
+
+a
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+j
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+tau
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ =c
+\begin_inset Formula $ для $
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+forall
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+tau
+\end_layout
+
+\end_inset
+
+ <t 
+\newline
+ d, 
+\begin_inset Formula $ иначе $
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document
