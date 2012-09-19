@@ -1,0 +1,777 @@
+#LyX file created by tex2lyx 2.0.0rc2
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\options pdftex
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+
+Пусть 
+\begin_inset Formula $  V $
+\end_inset
+
+ --- общая ценность товара для двух игроков, равномерна на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Величины 
+\begin_inset Formula $ R_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ R_{2} $
+\end_inset
+
+ --- независимы между собой и с 
+\begin_inset Formula $ V $
+\end_inset
+
+ и равномерны на 
+\begin_inset Formula $ [0.5;1.5] $
+\end_inset
+
+. Игроки получают сигналы 
+\begin_inset Formula $ X_{i}=V\cdot R_{i} $
+\end_inset
+
+. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Найдите совместную функцию плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+. Верно ли, что 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ аффилированны? 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ v(x,y)=E(V|X_{1}=x,Y_{1}=y) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите совместную функцию плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ g(x,y) $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+По условию, при фиксированном 
+\begin_inset Formula $ v $
+\end_inset
+
+ величина равномерна на 
+\begin_inset Formula $ [0.5v;1.5v] $
+\end_inset
+
+. Длина этого отрезка равна 
+\begin_inset Formula $ v $
+\end_inset
+
+, значит условная функция плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ при фиксированном 
+\begin_inset Formula $ v $
+\end_inset
+
+ имеет вид: 
+\begin_inset Formula \begin{equation}
+p(x_{1}|v)=\frac{1}{v}\quad x_{1}\in [0.5v;1.5v]
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.к. при фиксированном 
+\begin_inset Formula $ v $
+\end_inset
+
+ величины 
+\begin_inset Formula $X_{1}  $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ независимы, то выписываем 
+\begin_inset Formula $ p(x_{1},x_{2}|v) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+p(x_{1},x_{2}|v)=\frac{1}{v}\cdot \frac{1}{v}, \quad x_{1},x_{2}\in [0.5v;1.5v]
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.к. 
+\begin_inset Formula $ p(x_{1},x_{2},v)=p(x_{1},x_{2}|v)p(v) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+p(x_{1},x_{2},v)=\frac{1}{v}\cdot \frac{1}{v}\cdot 1, \quad x_{1},x_{2}\in [0.5v;1.5v]
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Условие 
+\begin_inset Formula $ x_{1},x_{2}\in [0.5v;1.5v] $
+\end_inset
+
+ записываем как: 
+\begin_inset Formula $ x_{1}\wedge x_{2} > 0.5v $
+\end_inset
+
+ и 
+\begin_inset Formula $ x_{1}\vee x_{2} <1.5v $
+\end_inset
+
+. Или как 
+\begin_inset Formula $ v\in [\frac{x_{1}\vee x_{2}}{1.5};\frac{x_{1}\wedge x_{2}}{0.5}] $
+\end_inset
+
+. Для краткости обозначим этот интервал: 
+\begin_inset Formula $ [v_{min};v_{max}] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Интегрируем по 
+\begin_inset Formula $ v $
+\end_inset
+
+ в указанных пределах и получаем: 
+\begin_inset Formula \begin{equation}
+p(x_{1},x_{2})=\int_{v_{min}}^{v_{max}}\frac{1}{v^{2}}dv=\frac{1}{v_{min}}-\frac{1}{v_{max}}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Замечаем, что функция (там где она положительна) не зависит от 
+\begin_inset Formula $ x_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ x_{2} $
+\end_inset
+
+, значит смешанная производная логарифма равна нулю и величины аффилированны.
+\end_layout
+
+\begin_layout Standard
+
+Здесь 
+\begin_inset Formula $ Y_{1}=X_{2} $
+\end_inset
+
+, поэтому третий пункт уже решен, осталось найти:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{multline}
+E(V|X_{1}=x_{1}, X_{2}=x_{2})=\int v p(v|x_{1},x_{2})dv=\\
+\int v \frac{p(x_{1},x_{2},v)}{p(x_{1},x_{2})} dv=\frac{\int v p(x_{1},x_{2},v) dv }{p(x_{1},x_{2})}
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В числителе: 
+\begin_inset Formula \begin{equation}
+\int_{v_{min}}^{v_{max}}\frac{1}{v}dv=\ln(v_{max})-\ln(v_{min})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Значит в итоге: 
+\begin_inset Formula \begin{equation}
+v(x_{1},x_{2})=\frac{\ln(v_{max})-\ln(v_{min})}{\frac{1}{v_{min}}-\frac{1}{v_{max}}}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На аукционе продается картина, которая равновероятно является 
+\begin_inset Quotes ard
+\end_inset
+
+Джокондой
+\begin_inset Quotes ald
+\end_inset
+
+ Леонардо да Винчи или ее подделкой. За нее торгуются 
+\begin_inset Formula $ n $
+\end_inset
+
+ покупателей. Ценность картины для всех покупателей одинакова, 
+\begin_inset Formula $ V_{1}=V_{2}=...=V_{n}=V $
+\end_inset
+
+ и равна 1, если это оригинал и 0, если подделка.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Если 
+\begin_inset Formula $ V=0 $
+\end_inset
+
+, то сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ условно независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Если 
+\begin_inset Formula $ V=1 $
+\end_inset
+
+, то сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ условно независимы и имеют функцию плотности 
+\begin_inset Formula $ f(x|V=1)=2x $
+\end_inset
+
+ при 
+\begin_inset Formula $x\in [0;1] $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите совместную функцию плотности всех 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Верно ли, что все 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ аффилированны? 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ v(x,y)=E(V|X_{1}=x,Y_{1}=y) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите совместную функцию плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ g(x,y) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Для наглядности напомню формулу для вероятности некоего события 
+\begin_inset Formula $ A $
+\end_inset
+
+: 
+\begin_inset Formula \begin{multline}
+P(A)=P(A\cap V=1)+P(A\cap V=0)=\\
+=P(A|V=1)P(V=1)+P(A|V=0)P(V=0)=0.5P(A|V=1)+0.5P(A|V=0)
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+О-малые говорят нам, что плотности подчиняются такой же формуле, т.к. многомерная плотность есть вероятность поделить на 
+\begin_inset Formula $ \Delta^{n} $
+\end_inset
+
+. Поэтому совместная функция плотности имеет вид: 
+\begin_inset Formula \begin{equation}
+f(x_{1},...,x_{n})=0.5\cdot 1\cdot 1 ...\cdot 1+0.5\cdot 2x_{1}\cdot 2x_{2}\cdot \ldots 2x_{n}=0.5+2^{n-1}x_{1}\cdot \ldots \cdot x_{n}
+\end{equation}
+\end_inset
+
+ Проверяем вторую смешанную производную логарифма. В силу симметрии достаточно по 
+\begin_inset Formula $ x_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ x_{2} $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+\frac{\partial^{2}\ln(f)}{\partial x_{1}\partial x_{2}}=...=\frac{0.5}{f(x_{1},...,x_{2})^{2}}\geq 0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Найдем сначала третий пункт:
+\end_layout
+
+\begin_layout Standard
+
+Опять вспоминаем, что 
+\begin_inset Formula $ P(A)= 0.5P(A|V=1)+0.5P(A|V=0)$
+\end_inset
+
+. О-малые говорят нам, что плотности подчиняются такой же формуле! Поэтому находим две условные функции плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+g(x,y|V=0)=(n-1)\cdot 1 \cdot y^{n-2}
+\end{equation}
+\end_inset
+
+ И 
+\begin_inset Formula \begin{equation}
+g(x,y|V=1)=(n-1)\cdot 2x \cdot (y^{2})^{n-2}
+\end{equation}
+\end_inset
+
+ И получаем безусловную: 
+\begin_inset Formula \begin{equation}
+g(x,y)=0.5(n-1)\cdot 1 \cdot y^{n-2}+0.5(n-1)\cdot 2x \cdot (y^{2})^{n-2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Поскольку 
+\begin_inset Formula $ V $
+\end_inset
+
+ принимает значения только 0 и 1, то 
+\begin_inset Formula $ E(V|A)=P(V=1|A) $
+\end_inset
+
+. По формуле условной вероятности: 
+\begin_inset Formula \begin{equation}
+P(V=1|A)=\frac{P(V=1 \cap A)}{P(A)}=\frac{P(A|V=1)\cdot P(V=1)}{P(A)}=\frac{0.5P(A|V=1)}{P(A)}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+И в итоге: 
+\begin_inset Formula \begin{equation}
+P(V=1|X_{1}=x,Y_{1}=y)=\frac{0.5(n-1)\cdot 2x \cdot (y^{2})^{n-2}}{0.5(n-1)\cdot 1 \cdot y^{n-2}+0.5(n-1)\cdot 2x \cdot (y^{2})^{n-2}}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На аукционе второй цены присутствуют 
+\begin_inset Formula $ n $
+\end_inset
+
+ покупателей. Ценности совпадают с сигналами, 
+\begin_inset Formula $ V_{i}=X_{i} $
+\end_inset
+
+; сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. На аукционе продается 
+\begin_inset Formula $k$
+\end_inset
+
+ одинаковых чудо-швабр, 
+\begin_inset Formula $ 1<k<n $
+\end_inset
+
+. Каждому покупателю нужна только одна чудо-швабра. Покупатели одновременно делают свои ставки. Чудо-швабры достаются по одной каждому из 
+\begin_inset Formula $ k $
+\end_inset
+
+ покупателей с самыми высокими ставками. Каждый из 
+\begin_inset Formula $ k $
+\end_inset
+
+ победителей платит организатору наибольшую проигравшую ставку.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Найдите равновесие Нэша.
+\end_layout
+
+\begin_layout Standard
+
+Проверяем метод 
+\begin_inset Quotes ard
+\end_inset
+
+Авось старое решение подойдет
+\begin_inset Quotes ald
+\end_inset
+
+. Строим табличку как в первой лекции и видим, что стратегия 
+\begin_inset Formula $ b(x)=x $
+\end_inset
+
+ нестрого доминирует остальные стратегии. Единственное отличие: выиграю ли я аукцион зависит от сравнения моей ставки и 
+\begin_inset Formula $m=b(Y_{k}) $
+\end_inset
+
+, а не 
+\begin_inset Formula $m=b(Y_{1}) $
+\end_inset
+
+ как в первой лекции.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На аукционе первой цены присутствуют 
+\begin_inset Formula $ n $
+\end_inset
+
+ покупателей. Ценности совпадают с сигналами, 
+\begin_inset Formula $ V_{i}=X_{i} $
+\end_inset
+
+; сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. На аукционе продается 
+\begin_inset Formula $k$
+\end_inset
+
+ одинаковых чудо-швабр, 
+\begin_inset Formula $ 1<k<n $
+\end_inset
+
+. Каждому покупателю нужна только одна чудо-швабра. Покупатели одновременно делают свои ставки. Чудо-швабры достаются по одной каждому из 
+\begin_inset Formula $ k $
+\end_inset
+
+ покупателей с самыми высокими ставками. Эти 
+\begin_inset Formula $ k $
+\end_inset
+
+ победителей платят свои ставки организатору.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Найдите дифференциальное уравнение, которому удовлетворяет равновесная стратегия.
+\end_layout
+
+\begin_layout Standard
+
+Hint: Когда продавался один товар, то условие победы первого игрока --- 
+\begin_inset Formula $ Y_{1}<a $
+\end_inset
+
+, а если продается 
+\begin_inset Formula $ k $
+\end_inset
+
+ товаров, то условие победы первого игрока 
+\begin_inset Formula $ Y_{?}<a $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Условие победы первого игрока: 
+\begin_inset Formula $ Y_{k}<a $
+\end_inset
+
+. В функции прибыли мы можем убрать условие в силу независимости ценностей. 
+\begin_inset Formula \begin{equation}
+\pi(x,b(a))=(x-b(a))E(1_{Y_{k}<a}|X_{1}=x)=(x-b(a))P(Y_{k}<a)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Применяем о-малые. Одна величина должна упасть около 
+\begin_inset Formula $ t $
+\end_inset
+
+, 
+\begin_inset Formula $ (k-1) $
+\end_inset
+
+ должна оказаться выше 
+\begin_inset Formula $ t $
+\end_inset
+
+, и 
+\begin_inset Formula $ (n-1-k) $
+\end_inset
+
+ должно оказаться ниже 
+\begin_inset Formula $ t $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+f_{Y_{k}}(t)=(n-1)\cdot C_{n-1}^{k-1}\cdot 1\cdot (1-t)^{k-1}\cdot t^{n-k-1}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Значит: 
+\begin_inset Formula \begin{equation}
+\pi(x,b(a))=(x-b(a))E(1_{Y_{k}<a}|X_{1}=x)=(x-b(a))\int_{0}^{a}f_{Y_{k}}(t)dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Получаем диф. ур: 
+\begin_inset Formula \begin{equation}
+(x-b(x))f_{Y_{k}}(x)-b'(x)\int_{0}^{x}f_{Y_{k}}(t)dt=0
+\end{equation}
+\end_inset
+
+ Всё. Дифференциальное уравнение получено.
+\end_layout
+
+\begin_layout Standard
+
+А дальше можно изолировать 
+\begin_inset Formula $ \int_{0}^{x}...dt $
+\end_inset
+
+ в правой части, взять производную по 
+\begin_inset Formula $ x $
+\end_inset
+
+ и избавится от интеграла. Но это уже относится к решению дифференциального уравнения.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Существуют ли неаффилированные случайные величины 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ такие, что 
+\begin_inset Formula $Cov(X_{1},X_{2})>0  $
+\end_inset
+
+?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Да. Возьмем пару аффилированных случайных величин с положительной корреляцией. У нее функция плотности всюду удовлетворяет условию 
+\begin_inset Formula $\partial^{2}\ln (f(x_{1},x_{2}))/\partial x_{1}\partial x_{2} \geq 0$
+\end_inset
+
+. А теперь на очень-очень маленьком участке нарушим это условие. Случайные величины перестали быть аффилированными. А ковариация от этого изменится очень-очень слабо, т.е. останется положительной.
+\end_layout
+
+\begin_layout Standard
+
+Конкретный пример: 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ --- равномерно на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+, 
+\begin_inset Formula $ D $
+\end_inset
+
+ --- равномерно на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. 
+\begin_inset Formula \begin{equation}
+X_{2}=D+
+\begin{cases}
+X_{1}, X_{1}>0.00001 \\
+-X_{1}, X_{1}<0.00001
+\end{cases}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

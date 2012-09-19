@@ -1,0 +1,111 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+%\input{e:/Documents/tex_general/title_bor_utf8}
+%\input{title_bor_utf8}
+\input{/home/boris/Dropbox/Public/tex_general/title_bor_utf8}
+%input{e:/Documents/Dropbox/tex_general/title_bor_utf8}
+
+
+%\usepackage{showkeys} % показывать метки
+
+%\usepackage{verbatim}
+
+\input{/home/boris/Dropbox/Public/tex_general/prob_and_sol_utf8}
+%\input{e:/Documents/Dropbox/tex_general/prob_and_sol_utf8}
+%\input{e:/Documents/tex_general/prob_and_sol_utf8}
+%\input{prob_and_sol_utf8}
+
+
+\newcommand{\indef}[1]{\textbf{#1}}
+
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+
+
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;)
+\newtheorem{mydef}[equation]{Определение}
+
+\theoremstyle{definition}
+\newtheorem{myex}[equation]{Пример}
+
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+
+\theoremstyle{definition}
+\newtheorem*{myproof}{Доказательство}
+
+
+
+
+\title{Кооперативная теория игр. Азбука. }
+\author{Борис Демешев}
+\date{\today}
+
+
+
+\makeindex % команда для создания предметного указателя
+\bibliographystyle{plain} % стиль оформления ссылок
+
+
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents{}
+
+
+\section*{Вокруг и около...}
+
+
+Источники мудрости, которые я постараюсь не замутить:
+
+Osborne, Rubinstein, A course in game theory: \cite{osborne:cgt}
+
+Данилов, Лекции по теориЯ игр: \cite{danilov:lte}
+
+%Peleg, Introduction to the theory of cooperative games
+%Они содержат практически все, что есть в этих заметках, но изложение, пожалуй, более трудное. 
+Любые вопросы и комментарии: \url{boris.demeshev@gmail.com}.
+
+Свежая версия: \url{http://demeshev.wordpress.com/Materials}.
+
+Большое спасибо Тимуру Зыкову и Георгию Логинову за комментарии и замеченные ошибки!
+
+
+
+
+\input{coop_l1}
+
+\input{coop_ps1}
+
+
+\input{coop_l2}
+
+\input{coop_ps2}
+
+
+\input{coop_l3}
+
+\input{coop_ps3}
+
+\input{coop_l4}
+
+\input{coop_ps4}
+
+\input{coop_ex1}
+
+
+%\input{coop_sol}
+
+\printindex % печать предметного указателя здесь
+
+
+\bibliography{/home/boris/Dropbox/tex_general/opit}
+%\bibliography{e:/Documents/Dropbox/tex_general/opit}
+
+
+
+
+\end{document}

@@ -1,0 +1,6025 @@
+#LyX file created by tex2lyx 2.0.0rc2
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\options pdftex
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+Общая ценность, аффилированные сигналы
+\end_layout
+
+\begin_layout Subsection
+
+Напоминалка по теории вероятностей
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Индикатором события 
+\begin_inset Formula $ A $
+\end_inset
+
+ называется случайная величина, которая равна 1, если 
+\begin_inset Formula $ A $
+\end_inset
+
+ произошло и 0, если 
+\begin_inset Formula $ A $
+\end_inset
+
+ не произошло. Обозначают индикатор 
+\begin_inset Formula $ A $
+\end_inset
+
+ так: 
+\begin_inset Formula $ 1_{A} $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Проверьте, что вы понимаете, что 
+\begin_inset Formula $ E(1_{A})=P(A) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+С помощью индикаторов легко определить условное ожидание:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Если 
+\begin_inset Formula $ P(A)>0 $
+\end_inset
+
+, то условным ожидание случайной величины 
+\begin_inset Formula $ X $
+\end_inset
+
+ при условии события 
+\begin_inset Formula $ A $
+\end_inset
+
+ называют число: 
+\begin_inset Formula \[ E(X|A):=\frac{E(X\cdot 1_{A})}{P(A)} \]
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "posit_condition"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если вам знакомо альтернативное определение условного ожидания, убедитесь, что оно совпадает с этим на паре примеров. Альтернативное определение основано на идее: условное ожидание считается так же, как и безусловное, только вместо безусловной вероятности используется условная.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="2" columns="5">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Prob 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+1 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Найдите 
+\begin_inset Formula $ E(X|X>2) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Решение:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula $P(X>2)=0.4$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Составляем табличку для 
+\begin_inset Formula $ X\cdot 1_{X>2} $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="5">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Prob 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0.4 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $1_{X>2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $X\cdot 1_{X>2}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Находим 
+\begin_inset Formula $ E(X\cdot 1_{X>2})=1.5 $
+\end_inset
+
+. Значит 
+\begin_inset Formula $ E(X|X>2)=1.5/0.4=3.75 $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Пусть 
+\begin_inset Formula $ X $
+\end_inset
+
+ распределено экспоненциально с параметром 
+\begin_inset Formula $ \lambda=1 $
+\end_inset
+
+, т.е. функция плотности 
+\begin_inset Formula $ X $
+\end_inset
+
+ при 
+\begin_inset Formula $ t\geq 0 $
+\end_inset
+
+ имеет вид: 
+\begin_inset Formula \[ p_{X}(t)=e^{-t} \]
+\end_inset
+
+ Найдите 
+\begin_inset Formula $ E(X|X<5) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Решение. Находим 
+\begin_inset Formula $ P(X<5)=\int_{0}^{5}e^{-x}dx=1-e^{-5} $
+\end_inset
+
+. Затем 
+\begin_inset Formula $ E(X\cdot 1_{X<5})=\int_{0}^{5} xe^{-x}dx=1-6e^{-5} $
+\end_inset
+
+. И, следовательно, 
+\begin_inset Formula $ E(X|X<5)=\frac{e^{5}-6}{e^{5}-1} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Часто приходится иметь дело с условным ожиданием виде 
+\begin_inset Formula $ E(Y|X=x) $
+\end_inset
+
+. В случае, когда 
+\begin_inset Formula $ X $
+\end_inset
+
+ дискретна и 
+\begin_inset Formula $ P(X=x)>0 $
+\end_inset
+
+ мы без проблем применяем определение 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "posit_condition"
+
+\end_inset
+
+. Однако, если, 
+\begin_inset Formula $ X $
+\end_inset
+
+ непрерывна и 
+\begin_inset Formula $ P(X=x)=0 $
+\end_inset
+
+, у нас возникают проблемы. Впрочем, если 
+\begin_inset Formula $ P(X\in [x;x+\Delta x])>0$
+\end_inset
+
+, то наши проблемы легко решаются: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Если 
+\begin_inset Formula $ P(X\in [x;x+\Delta x])>0 $
+\end_inset
+
+, то мы определяем условное ожидание 
+\begin_inset Formula $ E(Y|X=x) $
+\end_inset
+
+ по формуле: 
+\begin_inset Formula \begin{equation}
+E(Y|X=x):=\lim_{\Delta x\to 0}E(Y|X\in [x;x+\Delta x])
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Для практических вычислений мы редко (почти никогда в этих лекциях) будем пользоваться определением. Нам будет достаточно четырех свойств:
+\end_layout
+
+\begin_layout Itemize
+
+Мат. ожидание суммы равно сумме мат. ожиданий 
+\begin_inset Formula \begin{equation}
+E(X+Y|A)=E(X|A)+E(Y|A)
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Константу можно выносить за знак мат. ожидания 
+\begin_inset Formula \begin{equation}
+E(cX|A)=cE(X|A)
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Значения известной случайной величины можно подставлять: 
+\begin_inset Formula \begin{equation}
+E(f(X,Y)|X=x)=E(f(x,Y)|X=x)
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Если случайная величина 
+\begin_inset Formula $ X $
+\end_inset
+
+ и событие 
+\begin_inset Formula $ A $
+\end_inset
+
+ независимы, то 
+\begin_inset Formula \begin{equation}
+E(X|A)=E(X)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Для величин имеющих совместную функцию плотности можно указать способ считать 
+\begin_inset Formula $ E(Y|X=x) $
+\end_inset
+
+ без предельного перехода: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Если пара случайных величин 
+\begin_inset Formula $ X $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y $
+\end_inset
+
+ имеет совместную функцию плотности 
+\begin_inset Formula $ f(x,y) $
+\end_inset
+
+, то 
+\begin_inset Formula \begin{equation}
+E(Y|X=x)=\int_{-\infty}^{+\infty}yf(y|x)dy
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{multline}
+E(Y|X\in [x;x+\Delta x])=\frac{E(Y1_{X\in[x;x+\Delta x]})}{P(X\in[x;x+\Delta x])}=\frac{\int_{-\infty}^{\infty}\int_{x}^{x+\Delta x} y f(x,y)dx dy }{f_{X}(x)\cdot \Delta x+o(\Delta x)}= \\
+=\frac{\int_{-\infty}^{\infty}y\int_{x}^{x+\Delta x}  f(x,y)dx dy }{f_{X}(x)\cdot \Delta x+o(\Delta x)}=\frac{\int_{-\infty}^{\infty}y (f(x,y)\Delta x +o(\Delta x) ) dy }{f_{X}(x)\cdot \Delta x+o(\Delta x)}= \\
+=\int_{-\infty}^{\infty}y \frac{f(x,y)\Delta x +o(\Delta x) }{f_{X}(x)\cdot \Delta x+o(\Delta x)} dy 
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+При 
+\begin_inset Formula $ \Delta x\to 0 $
+\end_inset
+
+ указанный интеграл стремится к 
+\begin_inset Formula $ \int_{-\infty}^{+\infty}yf(y|x)dy $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Большая сила о-малых!
+\end_layout
+
+\begin_layout Standard
+
+В теории вероятностей часто возникает примерно такая задача:
+\end_layout
+
+\begin_layout Standard
+
+Известна функция плотности случайной величины 
+\begin_inset Formula $ X $
+\end_inset
+
+, 
+\begin_inset Formula $ p_{X}(t) $
+\end_inset
+
+. Также известно, как 
+\begin_inset Formula $ Y $
+\end_inset
+
+ выражается через 
+\begin_inset Formula $ X $
+\end_inset
+
+, т.е. известно, что 
+\begin_inset Formula $ Y=f(X) $
+\end_inset
+
+. Причем функция 
+\begin_inset Formula $ f $
+\end_inset
+
+ --- монотонная и дифференциируемая. Нужно найти функцию плотности 
+\begin_inset Formula $ Y $
+\end_inset
+
+, 
+\begin_inset Formula $ p_{Y}(t) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Есть два способа решения.
+\end_layout
+
+\begin_layout Standard
+
+Первый --- стандартный, без о-малых и их силы. Нужно знать только, что функция плотности --- это производная от функции распределения:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \[ p_{Y}(y)=\frac{dP(Y\leq y)}{dy}=\frac{dP(X\leq f^{-1}(y))}{dy}=p_{X}(f^{-1}(y))\cdot \frac{df^{-1}(y)}{dy} \]
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Или, если считать, что 
+\begin_inset Formula $ y=f(x) $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\frac{dy}{dx}p_{Y}(y)=p_{X}(x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Пусть 
+\begin_inset Formula $ X $
+\end_inset
+
+ имеет функцию плотности 
+\begin_inset Formula $ p_{X}(x)=2x $
+\end_inset
+
+ на отрезке 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y=X^{3} $
+\end_inset
+
+. Найдите функцию плотности 
+\begin_inset Formula $ Y $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Решение: Здесь 
+\begin_inset Formula $ y=x^{3} $
+\end_inset
+
+, значит 
+\begin_inset Formula $ y'=3x^{2} $
+\end_inset
+
+ и 
+\begin_inset Formula $ x=y^{1/3} $
+\end_inset
+
+. Значит: 
+\begin_inset Formula \begin{equation}
+3x^{2}p_{Y}(y)=2x
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Подставляем вместо 
+\begin_inset Formula $ x=y^{1/3} $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+3y^{2/3}p_{Y}(y)=2y^{1/3}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Итого: 
+\begin_inset Formula \begin{equation}
+p_{Y}(y)=\frac{2}{3}y^{-1/3}
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Теперь магия о-малых!
+\end_layout
+
+\begin_layout Standard
+
+Какой смысл в функции плотности? Вероятность того, что 
+\begin_inset Formula $ X $
+\end_inset
+
+ лежит в отрезке небольшой длины примерно равна произведению длины этого отрезка на значение плотности:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+P(X\in [x;x+\Delta x])\approx p(x)\Delta x
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Здесь 
+\begin_inset Formula $ \Delta x $
+\end_inset
+
+ --- это небольшое число. Если быть точным, то: 
+\begin_inset Formula \begin{equation}
+P(X\in [x;x+\Delta x])=p_{X}(x)\Delta x+o(\Delta x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+На всякий случай, 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ o(\Delta x) $
+\end_inset
+
+ --- это такая функция от 
+\begin_inset Formula $ \Delta x $
+\end_inset
+
+, что: 
+\begin_inset Formula \begin{equation}
+\lim_{\Delta x\to 0} \frac{o(\Delta x)}{\Delta x}=0
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ o(1) $
+\end_inset
+
+ --- это такая функция от 
+\begin_inset Formula $ \Delta x $
+\end_inset
+
+, что 
+\begin_inset Formula \begin{equation}
+\lim_{\Delta x \to 0} o(1)=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Поскольку 
+\begin_inset Formula $ f $
+\end_inset
+
+ монотонная, то событию 
+\begin_inset Formula $X\in [x;x+\Delta x]  $
+\end_inset
+
+ соответствует событие 
+\begin_inset Formula $Y\in [y;y+\Delta y]$
+\end_inset
+
+, где конечно, 
+\begin_inset Formula $ y=f(x) $
+\end_inset
+
+ и 
+\begin_inset Formula $ \Delta y= f(x+\Delta x)-f(x) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Аналогично: 
+\begin_inset Formula \begin{equation}
+P(Y\in [y;y+\Delta y])=p_{Y}(y)\Delta y+o(\Delta y)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Приравниваем две вероятности: 
+\begin_inset Formula \begin{equation}
+p_{X}(x)\Delta x+o(\Delta x)=p_{Y}(y)\Delta y+o(\Delta y)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Делим на 
+\begin_inset Formula $ \Delta x $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+p_{X}(x)+\frac{o(\Delta x)}{\Delta x}=p_{Y}(y)\frac{\Delta y}{\Delta x}+\frac{o(\Delta y)}{\Delta x}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Устремляем о-малое к нулю и по определению о-малого получаем: 
+\begin_inset Formula \begin{equation}
+p_{X}(x)=p_{Y}(y)\frac{dy}{dx}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Продолжаем осваивать большую силу о-малых!
+\end_layout
+
+\begin_layout Standard
+
+Пусть 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ --- имеют регулярную функцию распределения 
+\begin_inset Formula $ F() $
+\end_inset
+
+ на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ и независимы. Введем также обозначения 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ Y_{2} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ Y_{n-1} $
+\end_inset
+
+ --- это величины 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+, 
+\begin_inset Formula $ X_{3} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+, отсортированные в порядке убывания. В частности, 
+\begin_inset Formula $ Y_{1}=\max\{X_{2},...,X_{n}\} $
+\end_inset
+
+ --- наибольшая ставка сделанная всеми игроками кроме первого. Также, 
+\begin_inset Formula $ Y_{n-1}=\min\{X_{2},...,X_{n}\} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Найдите функцию плотности 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Решение. Прежде чем доставать из ножен о-малые вспомним два простых факта:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+P(X_{1}<x)=F(x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+P(X_{1}\in [x_{1};x_{2}])=F(x_{2})-F(x_{1})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%В аукционе первой цены судьба первого игрока зависит от $ X_{1} $ и $ Y_{1} $...
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Вместо плотности 
+\begin_inset Formula $ p_{Y_{1}}(z) $
+\end_inset
+
+ мы ищем вероятность 
+\begin_inset Formula $ P(Y_{1}\in [z;z+\Delta z]) $
+\end_inset
+
+. При маленьких 
+\begin_inset Formula $ \Delta z $
+\end_inset
+
+ вероятность и плотность связаны: 
+\begin_inset Formula \begin{equation}
+P(Y_{1}\in [z;z+\Delta z])\approx p_{Y_{1}}(z)\Delta z
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Расчехлим о-малые:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+P(X_{2}<X_{1}|X_{1}\in [z;z+\Delta z])=F(z)+o(1)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Чуть-чуть помедитируйте над этим равенством. При 
+\begin_inset Formula $ \Delta z\to 0 $
+\end_inset
+
+ правая и левая части становятся похожи на 
+\begin_inset Formula $ F(z) $
+\end_inset
+
+. Значит верное равенство.
+\end_layout
+
+\begin_layout Standard
+
+А теперь мы одним махом выпишем ответ!
+\end_layout
+
+\begin_layout Standard
+
+Что значит 
+\begin_inset Formula $ Y_{1}\in [z;z+\Delta z] $
+\end_inset
+
+? Это означает, что одна из величин 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ попала в этот интервал. У нас есть 
+\begin_inset Formula $ (n-1) $
+\end_inset
+
+ возможностей выбрать эту одну. А остальные 
+\begin_inset Formula $ (n-2) $
+\end_inset
+
+ случайные величины должны быть меньше избранной! Смотрите на ответ:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+P(Y_{1}\in [z;z+\Delta z])=(n-1)\cdot (F(z+\Delta z)-F(z)) \cdot (F(z)+o(1))^{n-2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+По сомножителям: 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ (n-1) $
+\end_inset
+
+ --- это число способов выбрать ту случайную величину, которая будет максимумом. Скажем мы выбрали 
+\begin_inset Formula $ X_{3} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ F(z+\Delta z)-F(z) $
+\end_inset
+
+ --- это вероятность того, что 
+\begin_inset Formula $ X_{3} $
+\end_inset
+
+ попадет в интервал 
+\begin_inset Formula $ [z;z+\Delta z] $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ F(z)+o(1)=P(X_{i}<X_{3}|X_{3}\in [z;z+\Delta z]) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Чтобы получить функцию плотности: делим на 
+\begin_inset Formula $ \Delta z $
+\end_inset
+
+ и устремляем 
+\begin_inset Formula $ \Delta z $
+\end_inset
+
+ к нулю!
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{Y_{1}}(z)=(n-1)\cdot f(z)\cdot F(z)^{n-2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+На всякий случай напомню стандартный способ без о-малых: 
+\begin_inset Formula \begin{equation}
+p_{Y_{1}}(z)=\frac{dP(Y_{1}\leq z)}{dz}=\frac{d P(X_{2}<z\cap...\cap X_{n}<z)}{dz}=\frac{dF(z)^{n-1}}{dz}=(n-1)f(z)F(z)^{n-2}
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если при поиске отдельной функции плотности можно обойтись без о-малых, то при переходе к совместной функции плотности о-малые впереди на лихом коне!
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Найдите совместную функцию плотности для пары 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{3} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Вместо плотности легче искать вероятность:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+ P(Y_{1}\in [w;w+\Delta w] \cap Y_{3} \in [z+\Delta z] )=p(w,z)\Delta w\Delta z+o(dwdz)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Что значит 
+\begin_inset Formula $ Y_{1} \in [w;w+\Delta w] \cap Y_{3} \in [z+\Delta z]$
+\end_inset
+
+? Это означает, что одна из величин 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ попала в 
+\begin_inset Formula $ [w;w+\Delta w] $
+\end_inset
+
+. У нас есть 
+\begin_inset Formula $ (n-1) $
+\end_inset
+
+ возможностей выбрать эту одну. Еще одна попала в 
+\begin_inset Formula $ [z;z+\Delta z] $
+\end_inset
+
+. Эту одну можно выбрать 
+\begin_inset Formula $ (n-2) $
+\end_inset
+
+ способом. Еще одна попала между ними, т.е. в интервал 
+\begin_inset Formula $ [w+o(1);z+o(1)] $
+\end_inset
+
+. Эту одну можно выбрать 
+\begin_inset Formula $ (n-3) $
+\end_inset
+
+ способами. Оставшиеся 
+\begin_inset Formula $ (n-4) $
+\end_inset
+
+ случайные величины должны быть меньше 
+\begin_inset Formula $ Y_{3} $
+\end_inset
+
+, т.к. лежать в интервале 
+\begin_inset Formula $ [0;w+o(1)] $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{multline}
+P(Y_{1}\in [w;w+\Delta w] \cap Y_{3}\in [z;z+\Delta z] ) =\\
+= (n-1)(n-2)(n-3) (F(w+\Delta w)-F(w)) (F(z+\Delta z)-F(z))\cdot \\
+\cdot (F(z)-F(w)+o(1)) (F(z)+o(1))^{n-4}
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+На всякий случай объясняем по сомножителям: 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $(n-1)  $
+\end_inset
+
+ --- это число способов выбрать ту случайную величину, которая будет максимумом. Скажем мы выбрали 
+\begin_inset Formula $ X_{3} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ (n-2) $
+\end_inset
+
+ --- это число способов выбрать 
+\begin_inset Formula $ Y_{3} $
+\end_inset
+
+ среди оставшихся. Скажем мы выбрали 
+\begin_inset Formula $ X_{7} $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ (n-3) $
+\end_inset
+
+ --- это число способов выбрать 
+\begin_inset Formula $ Y_{2} $
+\end_inset
+
+. Ее надо оговаривать особо, т.к. она должна лечь между 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{3} $
+\end_inset
+
+. Пусть это оказалась 
+\begin_inset Formula $ X_{9} $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $(F(w+\Delta w)-F(w))$
+\end_inset
+
+ --- это 
+\begin_inset Formula $ P(X_{3}\in [w;w+\Delta w]) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $(F(z+\Delta z)-F(z))$
+\end_inset
+
+ --- это 
+\begin_inset Formula $ P(X_{7}\in [z;z+\Delta z] ) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $(F(w)-F(z)+o(1))$
+\end_inset
+
+ --- это 
+\begin_inset Formula $ P(X_{9}\in [w+o(1);z+o(1)] ) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ (F(z)+o(1))^{n-4} $
+\end_inset
+
+ --- это вероятность того, что оставшиеся 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ меньше 
+\begin_inset Formula $ X_{7} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Делим на 
+\begin_inset Formula $ \Delta w $
+\end_inset
+
+, 
+\begin_inset Formula $ \Delta z $
+\end_inset
+
+ и устремляем их к нулю.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{Y_{1},Y_{3}}(w,z)=(n-1)(n-2)(n-3)f(z)f(w)(F(w)-F(z))F(z)^{n-4}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Старые формулы на вероятностном языке
+\end_layout
+
+\begin_layout Quotation
+
+Сова стала объяснять, что такое Необходимая или Соответствующая Спинная Мускулатура. Она уже объясняла это когда-то Пуху и Кристоферу Робину и с тех пор ожидала удобного случая, чтобы повторить объяснения, потому что это такая штука, которую вы спокойно можете объяснять два раза, не опасаясь, что кто-нибудь поймёт, о чём вы говорите.
+\end_layout
+
+\begin_layout Quotation
+
+Алан Милн в переводе Бориса Заходера. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+indef{
+\end_layout
+
+\end_inset
+
+Обозначения!
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+indef{
+\end_layout
+
+\end_inset
+
+Событие:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ --- событие, состоящее в том, что победителем аукциона стал игрок 
+\begin_inset Formula $ i $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+indef{
+\end_layout
+
+\end_inset
+
+Случайные величины:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ --- случайная величина, значение которой известно игроку 
+\begin_inset Formula $ i $
+\end_inset
+
+. Функцию распределения этой случайной величины обозначим 
+\begin_inset Formula $ F() $
+\end_inset
+
+, а функцию плотности --- 
+\begin_inset Formula $ f() $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ V_{i} $
+\end_inset
+
+ --- случайная величина, ценность товара для игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+. Если игрок точно знает ценность товара, то 
+\begin_inset Formula $ V_{i}=X_{i} $
+\end_inset
+
+. Есть множество других возможностей, например, 
+\begin_inset Formula $ X_{i}=V_{i}+e_{i} $
+\end_inset
+
+, где 
+\begin_inset Formula $ e_{i} $
+\end_inset
+
+ --- некая случайная ошибка.
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $Bid_{i}$
+\end_inset
+
+ --- случайная величина, ставка, которую сделает игрок 
+\begin_inset Formula $ i $
+\end_inset
+
+. В симметричном равновесии Нэша: 
+\begin_inset Formula \begin{equation}
+Bid_{i}=b(X_{i})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $Pay_{i}$
+\end_inset
+
+ --- случайная величина, выплата, которую сделает игрок 
+\begin_inset Formula $ i $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ R $
+\end_inset
+
+ --- случайная величина, доход продавца: 
+\begin_inset Formula \begin{equation}
+R=Pay_{1}+Pay_{2}+...+Pay_{n}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $Profit_{i}$
+\end_inset
+
+ --- случайная величина, выигрыш игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+Profit_{i}=V_{i}1_{W_{i}}-Pay_{i}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ Y_{n-1} $
+\end_inset
+
+ --- случайные величины 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ упорядоченные по убыванию.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+indef{
+\end_layout
+
+\end_inset
+
+Детерминистические функции:
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ b(\cdot ) $
+\end_inset
+
+ --- неслучайная функция, зависимость ставки от ценности в равновесии Нэша
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $q(x)=P(W_{1}|X_{1}=x)$
+\end_inset
+
+ --- вероятность выигрыша первого игрока, если 
+\begin_inset Formula $ X_{1}=x $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $pay_{1}(x)=E(Pay_{1}|X_{1}=x)$
+\end_inset
+
+ --- средняя выплата первого игрока, если 
+\begin_inset Formula $ X_{1}=x $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если предположить, что первый игрок использует не равновесную стратегию 
+\begin_inset Formula $ Bid_{1}=b(X_{1}) $
+\end_inset
+
+, а ставит константу
+\begin_inset Foot
+status collapsed
+
+
+\begin_layout Standard
+
+Это нужно только при поиске равновесия. Остальные игроки используют равновесные стратегии.
+\end_layout
+
+\end_inset
+
+ , т.е. 
+\begin_inset Formula $ Bid_{1}=b_{1} $
+\end_inset
+
+, то появляются еще 3 детерминистические функции:
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $\widehat{q}(b)=P(W_{1}|Bid_{1}=b_{1})$
+\end_inset
+
+ --- вероятность выигрыша, если используется стратегия 
+\begin_inset Formula $ Bid_{1}=b_{1} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $\widehat{pay_{1}}(b_{1})=E(Pay_{1}|Bid_{1}=b_{1})$
+\end_inset
+
+ --- средняя выплата, если используется стратегия 
+\begin_inset Formula $ Bid_{1}=b_{1} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $\pi_{1}(x,b_{1})=E(Profit_{1}|X_{1}=x ; Bid_{1}=b_{1})$
+\end_inset
+
+ --- средний выигрыш первого игрока, если 
+\begin_inset Formula $ X_{1}=x $
+\end_inset
+
+ и используется стратегия 
+\begin_inset Formula $ Bid_{1}=b_{1} $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+Для аукциона первой цены: 
+\begin_inset Formula \begin{equation}
+Pay_{1}=Bid_{1}\cdot 1_{W_{1}}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Значит: 
+\begin_inset Formula \begin{equation}
+Profit_{1}=X_{1}\cdot 1_{W_{1}}-Pay_{1}=(X_{1}-Bid_{1})\cdot 1_{W_{1}}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{multline}
+E(Profit_{1}|X_{1}=x ; Bid_{1}=b_{1})=\\
+=E((X_{1}-Bid_{1})\cdot 1_{W_{1}}|X_{1}= x ; Bid_{1}=b_{1})=\\
+= (x-b_{1})E(1_{W_{1}}|X_{1}=x ; Bid_{1}=b_{1})=\\
+=(x-b_{1})P(W_{1}|X_{1}=x ; Bid_{1}=b_{1})
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Озаботимся величиной 
+\begin_inset Formula $ P(W_{1}|X_{1}=x ; Bid_{1}=b_{1}) $
+\end_inset
+
+. Если ценности независимы, то: 
+\begin_inset Formula \begin{multline}
+P(W_{1}|X_{1}=x ; Bid_{1}=b_{1})=P(W_{1}|Bid_{1}=b_{1})= \\
+=P(Bid_{2}<Bid_{1}\cap \ldots ; Bid_{n}<Bid_{1}|Bid_{1}=b_{1})=\\
+=P(Bid_{2}<b_{1}\cap \ldots ; Bid_{n}<b_{1})=\\
+=P(Bid_{2}<b_{1})^{n-1}=P(b(X_{2})<b_{1})^{n-1}
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Дальше чудо-замена 
+\begin_inset Formula $ b_{1}=b(a) $
+\end_inset
+
+. Уточняем: 
+\begin_inset Formula $ b_{1} $
+\end_inset
+
+ --- константа, 
+\begin_inset Formula $ a $
+\end_inset
+
+ --- константа, 
+\begin_inset Formula $ b() $
+\end_inset
+
+ --- неизвестная, но детерминистическая функция.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+P(b(X_{2})<b_{1})^{n-1}=P(b(X_{2})<b(a))^{n-1}=P(X_{2}<a)^{n-1}=(F(a))^{n-1}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Итого, для аукциона первой цены с независимыми ценностями: 
+\begin_inset Formula \begin{equation}
+\pi_{1}(x,b(a))=(x-b(a))\cdot (F(a))^{n-1}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Что меняется, если ценности зависимы?
+\end_layout
+
+\begin_layout Standard
+
+Единственное отличие состоит в том, что: 
+\begin_inset Formula \begin{equation}
+P(W_{1}|X_{1}=x ; Bid_{1}=b_{1}) \neq P(W_{1}|Bid_{1}=b_{1})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+На этот раз вероятность упрощается не так сильно: 
+\begin_inset Formula \begin{multline}
+P(W_{1}|X_{1}=x ; Bid_{1}=b_{1})=\\
+=P(Bid_{2}<Bid_{1}\cap \ldots \cap Bid_{n}<Bid_{1}|X_{1}=x ; Bid_{1}=b_{1})=\\
+=P(Bid_{2}<b_{1}\cap \ldots \cap Bid_{n}<b_{1}|X_{1}=x)=\\
+=P(b(X_{2})<b_{1}\cap \ldots \cap b(X_{n})<b_{1}|X_{1}=x)
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+И еще чуть-чуть после чудо-замены: 
+\begin_inset Formula \begin{multline}
+P(b(X_{2})<b_{1}\cap \ldots \cap b(X_{n})<b_{1}|X_{1}=x)=\\
+P(b(X_{2})<b(a)\cap \ldots \cap b(X_{n})<b(a)|X_{1}=x)=\\
+P(X_{2}<a\cap \ldots \cap X_{n}<a|X_{1}=x)
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+А эту вероятность можно посчитать, если известна совместная функция плотности ценностей. С использованием обозначения 
+\begin_inset Formula $ Y_{1}=\max\{X_{2},\ldots, X_{n}\} $
+\end_inset
+
+ можно записать ее короче: 
+\begin_inset Formula \begin{equation}
+P(X_{2}<a\cap \ldots \cap X_{n}<a|X_{1}=x)=P(Y_{1}<a|X_{1}=x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Итого, для аукциона первой цены с зависимыми ценностями: 
+\begin_inset Formula \begin{equation}
+\pi_{1}(x,b(a))=(x-b(a))\cdot P(Y_{1}<a|X_{1}=x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+А сейчас мы увидим, как с помощью мат. ожидания записать уже знакомые нам вещи. А именно:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Если предпосылки теоремы об одинаковой доходности выполнены, то: 
+\begin_inset CommandInset label
+LatexCommand label
+name "probabilistic_interpretation"
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Для произвольного аукциона 
+\begin_inset Formula $ q(x)=P(Y_{1}<x) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Для произвольного аукциона 
+\begin_inset Formula $ pay(x)=E(Y_{1}\cdot 1_{Y_{1}<x}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+Для аукциона первой цены 
+\begin_inset Formula $ b(x)=E(Y_{1}|Y_{1}<x) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Первое. Из предпосылки о том, что товар достается тому покупателю, у которого выше ценность немедленно следует, что 
+\begin_inset Formula $ q(x)=P(Y_{1}<x) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Второе. В одном из упражнений первой лекции мы установили: 
+\begin_inset Formula \begin{equation}
+pay(x)=pay(\underline{x})+\int_{\underline{x}}^{x}t \cdot \frac{dq(t)}{dt}\cdot dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если предпосылки теоремы об одинаковой доходности выполнены, то: 
+\begin_inset Formula \begin{equation}
+pay(x)=\int_{\underline{x}}^{x}t \cdot \frac{dq(t)}{dt}\cdot dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Вспоминаем, что: 
+\begin_inset Formula \begin{equation}
+q(x)=F(x)^{n-1}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Стало быть 
+\begin_inset Formula \begin{equation}
+\frac{dq(x)}{dx}=(n-1)f(x)F(x)^{n-2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+И!!! Мы видим, что это есть функция плотности 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+!!!: 
+\begin_inset Formula \begin{equation}
+\frac{dq(x)}{dx}=p_{Y_{1}}(x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.е. для любого аукциона подходящего в теорему об одинаковой доходности: 
+\begin_inset Formula \begin{equation}
+pay(x)=\int_{\underline{x}}^{x}t \cdot p_{Y_{1}}(t)\cdot dt=E(Y_{1}\cdot 1_{Y_{1}<x})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Третье. На аукционе первой цены: 
+\begin_inset Formula \begin{equation}
+pay(x)=b(x)\cdot q(x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Пользуемся первыми двумя результатами и получаем: 
+\begin_inset Formula \begin{equation}
+E(Y_{1}1_{Y_{1}<x})=b(x)\cdot P(Y_{1}<x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Отсюда немедленно следует, что: 
+\begin_inset Formula \begin{equation}
+b(x)=\frac{E(Y_{1}1_{Y_{1}<x})}{P(Y_{1}<x)}=E(Y_{1}|Y_{1}<x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Просто разные примеры
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Потренируем о-малую мускулу. Найдем равновесие Нэша в аукционе третьей цены. Предполагаем, что ценность и сигнал --- это одно и то же, т.е. 
+\begin_inset Formula $ V_{i}=X_{i} $
+\end_inset
+
+, а сами сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы и имеют регулярное распределение на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Мы только что доказали, что при выполнении теоремы об одинаковой доходности: 
+\begin_inset Formula \begin{equation}
+pay_{1}(x)=E(Y_{1}\cdot 1_{Y_{1}<x})=\int_{0}^{x}tp_{Y_{1}}(t)dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Из этого следует, что: 
+\begin_inset Formula \begin{equation}
+\frac{dpay_{1}(x)}{dx}=xp_{Y_{1}}(x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+С другой стороны на аукционе третьей цены первый игрок платит третью по величине ставку, значит вторую по величине ставку игроков не считая себя.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+pay_{1}(x)=E(Pay_{1}|X_{1}=x)=E(b(Y_{2})\cdot 1_{W_{1}}|X_{1}=x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если мы предположим, что в равновесии функция 
+\begin_inset Formula $ b() $
+\end_inset
+
+ строго возрастает, то 
+\begin_inset Formula \begin{equation}
+W_{1}=\{b(X_{1})>b(X_{2})\cap \ldots\cap  b(X_{1})>b(X_{n})\}=\{X_{1}>Y_{1}\}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.к. 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы, нашу функцию выплат можно записать с помощью безусловного мат. ожидания: 
+\begin_inset Formula \begin{equation}
+pay_{1}(x)=E(b(Y_{2})\cdot 1_{Y_{1}<X_{1}}|X_{1}=x)=E(b(Y_{2})\cdot 1_{Y_{1}<x})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Судя по формуле нам нужна совместная функция плотности 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{2} $
+\end_inset
+
+. О-малые приходят на помощь:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p(y_{1},y_{2})=(n-1)(n-2)f(y_{1})f(y_{2})F(y_{2})^{n-3}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Следует уточнить, что эта формула верна при 
+\begin_inset Formula $0<y_{2}<y_{1}<1$
+\end_inset
+
+. При остальных 
+\begin_inset Formula $ y_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ y_{2} $
+\end_inset
+
+ плотность равна нулю.
+\end_layout
+
+\begin_layout Standard
+
+Для нахождения математического ожидания выписываем страшный двойной интеграл: 
+\begin_inset Formula \begin{multline}
+pay_{1}(x)=E(b(Y_{2})\cdot 1_{Y_{1}<x})=\int_{0}^{1}\int_{0}^{y_{1}} b(y_{2})1_{y_{1}<x} p(y_{1},y_{2})dy_{2}dy_{1}=\\
+\int_{0}^{x}\int_{0}^{y_{1}} b(y_{2})p(y_{1},y_{2})dy_{2}dy_{1}=\int_{0}^{x}\int_{0}^{y_{1}} b(y_{2}) (n-1)(n-2)f(y_{1})f(y_{2})F(y_{2})^{n-3} dy_{2}dy_{1}=\\
+(n-1)(n-2)\int_{0}^{x}f(y_{1})\int_{0}^{y_{1}} b(y_{2}) f(y_{2})F(y_{2})^{n-3} dy_{2}dy_{1}
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Конечно, интегрировать это мы не будем. Мы наооборот, возьмем производную по 
+\begin_inset Formula $ x $
+\end_inset
+
+ два раза. Берем производную первый раз: 
+\begin_inset Formula \begin{equation}
+\frac{dpay_{1}(x)}{dx}=(n-1)(n-2)f(x)\int_{0}^{x} b(y_{2}) f(y_{2})F(y_{2})^{n-3} dy_{2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+С другой стороны, 
+\begin_inset Formula \begin{equation}
+\frac{dpay_{1}(x)}{dx}=xp_{Y_{1}}(x)=x(n-1)f(x)(F(x))^{n-2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+После сокращения 
+\begin_inset Formula $ (n-1) $
+\end_inset
+
+ и 
+\begin_inset Formula $ f(x) $
+\end_inset
+
+ мы получили уравнение: 
+\begin_inset Formula \begin{equation}
+(n-2)\int_{0}^{x} b(y_{2}) f(y_{2})F(y_{2})^{n-3} dy_{2}=x(F(x))^{n-2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Чтобы избавиться от интеграла берем еще раз производную по 
+\begin_inset Formula $ x $
+\end_inset
+
+ от обеих частей. 
+\begin_inset Formula \begin{equation}
+(n-2) b(x) f(x)F(x)^{n-3}=F(x)^{n-2}+(n-2)xf(x)F(x)^{n-3}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Выражаем 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+b(x)=\frac{F(x)}{(n-2)f(x)}+x
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+При равномерном распределении наша формула превращается в: 
+\begin_inset Formula \begin{equation}
+b(x)=\frac{n-1}{n-2}x
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Она возрастает по 
+\begin_inset Formula $ x $
+\end_inset
+
+, значит теорему об одинаковой доходности действительно можно было применять. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Общая ценность.
+\end_layout
+
+\begin_layout Standard
+
+Предположим, что на аукционе первой цены продается участок с домом. Торгуются два игрока. Ценность участка с домом одинакова для обоих игроков. Только они ее не совсем полностью знают. Один игрок хорошо разбирается в домах, а второй --- в земельных участках. Т.е. Природа сообщает первому игроку ценность дома, а второму --- ценность участка.
+\end_layout
+
+\begin_layout Standard
+
+Введем обозначения:
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ V_{i} $
+\end_inset
+
+ --- случайная величина, ценность товара для игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ --- случайная величина, сигнал от Природы, который получает игрок 
+\begin_inset Formula $ i $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+В нашем случае: 
+\begin_inset Formula $ V_{1}=V_{2}=X_{1}+X_{2} $
+\end_inset
+
+ --- это ценности товара, а 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ --- сигнал, часть ценности, известная первому игроку и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ --- сигнал, часть ценности, известная второму игроку.
+\end_layout
+
+\begin_layout Standard
+
+Предположим, что 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Найдите равновесие Нэша.
+\end_layout
+
+\begin_layout Standard
+
+Решение:
+\end_layout
+
+\begin_layout Standard
+
+В этом случае прибыль равна:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+Profit_{1}=(V_{1}-Bid_{1})\cdot 1_{W_{1}}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Находим нашу детерминистическую функцию:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{multline}
+E(Profit_{1}|X_{1}=x; Bid_{1}=b_{1})=\\
+=E((x+X_{2})-b_{1})\cdot 1_{W_{1}}|X_{1}=x; Bid_{1}=b_{1})=\\
+=(x-b_{1})P(W_{1}|X_{1}=x; Bid_{1}=b_{1})+E(X_{2}\cdot 1_{W_{1}}|X_{1}=x; Bid_{1}=b_{1})
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Здесь нужно быть очень аккуратным т.к. 
+\begin_inset Formula $ E(X\cdot Y) $
+\end_inset
+
+ в общем случае не совпадает с 
+\begin_inset Formula $ E(X)\cdot E(Y) $
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Standard
+
+В силу независимости 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ и того, что 
+\begin_inset Formula $ Bid_{2}=b(X_{2}) $
+\end_inset
+
+ упрощаем 
+\begin_inset Formula $P(W_{1}|X_{1}=x ; Bid_{1}=b_{1})$
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+P(W_{1}|X_{1}=x; Bid_{1}=b_{1})=P(Bid_{2}<Bid_{1}|X_{1}=x; Bid_{1}=b_{1})=P(Bid_{2}<b_{1})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Вспомнив чудо-замену 
+\begin_inset Formula $ b_{1}=b(a) $
+\end_inset
+
+ получаем: 
+\begin_inset Formula \begin{equation}
+P(Bid_{2}<b_{1})=P(b(X_{2})<b(a))=P(X_{2}<a)=F(a)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Упрощаем: 
+\begin_inset Formula $ E(X_{2}\cdot 1_{W_{1}}|X_{1}=x; Bid_{1}=b_{1}) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{multline}
+E(X_{2}\cdot 1_{W_{1}}|X_{1}=x; Bid_{1}=b_{1})=E(X_{2}\cdot 1_{Bid_{2}<Bid_{1}}|X_{1}=x; Bid_{1}=b_{1})=\\
+E(X_{2}\cdot 1_{b(X_{2})<b_{1}}|X_{1}=x)=E(X_{2}\cdot 1_{b(X_{2})<b_{1}})
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В последнем переходе мы использовали то, что 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ независимы.
+\end_layout
+
+\begin_layout Standard
+
+И, чудо-замена,
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+E(X_{2}\cdot 1_{b(X_{2})<b_{1}})=E(X_{2}\cdot 1_{b(X_{2})<b(a)})=E(X_{2}\cdot 1_{X_{2}<a})=\int_{0}^{a}tf(t)dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Собираем все вместе:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\pi_{1}(x,b(a))=(x-b(a))F(a)+\int_{0}^{a}tf(t)dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Берем производную по 
+\begin_inset Formula $ a $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+-b'(a)F(a)+(x-b(a))f(a)+af(a)=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.к. мы ищем равновесие Нэша, оптимальное 
+\begin_inset Formula $b_{1}=b(x)  $
+\end_inset
+
+, и значит, оптимальное 
+\begin_inset Formula $ a=x $
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+-b'(x)F(x)+(x-b(x))f(x)+xf(x)=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В случае равномерных ценностей: 
+\begin_inset Formula \begin{equation}
+-b'(x)x+(x-b(x))+x=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Это линейное дифференциальное уравнение, общее решение имеет вид 
+\begin_inset Formula $ b(x)=x+\frac{c}{x} $
+\end_inset
+
+. Единственное ограниченное на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ решение --- это 
+\begin_inset Formula $ b(x)=x $
+\end_inset
+
+. Почему нас не интересуют неограниченные решения? Потому, что оно заведомо не оптимально. Если стратегия 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+ принимает значения больше единицы, то стратегия 
+\begin_inset Formula $ \min\{b(x),1\} $
+\end_inset
+
+ окажется лучше. Стратегия 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+ с положительной вероятностью приводит к ситуации, когда мы выигрываем товар, но обязаны заплатить за него сумму выше 1, т.е. мы получаем отрицательный выигрыш. Стратегия 
+\begin_inset Formula $ \min\{b(x),1\} $
+\end_inset
+
+ этого недостатка лишена, а во всем прочем точно копирует стратегию 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Кнопочный аукцион с зависимыми ценностями. У нас имеется три игрока, 
+\begin_inset Formula $ V_{1}=V_{2}=V_{3}=X_{1}+X_{2}+X_{3} $
+\end_inset
+
+, ценности независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Найдите равновесные Нэша и средний доход продавца.
+\end_layout
+
+\begin_layout Standard
+
+Самое сложное --- это понять, что является здесь стратегией игрока. Напомню правила. Текущая цена равна времени прошедшему с момента начала аукциона. В начале все игроки жмут свои кнопки. Каждый сам решает, когда ему отпустить кнопку. Как только кнопку отпускает предпоследний игрок, аукцион оканчивается. Победителем считается тот, кто продолжает давить. Он получает товар, по текущей цене на конец аукциона. Во время аукциона игроки знают кто и когда его покидает. Стратегия игрока может учитывать эту информацию. Если ценности зависимы, так оно и окажется.
+\end_layout
+
+\begin_layout Standard
+
+Рассмотрим первого игрока. Стратегия должна говорить игроку: до которого времени давить кнопку, если никто другой не вышел, и до которогу времени давить кнопку, если один другой игрок вышел на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+. При всем при этом стратегия может учитывать известное игроку значение 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+. В результате стратегия игрока в симметричном случае описывается двумя (!) функциями 
+\begin_inset Formula $ (b^{3}(x), b^{2}(x,p)) $
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ b^{3}(x) $
+\end_inset
+
+ --- до которого времени давить кнопку, если в игре 3 игрока 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ b^{2}(x,p) $
+\end_inset
+
+ --- до которого времени давить кнопку, если в игре 2 игрока, и один ушел на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Сейчас мы предъявим равновесные стратегии, а затем докажем, что они действительно равновесные.
+\end_layout
+
+\begin_layout Standard
+
+Пусть: 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ b^{3}(x)=x+x+x=3x$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ b^{2}(x,p)=x+x+\frac{p}{3}=2x+\frac{p}{3}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Откуда взялись эти стратегии?
+\end_layout
+
+\begin_layout Standard
+
+Первая, 
+\begin_inset Formula $ b^{3}() $
+\end_inset
+
+, получилась подстановкой 
+\begin_inset Formula $ x $
+\end_inset
+
+ в платежную фукнцию вместо каждого 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Чтобы понять вторую, 
+\begin_inset Formula $ b^{2}(x,p) $
+\end_inset
+
+, представим себе, что игрок спрашивает сам себя 
+\begin_inset Quotes ard
+\end_inset
+
+Что будет, если я прямо сейчас выиграю аукион?
+\begin_inset Quotes ald
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Допустим, что текущая цена равна 
+\begin_inset Formula $ p $
+\end_inset
+
+, и остальные два игрока используют такую же 
+\begin_inset Formula $ b^{3}() $
+\end_inset
+
+. Первый игрок выиграет аукцион, только если остальные два игрока прямо сейчас покинут его. Но это означает, что для них 
+\begin_inset Formula $ b^{3}(x)=p $
+\end_inset
+
+. Значит для уходящего игрока 
+\begin_inset Formula $ x=\frac{p}{3} $
+\end_inset
+
+. Ага! Мы смогли восстановить 
+\begin_inset Formula $ x $
+\end_inset
+
+ уходящего игрока зная цену на которой он вышел. И мы вводим новую функцию 
+\begin_inset Formula $ b^{2}(x,p) $
+\end_inset
+
+, которая учитывает этот факт.
+\end_layout
+
+\begin_layout Standard
+
+Чем они хороши?
+\end_layout
+
+\begin_layout Standard
+
+Сначала определим, в каком порядке будут выходить игроки, если все используют указанную стратегию. Сначала выйдет тот игрок, у кого минимальное значение 
+\begin_inset Formula $ b^{3}(X_{i}) $
+\end_inset
+
+. Поскольку 
+\begin_inset Formula $ b^{3}() $
+\end_inset
+
+ строго возрастающая функция первым выйдет игрок с минимальным 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Допустим это произошло на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+. Следующим игроком из двух оставшихся выйдет тот, у кого 
+\begin_inset Formula $ b^{2}(X_{i},p) $
+\end_inset
+
+ меньше. Но 
+\begin_inset Formula $ b_{2}(x,p) $
+\end_inset
+
+ строго возрастает по 
+\begin_inset Formula $ x $
+\end_inset
+
+, а значение 
+\begin_inset Formula $ p $
+\end_inset
+
+ одинаковое, значит вторым выйдет тот из оставшихся игроков, у кого 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ меньше. Мораль. Если игроки используют эти стратегии, то они выходят в порядке возрастания ценностей и товар получает тот, у кого 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ наибольшее. Это хорошее свойство указанной стратегии, но еще не доказательство оптимальности.
+\end_layout
+
+\begin_layout Standard
+
+Почему же они все-таки равновесны?
+\end_layout
+
+\begin_layout Standard
+
+Рассматриваем ситуацию, когда все игроки кроме первого используют указанную стратегию. Мы сейчас посчитаем какой выигрыш получает первый игрок, если тоже использует указанную стратегию и сколько он получит, если отклонится.
+\end_layout
+
+\begin_layout Standard
+
+Пусть первый игрок также использует стратегию 
+\begin_inset Formula $ (b^{3}(x), b^{2}(x,p)) $
+\end_inset
+
+. Возможно две ситуации: 
+\end_layout
+
+\begin_layout Itemize
+
+Первый игрок выигрывает аукцион.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Это происходит, если его ценность выше других, т.е. 
+\begin_inset Formula $ X_{1}>Y_{1} $
+\end_inset
+
+. В этом случае первый выход из игры происходит при цене 
+\begin_inset Formula $ b^{3}(Y_{2}) $
+\end_inset
+
+, а второй --- при цене 
+\begin_inset Formula $ b^{2}(Y_{1},b^{3}(Y_{2})) $
+\end_inset
+
+. Значит первый игрок заплатит 
+\begin_inset Formula $ b^{2}(Y_{1},b^{3}(Y_{2})) $
+\end_inset
+
+. И выигрыш первого игрока равен: 
+\begin_inset Formula \begin{equation}
+V_{1}-b^{2}(Y_{1},b^{3}(Y_{2}))=X_{1}+X_{2}+X_{3}-b^{2}(Y_{1},b^{3}(Y_{2}))=X_{1}+Y_{1}+Y_{2}-Y_{1}-Y_{1}-Y_{2}=X_{1}-Y_{1}>0 
+\end{equation}
+\end_inset
+
+ Если игрок захочет отклонится, т.е. не выиграть аукцион, то он получит 0. Значит отклоняться не выгодно.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Первый игрок проигрывает аукцион.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Это происходит, если его ценность не максимальная, т.е. 
+\begin_inset Formula $ X_{1}<Y_{1} $
+\end_inset
+
+. В этом случае его доход равен 0. Сколько игрок получит, если захочет отклонится, т.е. выиграть? 
+\begin_inset Formula \begin{equation}
+ V_{1}-b^{2}(Y_{1},b^{3}(Y_{2}))=X_{1}+X_{2}+X_{3}-b^{2}(Y_{1},b^{3}(Y_{2}))=X_{1}+Y_{1}+Y_{2}-Y_{1}-Y_{1}-Y_{2}=X_{1}-Y_{1}<0 
+\end{equation}
+\end_inset
+
+ Отклоняться не выгодно. 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+Считаем среднюю выручку продавца: 
+\begin_inset Formula \begin{multline}
+E(R)=E(b^{2}(Y_{1},b^{3}(Y_{2}))|X_{1}>Y_{1})=E((2Y_{1}+Y_{2})|X_{1}>Y_{1})=...=1.25
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Замечания: 
+\end_layout
+
+\begin_layout Itemize
+
+При определении стратегий была важна связь между 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ и 
+\begin_inset Formula $ V_{i} $
+\end_inset
+
+, но не совместная функция плотности 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. В решении равномерность распределения не исользовалась! 
+\end_layout
+
+\begin_layout Itemize
+
+Если после окончания игры игроки раскроют значения своих 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ друг другу, то никто не пожалеет о выбранной стратегии. Проигравшие не жалеют, т.к. при известных 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ им ничего не светит. Выигравший не жалеет, т.к. при фиксированных стратегиях других игроков выиграть за меньшую сумму он не мог. 
+\end_layout
+
+\begin_layout Itemize
+
+Аукцион как и раньше очень сильно похож на аукцион второй цены 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Супермодулярные функции
+\end_layout
+
+\begin_layout Standard
+
+Введем более короткие обозначения для максимума и минимума:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+x\wedge y\wedge z =\min\{x,y,z\}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+x\vee y\vee z =\max\{x,y,z\}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Запомнить эти обозначения легко поняв их происхождение. Кто-то когда-то давно заметил, что минимум и максимум нескольких чисел ведут себя точно так же, как пересечение и объединение множеств:
+\end_layout
+
+\begin_layout Standard
+
+Убедитесь, что для множеств верно:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+(A \cap B)\cup C=(A\cup C)\cap (B\cup C)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+А для чисел верно: 
+\begin_inset Formula \begin{equation}
+(a \wedge b)\vee c=(a\vee c)\wedge (b\vee c)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Совпадение это не случайно. Если какая-то формула для множеств верна, то она верна и для подмножеств числовой прямой вида 
+\begin_inset Formula $ (-\infty;t] $
+\end_inset
+
+. А на таких подмножествах аналогия совершенно прямая: если 
+\begin_inset Formula $ A=(-\infty;a] $
+\end_inset
+
+ и 
+\begin_inset Formula $ B=(-\infty;b] $
+\end_inset
+
+, то 
+\begin_inset Formula $ A\cup B= (-\infty;a\vee b] $
+\end_inset
+
+ и 
+\begin_inset Formula $ A\cap B=(-\infty;a\wedge b] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Докажите, что, например, верны формулы:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+1_{A}\wedge 1_{B}=1_{A\cap B}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+1_{A}\vee 1_{B}=1_{A\cup B}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Эти значки называются мит и джойн (?)...
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Аналогичные операции применяются и к векторам:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Если 
+\begin_inset Formula $ \vec{x}=(x_{1},\ldots, x_{n}) $
+\end_inset
+
+ и 
+\begin_inset Formula $ \vec{y}=(y_{1},\ldots, y_{n}) $
+\end_inset
+
+, то: 
+\begin_inset Formula \begin{equation}
+\vec{x}\wedge\vec{y}=(x_{1}\wedge y_{1}, \ldots, x_{n}\wedge y_{n}) 
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\vec{x}\vee\vec{y}=(x_{1}\vee y_{1}, \ldots, x_{n}\vee y_{n}) 
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В экономическом моделировании то там, то сям возникают супермодулярные функции:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Функция 
+\begin_inset Formula $ f() $
+\end_inset
+
+ называется супермодулярной, если для любых 
+\begin_inset Formula $ \vec{x} $
+\end_inset
+
+ и 
+\begin_inset Formula $ \vec{y} $
+\end_inset
+
+ 
+\begin_inset Formula \begin{equation}
+f(\vec{x}\wedge\vec{y})+f(\vec{x}\vee\vec{y})\geq f(\vec{x})+f(\vec{y})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Функция 
+\begin_inset Formula $ f(x_{1},x_{2})=x_{1} $
+\end_inset
+
+ является супермодулярной. Действительно, левая часть равна: 
+\begin_inset Formula \begin{equation}
+f(\vec{x}\wedge\vec{y})+f(\vec{x}\vee\vec{y})=x_{1}\wedge y_{1}+x_{1}\vee y_{1}=x_{1}+y_{1}
+\end{equation}
+\end_inset
+
+ Правая часть равна: 
+\begin_inset Formula \begin{equation}
+f(\vec{x})+f(\vec{y})=x_{1}+y_{1}
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Функция 
+\begin_inset Formula $ f(x)=x^{3} $
+\end_inset
+
+ является супермодулярной: 
+\begin_inset Formula \begin{equation}
+f(x\wedge y)+f(x \vee y)=(x\wedge y)^{3}+(x\vee y)^{3}=x^{3}\wedge y^{3} + x^{3}\vee y^{3}=x^{3}+y^{3}=f(x)+f(y)
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Функция 
+\begin_inset Formula $ f(x_{1},x_{2})=-x_{1}x_{2} $
+\end_inset
+
+ не является супермодулярной: 
+\begin_inset Formula \begin{equation}
+f((1,2)\wedge (2,1))+f((1,2)\vee (2,1))=f(2,2)+f(1,1)=-4-1=-5
+\end{equation}
+\end_inset
+
+ 
+\begin_inset Formula \begin{equation}
+f(1,2)+f(2,1)=-2-2=-4
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Если у функции 
+\begin_inset Formula $ f $
+\end_inset
+
+ существуют вторые производные, то она является супермодулярной если и только если для 
+\begin_inset Formula $ i\neq j $
+\end_inset
+
+: 
+\begin_inset CommandInset label
+LatexCommand label
+name "supermod_crit"
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{equation}
+\frac{\partial^{2}f}{\partial x_{i}\partial x_{j}}\geq 0
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ В этой лекции мы в него поверим и его можно использовать при решении домашних задач. А докажем в 3-ей лекции. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Нам эти функции понадобятся в таком контексте.
+\end_layout
+
+\begin_layout Standard
+
+Мы предположим, что игрок не полностью знает ценность товара для себя. Т.е. каждый игрок получает от Природы сигнал 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Отныне 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ --- это не ценность товара для игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Случайные величины 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ с совместной функцией плотности 
+\begin_inset Formula $ f(x_{1},\ldots,x_{n}) $
+\end_inset
+
+ называются аффилированными, если 
+\begin_inset Formula $ ln(f(\vec{x})) $
+\end_inset
+
+ --- супермодулярная функция. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В силу того, что логарифм произведения равен сумме логарифмов, это определение эквивалентно следующему: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Случайные величины 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ с совместной функцией плотности 
+\begin_inset Formula $ f(x_{1},\ldots,x_{n}) $
+\end_inset
+
+ называются аффилированными, если
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+f(\vec{x}\wedge\vec{y})\cdot f(\vec{x}\vee\vec{y})\geq f(\vec{x})\cdot f(\vec{y})
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Упражнение:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Известно, что аффилированы случайные величины $ X_{1} $, ..., $ X_{n} $. Верно ли, что аффилированы случайные величины $ X_{1} $, ..., $ X_{n-1} $?
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{myth}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Если аффилированы $ X_{1} $, ..., $ X_{n} $, то аффилированы $ X_{1} $, $ Y_{1} $, $ Y_{2} $, ..., $ Y_{n-1} $
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{myth}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{proof}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%...
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{proof}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Задачи
+\end_layout
+
+\begin_layout Enumerate
+
+Пусть 
+\begin_inset Formula $ A $
+\end_inset
+
+ и 
+\begin_inset Formula $ B $
+\end_inset
+
+ --- это события. Верно ли, что 
+\begin_inset Formula $ E(1_{A}|B)=P(A|B) $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+
+Пусть 
+\begin_inset Formula $ A $
+\end_inset
+
+ и 
+\begin_inset Formula $ B $
+\end_inset
+
+ --- это независимые события. Верно ли, что 
+\begin_inset Formula $ E(1_{A}|B)=E(1_{A})  $
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+
+С помощью о-малых найдите:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+функцию плотности минимума остальных ставок, 
+\begin_inset Formula $ p_{Y_{n-1}}(t) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+функцию плотности 
+\begin_inset Formula $ p_{Y_{6}}(t) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+совместную функцию плотности 
+\begin_inset Formula $ p_{Y_{1},Y_{n-1}}(a,b) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+совместную функцию плотности 
+\begin_inset Formula $ p_{Y_{3},Y_{6}}(a,b) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+совместную функцию плотности 
+\begin_inset Formula $ p_{Y_{n-2},Y_{n-1}}(a,b) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+совместную функцию плотности 
+\begin_inset Formula $ p_{X_{1},Y_{1}}(a,b) $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Рассмотрим аукцион первой цены двух игроков. Ценности независимы и имеют функцию плотности 
+\begin_inset Formula $f(t)=2t  $
+\end_inset
+
+ на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Найдите: 
+\end_layout
+
+\begin_layout Enumerate
+
+Равновесие Нэша, т.е. детерминистические стратегии 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Детерминистическую функцию 
+\begin_inset Formula $ pay_{1}(x) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Детерминистическую функцию 
+\begin_inset Formula $ \widehat{pay_{1}}(b) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Детерминистическую функцию 
+\begin_inset Formula $ q_{1}(x) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Детерминистическую функцию 
+\begin_inset Formula $ \widehat{q_{1}}(b) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Функцию распределения случайной величины 
+\begin_inset Formula $ Pay_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ E(Pay_{1}) $
+\end_inset
+
+, 
+\begin_inset Formula $ Cov(Pay_{1},Pay_{2}) $
+\end_inset
+
+, 
+\begin_inset Formula $ Var(Pay_{1}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Функцию распределения случайной величины 
+\begin_inset Formula $ R $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ E(R) $
+\end_inset
+
+, 
+\begin_inset Formula $ Var(R) $
+\end_inset
+
+, 
+\begin_inset Formula $ Cov(R,Pay_{1}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Тонкая разница! Если применить детерминистическую функцию 
+\begin_inset Formula $ pay_{1}(x) $
+\end_inset
+
+ к случайной величине 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, то мы получим случайную величину 
+\begin_inset Formula $ pay_{1}(X_{1}) $
+\end_inset
+
+. Временно обозначим ее 
+\begin_inset Formula $ L_{1} $
+\end_inset
+
+ (и забудем это обозначение после этого упражнения). Найдите функцию распределения 
+\begin_inset Formula $ L_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ E(L_{1}) $
+\end_inset
+
+, 
+\begin_inset Formula $ Var(L_{1}) $
+\end_inset
+
+, 
+\begin_inset Formula $ Cov(L_{1},L_{2}) $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Предположим, что на аукционе первой цены продается участок с домом. Торгуются два игрока. Природа сообщает первому игроку ценность дома, 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, а второму --- ценность участка, 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+. При этом ценности игроков определяются по формулам: 
+\begin_inset Formula $ V_{1}=X_{1}+0.5X_{2} $
+\end_inset
+
+ --- первому важнее дом, 
+\begin_inset Formula $ V_{2}=0.5X_{1}+X_{2} $
+\end_inset
+
+ --- второму важнее участок. Ценности независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Найдите равновесие Нэша.
+\end_layout
+
+\begin_layout Enumerate
+
+Сколько функций потребуется (и от каких переменных каждая из них зависит) чтобы описать стратегию в симметричном равновесии Нэша в кнопочном аукционе с 4-мя игроками? С 5-ю? С 
+\begin_inset Formula $ n $
+\end_inset
+
+ игроками?
+\end_layout
+
+\begin_layout Enumerate
+
+Сколько функций потребуется (и от каких переменных каждая из них зависит) чтобы описать стратегию в несимметричном равновесии Нэша в кнопочном аукционе с 4-мя игроками? С 5-ю? С 
+\begin_inset Formula $ n $
+\end_inset
+
+ игроками?
+\end_layout
+
+\begin_layout Enumerate
+
+Рассмотрим кнопочный аукцион с тремя игроками. Каждый игрок знает своё 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+, а ценности определяются по правилу: 
+\begin_inset Formula \begin{equation}
+V_{1}=X_{1}+X_{2}\cdot X_{3} \\
+V_{2}=X_{2}+X_{1}\cdot X_{3} \\
+V_{3}=X_{3}+X_{1}\cdot X_{2} \\
+\end{equation}
+\end_inset
+
+ Сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы и имеют равномерное распределение на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Найдите равновесие Нэша и средний доход продавца.
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ (1,2,3)\wedge (5,0,2) $
+\end_inset
+
+ и 
+\begin_inset Formula $ (1,2,3)\vee (5,0,2) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Являеются ли супермодулярными функции: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(x_{1},\ldots,x_{n})=x_{1}+\ldots+x_{n} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(x_{1},\ldots,x_{n})=x_{1}\cdot \ldots \cdot x_{n} $
+\end_inset
+
+ при положительных 
+\begin_inset Formula $ x_{i} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(a,b,c)=a\wedge b\wedge c $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(a,b,c)=a\vee b\vee c $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Существует ли функция одной переменной не являющаяся супермодулярной?
+\end_layout
+
+\begin_layout Enumerate
+
+Верно ли, что 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ аффилированы если:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ --- независимы 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(x,y)=x+y $
+\end_inset
+
+ при 
+\begin_inset Formula $ x,y\in [0;1] $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(x,y)=\frac{1+4xy}{2} $
+\end_inset
+
+ при 
+\begin_inset Formula $ x,y\in [0;1] $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Пара случайных величин 
+\begin_inset Formula $ X $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y $
+\end_inset
+
+ имеет совместное нормальное распределение с корреляцией 
+\begin_inset Formula $ \rho $
+\end_inset
+
+. При каких 
+\begin_inset Formula $ \rho $
+\end_inset
+
+ они будут аффилированы?
+\end_layout
+
+\begin_layout Subsection
+
+Решения задач
+\end_layout
+
+\begin_layout Enumerate
+
+Да. 
+\begin_inset Formula $ E(1_{A}|B)=E(1_{A}1_{B})/P(B)=P(A\cap B)/P(B)=P(A|B) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Да. 
+\begin_inset Formula $ E(1_{A}|B)=P(A|B)=P(A)=E(1_{A})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ p_{Y_{n-1}}(t)=(n-1)f(t)(1-F(t))^{n-2} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ p_{Y_{6}}(t)=(n-1)f(t)C^{5}_{n-1}(1-F(t))^{5}(F(t))^{n-7} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ p_{Y_{1},Y_{n-1}}(a,b)=(n-1)(n-2)f(a)f(b)(F(a)-F(b))^{n-3} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ p_{Y_{3},Y_{6}}(a,b)=(n-1)(n-2)\textcolor{red}{C_{n-3}^{2}C_{n-5}^{2}}f(a)f(b) (F(b))^{n-7}(1-F(a))^{2}(F(a)-F(b))^{2} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ p_{Y_{n-2},Y_{n-1}}(a,b)=(n-1)(n-2)f(a)f(b)(1-F(a))^{n-3} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ p_{X_{1},Y_{1}}(a,b)=f(a)(n-1)f(b)(F(b))^{n-2} $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Стратегии 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+ мы уже искали в предыдущей домашней работе, 
+\begin_inset Formula $ b(x)=\frac{2}{3}x $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Функцию 
+\begin_inset Formula $ pay_{1}(x) $
+\end_inset
+
+ проще всего найти через теорему 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "probabilistic_interpretation"
+
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+pay_{1}(x)=\int_{0}^{x}t(n-1)f(t)(F(t))^{n-2}dt=\frac{2}{3}x^{3}
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Функция 
+\begin_inset Formula $ \widehat{q_{1}}(b) $
+\end_inset
+
+ --- это вероятность того, что первый выиграет, если поставит 
+\begin_inset Formula $ b $
+\end_inset
+
+. Значит: 
+\begin_inset Formula \begin{equation}
+\widehat{q_{1}}(b)=P(Bid_{2}<b)=P(\frac{2}{3}X_{2}<b)=P(X_{2}<\frac{3}{2}b)=F(\frac{3}{2}b)=(\frac{3}{2}b)^{2}
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Ищем 
+\begin_inset Formula $ \widehat{pay_{1}}(b) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+\widehat{pay_{1}}(b)=E(b\cdot 1_{Bid_{2}<b})=b\cdot P(Bid_{2}<b)=b(\frac{3}{2}b)^{2}
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Функция 
+\begin_inset Formula $ q_{1}(x) $
+\end_inset
+
+ --- это вероятность того, что первый выиграет при ценности 
+\begin_inset Formula $ x $
+\end_inset
+
+, значит 
+\begin_inset Formula $ q_{1}(x)=x^{2} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Cлучайная величина 
+\begin_inset Formula $ Pay_{1} $
+\end_inset
+
+ --- интересный зверь. Она не является ни дискретной, ни непрерывной. Заметим, что в равновесии с вероятностью 
+\begin_inset Formula $ 0.5 $
+\end_inset
+
+ первый проигрывает аукцион и не платит ничего. Значит у функции распределения скачок высотой 0.5 в точке 
+\begin_inset Formula $ t=0 $
+\end_inset
+
+! А в остальных точках --- она непрерывна. Замечаем, что область значений 
+\begin_inset Formula $ Pay_{1} $
+\end_inset
+
+ --- отрезок 
+\begin_inset Formula $ [0;2/3] $
+\end_inset
+
+...
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Более детально рассматриваем точки 
+\begin_inset Formula $ t\in (0;2/3) $
+\end_inset
+
+ 
+\begin_inset Formula \begin{multline}
+P(Pay_{1}\leq t)=P(Pay_{1}\leq t \cap X_{1}>X_{2})+P(Pay_{1}\leq t \cap X_{1}<X_{2})=\\
+=P(Pay_{1}\leq t \cap X_{1}>X_{2})+P(X_{1}<X_{2})=P(Pay_{1}\leq t \cap X_{1}>X_{2})+0.5
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Считаем первую вероятность отдельно: 
+\begin_inset Formula \begin{multline}
+P(Pay_{1}\leq t \cap X_{1}>X_{2})=P(\frac{2}{3}X_{1}\leq t \cap X_{1}>X_{2})=\\
+P(X_{1}\leq 1.5t \cap X_{1}>X_{2})=\int_{0}^{1.5t}\int_{0}^{x_{1}} 2x_{1}2x_{2}dx_{2}dx_{1}=\frac{81}{32}t^{4} 
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Итого, получаем функцию распределения: 
+\begin_inset Formula \begin{equation}
+F_{Pay_{1}}(t)=
+\begin{cases} 
+0, t<0 \\
+0.5+\frac{81}{32}t^{4}, t\in [0;2/3] \\
+1, t>2/3 \\
+\end{cases}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Функции плотности у 
+\begin_inset Formula $ Pay_{1} $
+\end_inset
+
+ нет! Функция распределения разрывна. Тем не менее выпишем производную: 
+\begin_inset Formula \begin{equation}
+f_{Pay_{1}}(t)=0.5d(0)+\frac{81}{8}t^{3}
+\end{equation}
+\end_inset
+
+ В начале формулы идет некое мифическое 
+\begin_inset Formula $ 0.5d(0) $
+\end_inset
+
+ --- это просто условная запись. Она нужна чтобы помнить, что у 
+\begin_inset Formula $ F(t) $
+\end_inset
+
+ в точке 
+\begin_inset Formula $ t=0 $
+\end_inset
+
+ был скачок высотой 
+\begin_inset Formula $ 0.5 $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ E(Pay_{1}) $
+\end_inset
+
+, , 
+\begin_inset Formula $ Var(Pay_{1}) $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Считаем мат. ожидание. Это легко. От дискретной части появляется 
+\begin_inset Formula $ 0\cdot 0.5 $
+\end_inset
+
+. От непрерывной --- интгерал. 
+\begin_inset Formula \begin{equation}
+E(Pay_{1})=0\cdot 0.5+\int_{0}^{2/3}t\cdot \frac{81}{8}t^{3} dt=...=4/15
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Для дисперсии нам нужно: 
+\begin_inset Formula \begin{equation}
+E(Pay_{1}^{2})=0^{2}\cdot 0.5+\int_{0}^{2/3}t^{2}\cdot \frac{81}{8}t^{3} dt=...=4/27
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Дисперсия равна: 
+\begin_inset Formula \begin{equation}
+Var(Pay_{1})=E(Pay_{1}^{2})-E(Pay_{1})^{2}=4/27-(4/15)^{2}=52/675
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Два игрока никогда не платят одновременно, поэтому 
+\begin_inset Formula $ Pay_{1}\cdot Pay_{2} $
+\end_inset
+
+ тождественно равно нулю. Отсюда: 
+\begin_inset Formula \begin{equation}
+Cov(Pay_{1},Pay_{2})=E(Pay_{1}Pay_{2})-E(Pay_{1})E(Pay_{2})=0-(4/15)^{2}
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Cлучайная величина 
+\begin_inset Formula $ R$
+\end_inset
+
+ --- это не что иное, как максимум из ставок: 
+\begin_inset Formula \begin{equation}
+R=\max\{ \frac{2}{3}X_{1},\frac{2}{3}X_{2} \}=\frac{2}{3}\max\{X_{1},X_{2}\}
+\end{equation}
+\end_inset
+
+ Функция распределения: 
+\begin_inset Formula \begin{equation}
+F_{R}(t)=P(R\leq t)=P(\frac{2}{3}\max\{X_{1},X_{2}\}\leq t)=P(X_{1}<\frac{3}{2}t \cap X_{2}<\frac{3}{2}t)=F(\frac{3}{2}t)^{2}=\left(\frac{3}{2}t\right)^{4}
+\end{equation}
+\end_inset
+
+ Это непрерывная случайная величина, и у нее есть функция плотности: 
+\begin_inset Formula \begin{equation}
+f_{R}(t)=4\left(\frac{3}{2}t\right)^{3}\frac{3}{2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Для нахождения 
+\begin_inset Formula $ E(R) $
+\end_inset
+
+, 
+\begin_inset Formula $ Var(R) $
+\end_inset
+
+, 
+\begin_inset Formula $ Cov(R,Pay_{1}) $
+\end_inset
+
+ вспоминаем, что 
+\begin_inset Formula $ R=Pay_{1}+Pay_{2} $
+\end_inset
+
+. 
+\begin_inset Formula \begin{equation}
+E(R)=E(Pay_{1}+Pay_{2})=2E(Pay_{1})
+\end{equation}
+\end_inset
+
+ 
+\begin_inset Formula \begin{equation}
+Var(R)=Var(Pay_{1})+Var(Pay_{2})+2Cov(Pay_{1},Pay_{2})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+Cov(R,Pay_{1})=Cov(Pay_{1}+Pay_{2},Pay_{1})=Var(Pay_{1})+Cov(Pay_{2},Pay_{1})
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+В нашем случае 
+\begin_inset Formula $ L_{1}=\frac{2}{3}X_{1}^{3} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Функция распределения: 
+\begin_inset Formula \begin{equation}
+F_{L_{1}}(t)=P(L_{1}<t)=P(\frac{2}{3}X_{1}^{3}<t)=P(X_{1}<(1.5t)^{1/3})=F((1.5t)^{1/3})=(1.5t)^{2/3}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В данном случае речь идет о непрерывной случайной величине, у нее есть функция плотности: 
+\begin_inset Formula \begin{equation}
+f_{L_{1}}(t)=1.5\frac{2}{3}(1.5t)^{-1/3}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Мат. ожидание: 
+\begin_inset Formula \begin{equation}
+E(L_{1})=\int_{0}^{1}\frac{2}{3}t^{3}2tdt=\frac{4}{15} 
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Дисперсия: 
+\begin_inset Formula \begin{equation}
+Var(L_{1})=E(L_{1}^{2})-E(L_{1})^{2}=\frac{1}{9}-\left(\frac{4}{15}\right)^{2}=\frac{1}{25}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Поскольку 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ независимы, 
+\begin_inset Formula $ pay(X_{1}) $
+\end_inset
+
+ и 
+\begin_inset Formula $ pay(X_{2}) $
+\end_inset
+
+ тоже независимы, и 
+\begin_inset Formula $ Cov(L_{1},L_{2})=0 $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+Заметим, что 
+\begin_inset Formula $ E(Pay_{1})=E(pay_{1}(X_{1}) $
+\end_inset
+
+, но дисперсия и ковариация отличаются! Т.е. 
+\begin_inset Formula $ Pay_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ pay_{1}(X_{1}) $
+\end_inset
+
+ --- это разные случайные величины.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+От рассмотренного примера отличается только коэффициентом 
+\begin_inset Formula $ 0.5 $
+\end_inset
+
+ перед 
+\begin_inset Formula $ E(X_{2}1_{W_{1}}|...) $
+\end_inset
+
+. Значит финальное дифф. уравнение имеет вид: 
+\begin_inset Formula \begin{equation}
+-b'(x)F(x)+(x-b(x))f(x)+0.5\cdot xf(x)=0
+\end{equation}
+\end_inset
+
+ При равномерном распределении: 
+\begin_inset Formula \begin{equation}
+-b'(x)x+(x-b(x))+0.5\cdot x=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Подбираем сразу линейное решение, получаем 
+\begin_inset Formula $ b(x)=0.75x $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Для четырех. 
+\begin_inset Formula $ b^{4}(x) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{3}(x,p_{4}) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{2}(x,p_{3},p_{4}) $
+\end_inset
+
+ (названия переменных объясняются соглашением, что 
+\begin_inset Formula $ p_{i} $
+\end_inset
+
+ --- это моменты выхода игроков в порядке убывания)
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Для пяти. 
+\begin_inset Formula $ b^{5}(x) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{4}(x,p_{5}) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{3}(x,p_{4},p_{5}) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{2}(x,p_{3},p_{4},p_{5}) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Для 
+\begin_inset Formula $ n $
+\end_inset
+
+ игроков. Нужна 
+\begin_inset Formula $ (n-1) $
+\end_inset
+
+ функция, 
+\begin_inset Formula $ b^{n}(x) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{n-1}(x,p_{n}) $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ b^{2}(x,p_{3},...,p_{n}) $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Начнем все-таки с трех. Заметим, что у каждого игрока свои стратегии! Например, рассмотрим первого: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{3}(x)$
+\end_inset
+
+ --- до какого момента давить на кнопку, если в игре 3 игрока. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:-2}(x,p) $
+\end_inset
+
+ --- до какого момента давить на кнопку, если в игре 2 игрока и первым вышел второй. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:-3}(x,p) $
+\end_inset
+
+ --- до какого момента давить на кнопку, если в игре 2 игрока и первым вышел третий. 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+Для четырех (функции описывают, до какого момента давить на кнопку) 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{4}(x)$
+\end_inset
+
+ --- если все четверо в игре 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{3:2}(x,p) $
+\end_inset
+
+ --- если вышел только второй на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{3:3}(x,p) $
+\end_inset
+
+ --- если вышел только третий на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{3:4}(x,p) $
+\end_inset
+
+ --- если вышел только четвертый на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:2,3}(x,p_{3},p_{4}) $
+\end_inset
+
+ --- если сначала вышел второй, на цене 
+\begin_inset Formula $ p_{4} $
+\end_inset
+
+, а затем --- третий, на цене 
+\begin_inset Formula $ p_{3} $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:2,4}(x,p_{3},p_{4}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:3,4}(x,p_{3},p_{4}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:3,2}(x,p_{3},p_{4}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:4,2}(x,p_{3},p_{4}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{1}^{2:4,3}(x,p_{3},p_{4}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Итого: 
+\begin_inset Formula $1+3+6=10$
+\end_inset
+
+ функций.
+\end_layout
+
+\begin_layout Standard
+
+Для пяти: 
+\begin_inset Formula $1+4+12+24=41$
+\end_inset
+
+ функция.
+\end_layout
+
+\begin_layout Standard
+
+Для произвольного 
+\begin_inset Formula $ n $
+\end_inset
+
+: 
+\begin_inset Formula $ C_{n-1}^{1}1!+C_{n-1}^{2}2!+C_{n-1}^{3}3!+C_{n-1}^{4}4!+...C_{n-1}^{n-2}(n-2)! $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Сначала равновесие. Первая функция --- 
+\begin_inset Formula $ b^{3}(x)=x+x^{2} $
+\end_inset
+
+. Со второй чуть посложнее... Если игрок вышел на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+, то 
+\begin_inset Formula $ x+x^{2}=p $
+\end_inset
+
+. Решаем квадратное уравнение, берем корень из 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+x=\frac{\sqrt{1+4p}-1}{2}
+\end{equation}
+\end_inset
+
+ И получаем: 
+\begin_inset Formula \begin{equation}
+b^{2}(x,p)=x+x\frac{\sqrt{1+4p}-1}{2}=x\frac{\sqrt{1+4p}+1}{2}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Пусть 
+\begin_inset Formula $ Z_{1} $
+\end_inset
+
+ --- наибольшая из всех 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+, 
+\begin_inset Formula $ Z_{2} $
+\end_inset
+
+ --- вторая по величине, а 
+\begin_inset Formula $ Z_{3} $
+\end_inset
+
+ --- самая маленькая. Тогда побеждает игрок с сигналом 
+\begin_inset Formula $ Z_{1} $
+\end_inset
+
+. При этом он платит 
+\begin_inset Formula $ b^{2}(Z_{2},b(Z_{3}))=Z_{2}+Z_{2}Z_{3} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Значит: 
+\begin_inset Formula \begin{equation}
+E(R)=E(Z_{2}+Z_{2}Z_{3})=E(Z_{2})+E(Z_{2}Z_{3})
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Для их расчета привлекаем банду о-малых.
+\end_layout
+
+\begin_layout Standard
+
+Ищем функцию плотности 
+\begin_inset Formula $ Z_{2} $
+\end_inset
+
+. Три способа выбрать 
+\begin_inset Formula $ Z_{2} $
+\end_inset
+
+, одна из двух 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ должна быть больше избранной (сомножитель 
+\begin_inset Formula $ (1-t) $
+\end_inset
+
+), другая --- меньше (сомножитель 
+\begin_inset Formula $ t $
+\end_inset
+
+): 
+\begin_inset Formula \begin{equation}
+p_{Z_{2}}(t)=3\cdot 2\cdot t(1-t)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Совместная функция плотности положительна только при 
+\begin_inset Formula $ a>b $
+\end_inset
+
+ и равна: 
+\begin_inset Formula \begin{equation}
+p_{Z_{2},Z_{3}}(a,b)=6(1-a)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+После интегрирования первой получаем очевидный результат, что мат. ожидание медианы трех равномерных случайных величин равно половине: 
+\begin_inset Formula \begin{equation}
+E(Z_{2})=...=1/2
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+И после интегрирования второй: 
+\begin_inset Formula \begin{equation}
+E(Z_{2}Z_{3})=...=\frac{3}{20}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Итого: 
+\begin_inset Formula $ E(R)=\frac{13}{20} $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Ответ: 
+\begin_inset Formula $ (1,2,3)\wedge (5,0,2)=(1,0,2) $
+\end_inset
+
+ и 
+\begin_inset Formula $ (1,2,3)\vee (5,0,2)=(5,2,3) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+К первым двум можно применять теорему 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "supermod_crit"
+
+\end_inset
+
+. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ \frac{\partial^{2} f}{\partial x_{i}\partial x_{j}}=0 $
+\end_inset
+
+, супермодулярна 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ \frac{\partial^{2} f}{\partial x_{i}\partial x_{j}}>0 $
+\end_inset
+
+, супермодулярна 
+\end_layout
+
+\begin_layout Enumerate
+
+да, супермодулярна. Достаточно, например, рассмотреть два случая: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ x_{1}>y_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ x_{2}>y_{2} $
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}>y_{3}$
+\end_inset
+
+. Здесь 
+\begin_inset Formula $ f(\vec{x}\wedge \vec{y})=f(\vec{y}) $
+\end_inset
+
+ и 
+\begin_inset Formula $ f(\vec{x}\vee \vec{y})=f(\vec{x}) $
+\end_inset
+
+ и неравенство выполнено. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ x_{1}>y_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ x_{2}>y_{2} $
+\end_inset
+
+, 
+\begin_inset Formula $x_{3}<y_{3}$
+\end_inset
+
+ Здесь нужно немного помучиться с рассмотрением разных порядков... 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+нет, не супермодулярна. Например: 
+\begin_inset Formula $ \vec{x}=(3,3,1) $
+\end_inset
+
+ и 
+\begin_inset Formula $ \vec{y}=(2,2,4) $
+\end_inset
+
+. Тогда: 
+\begin_inset Formula $ \vec{x}\wedge \vec{y}=(2,2,1) $
+\end_inset
+
+ и 
+\begin_inset Formula $ \vec{x}\vee\vec{y}=(3,3,4) $
+\end_inset
+
+. Находим, что: 
+\begin_inset Formula $ f(\vec{x}\wedge \vec{y})=2 $
+\end_inset
+
+, 
+\begin_inset Formula $ f(\vec{x}\vee \vec{y})=4 $
+\end_inset
+
+, 
+\begin_inset Formula $ f(\vec{x})=3 $
+\end_inset
+
+, 
+\begin_inset Formula $ f(\vec{y})=4 $
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Нет. Если 
+\begin_inset Formula $ x=y $
+\end_inset
+
+, то 
+\begin_inset Formula $ x\wedge y=x\vee y=x=y $
+\end_inset
+
+ и 
+\begin_inset Formula $ f(x\wedge y)+f(x\vee y)= f(x)+f(y) $
+\end_inset
+
+. Если 
+\begin_inset Formula $ x\neq y $
+\end_inset
+
+, то одно из этих чисел больше, а другое --- меньше. А это значит, что 
+\begin_inset Formula $ x=x\wedge y $
+\end_inset
+
+ и 
+\begin_inset Formula $ y=x \vee y $
+\end_inset
+
+. Или наоборот, 
+\begin_inset Formula $ x=x\vee y $
+\end_inset
+
+ и 
+\begin_inset Formula $ y=x\wedge y $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Независимые случайные величины аффилированы: 
+\begin_inset Formula $ \ln(f(x,y,z)=\ln(f(x))+\ln(f(y))+\ln(f(z)) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Если 
+\begin_inset Formula $ f(x,y)=x+y $
+\end_inset
+
+, то 
+\begin_inset Formula \begin{equation}
+\frac{\partial^{2} \ln(f)}{\partial x \partial y}=-\frac{1}{(x+y)^{2}}<0
+\end{equation}
+\end_inset
+
+ Значит, величины не аффилированны. Кстати, в этом примере ради интереса можно посчитать ковариацию: 
+\begin_inset Formula $ E(X)=E(Y)=7/12 $
+\end_inset
+
+, 
+\begin_inset Formula $ E(XY)=1/3 $
+\end_inset
+
+, 
+\begin_inset Formula $ Cov(X,Y)=-1/144 $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+Если 
+\begin_inset Formula $ f(x,y)=\frac{1+4xy}{2} $
+\end_inset
+
+, то: 
+\begin_inset Formula \begin{equation}
+\frac{\partial^{2} \ln(f)}{\partial x \partial y}=...=\frac{4}{(1+4xy)^{2}}\geq 0
+\end{equation}
+\end_inset
+
+ Случайные величины аффилированны
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Для начала заметим, что ответ на вопрос не зависит от мат. ожидания и дисперсии. Это связано с тем, что в силу теоремы 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "supermod_crit"
+
+\end_inset
+
+ нужна только неотрицательность смешанной второй производной логарифма плотности при любых 
+\begin_inset Formula $ x $
+\end_inset
+
+ и 
+\begin_inset Formula $ y $
+\end_inset
+
+. Выбор мат. ожидания --- это перенос графика плотности вдоль осей, выбор дисперсии --- это растяжение графика плотности вдоль осей. Если была где-то точка с отрицательной второй смешанной производной, то она просто поменяет свои координаты.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Рассматриваем случай с нулевым мат. ожиданием и единичной дисперсией. Ковариационная матрица имеет вид: 
+\begin_inset Formula \begin{equation}
+S=\left(\begin{array}{cc}
+1 & \rho \\
+\rho & 1 \\
+\end{array} 
+\right)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Функция плотности равна:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p(x,y)=\frac{1}{2\pi det(S)} exp\left(-\frac{1}{2}(x\; y)S^{-1}(x\; y)^{t}\right)
+\end{equation}
+\end_inset
+
+ После логарифмирования получаем (нам интересна только смешанная вторая производная, поэтому следим только за коэффициентом при 
+\begin_inset Formula $ xy $
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\ln (p(x,y))=...+\frac{\rho}{1-\rho^{2}}xy
+\end{equation}
+\end_inset
+
+ Значит двумерное совместное нормальное распределение аффилированно если корреляция неотрицательная.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

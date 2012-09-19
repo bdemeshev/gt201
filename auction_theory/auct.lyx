@@ -1,0 +1,974 @@
+#LyX file created by tex2lyx 2.0.0rc2
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+
+%\input{e:/Documents/tex_general/title_bor_utf8}
+%\input{title_bor_utf8}
+\input{/home/boris/Dropbox/Public/tex_general/title_bor_utf8}
+%input{e:/Documents/Dropbox/tex_general/title_bor_utf8}
+
+
+%\usepackage{showkeys} % показывать метки
+
+%\usepackage{verbatim}
+
+\input{/home/boris/Dropbox/Public/tex_general/prob_and_sol_utf8}
+%\input{e:/Documents/Dropbox/tex_general/prob_and_sol_utf8}
+%\input{e:/Documents/tex_general/prob_and_sol_utf8}
+%\input{prob_and_sol_utf8}
+
+
+\newcommand{\winpro}{\phi} % специальный знак для \pi из Кришны
+
+\newcommand{\indef}[1]{\textbf{#1}}
+
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+
+
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;)
+\newtheorem{mydef}[equation]{Определение}
+
+\theoremstyle{definition}
+\newtheorem{myex}[equation]{Пример}
+
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+
+\theoremstyle{definition}
+\newtheorem*{myproof}{Доказательство}
+
+
+
+
+\title{Моделирование аукционов. Азбука. }
+\author{Борис Демешев}
+\date{\today}
+
+
+
+\makeindex % команда для создания предметного указателя
+\bibliographystyle{plain} % стиль оформления ссылок
+
+
+
+
+
+\end_preamble
+\options pdftex
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "lecture1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Контрольная 1
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "solut1.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "lecture2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Контрольная 2
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "solut2.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "lecture3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Контрольная 3
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "solut3.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Домашка 3
+\end_layout
+
+\begin_layout Standard
+
+Контрольная номер 3 оказалась чересчур сложной, поэтому студентам была предложена вместо нее домашка 3.
+\end_layout
+
+\begin_layout Enumerate
+
+Техническая задача. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Выразите 
+\begin_inset Formula $ (a+c)\vee (b+c) $
+\end_inset
+
+ через 
+\begin_inset Formula $ a\vee b $
+\end_inset
+
+. Выразите 
+\begin_inset Formula $ (a+c)\wedge (b+c) $
+\end_inset
+
+ через 
+\begin_inset Formula $ a\wedge b $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Enumerate
+
+Случайные величины 
+\begin_inset Formula $ Z_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ Z_{n} $
+\end_inset
+
+ аффилированы между собой. Случайные величины 
+\begin_inset Formula $ W_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ W_{k} $
+\end_inset
+
+ --- аффилированы между собой. Набор случайных величин 
+\begin_inset Formula $ Z_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ Z_{n} $
+\end_inset
+
+ не зависит от набора 
+\begin_inset Formula $ W_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ W_{k} $
+\end_inset
+
+. Верно ли, что набор случайных величин 
+\begin_inset Formula $ Z_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ Z_{n} $
+\end_inset
+
+, 
+\begin_inset Formula $ W_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ W_{k} $
+\end_inset
+
+ аффилирован? 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Пусть 
+\begin_inset Formula $  V $
+\end_inset
+
+ --- общая ценность товара для двух игроков, равномерна на 
+\begin_inset Formula $ [1;2] $
+\end_inset
+
+. Величины 
+\begin_inset Formula $ R_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ R_{2} $
+\end_inset
+
+ --- независимы между собой и с 
+\begin_inset Formula $ V $
+\end_inset
+
+ и равномерны на 
+\begin_inset Formula $ [-0.5;0.5] $
+\end_inset
+
+. По смыслу: 
+\begin_inset Formula $ R_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ R_{2} $
+\end_inset
+
+ --- это ошибки игроков при подсчете ценности товара 
+\begin_inset Formula $ V $
+\end_inset
+
+. Игроки получают сигналы 
+\begin_inset Formula $ X_{i}=V+R_{i} $
+\end_inset
+
+, т.е. игроки знают ценность 
+\begin_inset Formula $ V $
+\end_inset
+
+ с ошибкой. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Найдите совместную функцию плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+. Верно ли, что 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ аффилированны? 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ v(x,y)=E(V|X_{1}=x,Y_{1}=y) $
+\end_inset
+
+. Найдите равновесие Нэша на аукционе второй цены. 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите совместную функцию плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ g(x,y) $
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+Hint: В решении контрольной есть похожая задача. А 
+\begin_inset Formula $ g(x,y) $
+\end_inset
+
+ можно неплохо упростить пользуясь предыдущей задачей.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Пусть 
+\begin_inset Formula $ R_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ R_{2} $
+\end_inset
+
+ и 
+\begin_inset Formula $ S $
+\end_inset
+
+ --- равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ и независимы. Ценность товара для первого игрока, 
+\begin_inset Formula $ V_{1}=0.8X_{1}+0.2X_{2} $
+\end_inset
+
+ и для второго --- 
+\begin_inset Formula $ V_{2}=0.8X_{2}+0.2X_{1} $
+\end_inset
+
+. Первый игрок получает сигнал 
+\begin_inset Formula $ X_{1}=S+R_{1} $
+\end_inset
+
+. Второй игрок получает сигнал 
+\begin_inset Formula $ X_{2}=S+R_{2} $
+\end_inset
+
+. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ g(x,y) $
+\end_inset
+
+, 
+\begin_inset Formula $ R(y|x) $
+\end_inset
+
+ и 
+\begin_inset Formula $ v(x,y)=E(V|X_{1}=x,Y_{1}=y) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Используя предыдущие функции найдите равновесие Нэша на аукционе второй цены, первой цены и кнопочном аукционе 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% ??? (занудно) В рамках предыдущей задачи найдите $ g(y|x) $, $ G(y|x) $, $ R(y|x) $, $ R(x|x) $. Найдите равновесие Нэша на аукционе первой цены и кнопочном аукционе.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Hint: Обратите внимание, что в лекции $ X_{i} $ принимает значения на $ [0;1] $. Здесь $ X_{i} 
+\backslash
+in [0.5;2.5] $, поэтому при подсчете $ G(y|x) $ нижний предел интегрирования не равен 0.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Продолжение задачи 2 с контрольной (можно использовать все полученные в ней результаты). На аукционе продается картина, которая равновероятно является 
+\begin_inset Quotes ard
+\end_inset
+
+Джокондой
+\begin_inset Quotes ald
+\end_inset
+
+ Леонардо да Винчи или ее подделкой. За нее торгуются 
+\begin_inset Formula $ n $
+\end_inset
+
+ покупателей. Ценность картины для всех покупателей одинакова, 
+\begin_inset Formula $ V_{1}=V_{2}=...=V_{n}=V $
+\end_inset
+
+ и равна 1, если это оригинал и 0, если подделка.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Если 
+\begin_inset Formula $ V=0 $
+\end_inset
+
+, то сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ условно независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Если 
+\begin_inset Formula $ V=1 $
+\end_inset
+
+, то сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ условно независимы и имеют функцию плотности 
+\begin_inset Formula $ f(x|V=1)=2x $
+\end_inset
+
+ при 
+\begin_inset Formula $x\in [0;1] $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите равновесие Нэша на аукционе второй цены 
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ E(V|X_{1}=x_{1},X_{2}=x_{2},X_{3}=x_{3}\ldots X_{n}=x_{n}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+С помощью предыдущего пункта найдите функции 
+\begin_inset Formula $ b^{n}(x) $
+\end_inset
+
+, 
+\begin_inset Formula $ b^{n-1}(x,p_{n}) $
+\end_inset
+
+ и 
+\begin_inset Formula $ b^{n-2}(x,p_{n-1},p_{n}) $
+\end_inset
+
+ в равновесии Нэша на кнопочном аукционе 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+item 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Хм: страшные интегралы лезут отовсюду..
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Товар имеет общую ценность $ V $ для трех игроков, $ V $ равномерно на $ [0;1] $. При фиксированном $ V=v $ сигналы независимы и имеют функцию плостности: 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%f(x|v)=2v
+\backslash
+cdot x^{2v-1}, 
+\backslash
+quad x
+\backslash
+in[0;1]
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{enumerate}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+item Какой ожидаемый сигнал получают игроки, если $ V=0 $? $ V=0.5 $? $ V=1 $?
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+item Найдите $ g(x,y) $
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+item Найдите $ v(x,y)=E(V|X_{1}=x,Y_{1}=y) $ и равновесие Нэша на аукционе второй цены
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+item Найдите $ E(V|X_{1}=x_{1},X_{2}=x_{2},X_{3}=x_{3} )$ и равновесие Нэша на кнопочном аукционе
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{enumerate}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Hint: Можно пользоваться тем, что $  $
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Лекция 3 получилась трудной технически. Помогите будущим студентам ее понять! Придумайте задачу на тему лекции 3. Решите придуманную задачу. Можно пойти по простому пути --- взять уже имеющуюся задачу и поменять в ней что-нибудь. Можно попытаться придумать что-то своё, оригинальное. Оригинальные и красивые задачи с решениями могут получить оценку существенно выше 5 баллов.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+input{soldom3.tex}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "lecture4.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Контрольная 4
+\end_layout
+
+\begin_layout Standard
+
+Пока еще недоступна... 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+input{solut4.tex}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Прочие задачи
+\end_layout
+
+\begin_layout Standard
+
+Тут еще задачи...
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset include
+LatexCommand input
+preview false
+filename "auc_problems.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset index_print
+LatexCommand printindex
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "/home/boris/Dropbox/tex_general/opit"
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+bibliography{e:/Documents/Dropbox/tex_general/opit}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

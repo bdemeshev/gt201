@@ -1,0 +1,42 @@
+% для создания отдельной главы...
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\input{/home/boris/Dropbox/tex_general/title_bor_utf8}
+
+%\input{e:/Documents/tex_general/title_bor_utf8}
+%\input{title_bor_utf8}
+%\input{e:/Documents/tex_general/prob_and_sol_utf8}
+%\input{prob_and_sol_utf8}
+
+%\usepackage{showkeys} % показывать метки
+%\usepackage{verbatim}
+
+\newcommand{\indef}[1]{\textbf{#1}}
+
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;)
+\newtheorem{mydef}[equation]{Определение}
+\theoremstyle{definition}
+\newtheorem{myex}[equation]{Пример}
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+\theoremstyle{definition}
+\newtheorem*{myproof}{Доказательство}
+
+\title{Дистанционная авантюра.}
+\author{Борис Демешев}
+\date{\today}
+
+%\makeindex % команда для создания предметного указателя
+%\bibliographystyle{plain} % стиль оформления ссылок
+
+\begin{document}
+
+%\maketitle
+%\tableofcontents{}
+
+\input{coop_ex1}
+
+\end{document}

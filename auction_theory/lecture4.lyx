@@ -1,0 +1,7143 @@
+#LyX file created by tex2lyx 2.0.0rc2
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\options pdftex
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+
+Язык механизмов
+\end_layout
+
+\begin_layout Standard
+
+Как выглядит аукцион, если не вдаваться в детали? Природа случайно раздает игрокам сигналы. Затем игроки делают ставки. Затем правила аукциона определяют, кто получает товар и кто сколько платит.
+\end_layout
+
+\begin_layout Standard
+
+Если не обращать внимание на слово 
+\begin_inset Quotes ard
+\end_inset
+
+аукцион
+\begin_inset Quotes ald
+\end_inset
+
+, то так выглядят абсолютно все задачи, где нужно принять решение. И в этой лекции мы покажем, как аукцион второй цены неплохо справляется со всеми этими задачами!
+\end_layout
+
+\begin_layout Subsection
+
+Описание всех задач на языке механизмов
+\end_layout
+
+\begin_layout Standard
+
+Рассмотрим несколько примеров. Во всех примерах нужно выбрать одно решение из нескольких возможных и определить, кто сколько платит. В табличках будут находится полезности игроков в зависимости от принятого решение. Вопрос оплаты решения мы в табличках освещать не будем. Мы также забудем пока про то, что Природа сообщает игрокам какие-то сигналы.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Аукцион. Есть три игрока и один товар. Ценность товара для них равна 
+\begin_inset Formula $ V_{1} $
+\end_inset
+
+, 
+\begin_inset Formula $ V_{2} $
+\end_inset
+
+ и 
+\begin_inset Formula $ V_{3} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="4" columns="5">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Отдать товар игроку 1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Отдать товар игроку 2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Отдать товар игроку 3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Оставить товар у продавца 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Игрок 1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ V_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Игрок 2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ V_{2} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Игрок 3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ V_{3} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Можно рассмотреть различные вариации этой задачи. Например, добавить продавца как игрока или убрать решение 
+\begin_inset Quotes ard
+\end_inset
+
+Оставить товар у продавца
+\begin_inset Quotes ald
+\end_inset
+
+ из списка возможных.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "bridge"
+
+\end_inset
+
+ Общественное благо. Есть два города, 
+\begin_inset Formula $ A $
+\end_inset
+
+ и 
+\begin_inset Formula $ B $
+\end_inset
+
+, на разных берегах реки. Полезность моста для их жителей равна 
+\begin_inset Formula $ V_{A} $
+\end_inset
+
+ и 
+\begin_inset Formula $ V_{B} $
+\end_inset
+
+. Есть еще администрация области, для которой мост обойдется в сумму 
+\begin_inset Formula $ c $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Построить мост 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Не строить мост 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Жители города A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ V_{A} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Жители города B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ V_{B} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Администрация 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если администрация тратит не свои деньги, а скажем деньги из какого-то бюджета, который ни на что кроме моста потратить нельзя, тогда ее как игрока можно не учитывать, т.к. ей все равно, строить мост или не строить.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "pizza"
+
+\end_inset
+
+. Разносчик пиццы. Есть два клиента, A и B. От ресторана до A ехать 
+\begin_inset Formula $ a $
+\end_inset
+
+ минут, до B --- 
+\begin_inset Formula $ b $
+\end_inset
+
+ минут. От A до B ехать 
+\begin_inset Formula $ c $
+\end_inset
+
+ минут. Полезность клиента от пиццы равна времени доставки со знаком минус:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="3">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Ехать сначала к А потом к B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Ехать сначала к B потом к A 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Клиент А 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-a$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-b-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Клиент B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-a-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-b$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+При желании можно учесть и полезность разносчика пиццы. Например, как общее время доставки со знаком минус. Это будет другая игра. Наш случай означает, что разносчику все равно сколько тратить на дорогу. Скажем, его в ресторане все равно нагрузили бы какой-нибудь работой, если бы он приехал раньше. Можно еще добавить решения 
+\begin_inset Quotes ard
+\end_inset
+
+Ехать только к А
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+Ехать только к В
+\begin_inset Quotes ald
+\end_inset
+
+ и 
+\begin_inset Quotes ard
+\end_inset
+
+Не ехать ни к кому
+\begin_inset Quotes ald
+\end_inset
+
+. Но мы будем считать, что пицца безумно вкусна эти варианты даже не рассматриваются клиентами.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "sm_posuda"
+
+\end_inset
+
+ Мама сказала Саше и Маше помыть посуду и подмести пол. Допустим, что неудовольствие от мытья посуды для каждого из них равно 
+\begin_inset Formula $ (-a) $
+\end_inset
+
+, а от подметания пола --- 
+\begin_inset Formula $ (-b) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="5">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Саша моет посуду, Маша --- пол. 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Саша моет пол, Маша --- посуду. 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Все моет Саша. 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Все моет Маша. 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Саша 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 0 $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Маша 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 0 $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Итак, любой механизм решения задачи должен состоять из двух правил: правило, которое говорит, какое решение должно быть принято, и правило, которое говорит, кто и сколько платит.
+\end_layout
+
+\begin_layout Standard
+
+Некая дополнительная сложность состоит в том, что в реальности часто применяются случайные механизмы решения этих задач. В частности, Саша и Маша могут просто подкинуть монетку, чтобы принять решение. Поэтому правило выбора будет говорить, какими должны быть вероятности принятия каждого из решений.
+\end_layout
+
+\begin_layout Standard
+
+Итого, для описания механизмов нам понадобятся множества:
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ T_{i} $
+\end_inset
+
+ --- множество всех возможных сигналов, которые Природа может послать игроку 
+\begin_inset Formula $ i $
+\end_inset
+
+. В наших трех предыдущих лекциях --- множество возможных значений случайной величины 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Еще говорят, множество возможных типов игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Пример. Пусть каждый игрок знает свое 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Величины 
+\begin_inset Formula $ X_{i}  $
+\end_inset
+
+ равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. В этом случае 
+\begin_inset Formula $ T_{i}=[0;1] $
+\end_inset
+
+. Число 
+\begin_inset Formula $ x_{1} $
+\end_inset
+
+, конкретный сигнал, который получил первый игрок --- это элемент из 
+\begin_inset Formula $ T_{1} $
+\end_inset
+
+. 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+ --- множество
+\begin_inset Foot
+status collapsed
+
+
+\begin_layout Standard
+
+Не путайте с другими обозначениями! 
+\begin_inset Formula $ b_{i} $
+\end_inset
+
+ --- это конкретная ставка игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+, число; 
+\begin_inset Formula $ Bid_{i} $
+\end_inset
+
+ --- ставка игрока как случайная величина; 
+\begin_inset Formula $ b(x) $
+\end_inset
+
+ --- функция, которая говорит какую ставку делать в зависимости от сигнала.
+\end_layout
+
+\end_inset
+
+ всех возможных ходов игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Например, для аукциона первой цены --- это список возможных ставок игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+, 
+\begin_inset Formula $ B_{i}=[0;+\infty) $
+\end_inset
+
+. Число 
+\begin_inset Formula $ b_{1} $
+\end_inset
+
+, конкретная ставка, которую сделал первый игрок --- это элемент из 
+\begin_inset Formula $ B_{1} $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ B=B_{1}\times B_{2}\times \ldots B_{n} $
+\end_inset
+
+ --- декартово произведение множеств ходов отдельных игроков. Т.е. это набор всех возможных сочетаний ходов для наших игроков.
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ T=T_{1}\times T_{2}\times \ldots T_{n} $
+\end_inset
+
+ --- декартово произведение множеств типов отдельных игроков. Т.е. это набор всех возможных сочетаний типов для наших игроков.
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ \Delta $
+\end_inset
+
+ --- множество вероятностных распределений на списке решений.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Звучит страшно, но достаточно привести в пример пару элементов из 
+\begin_inset Formula $ \Delta $
+\end_inset
+
+, чтобы все стало ясно. Если мы выбираем между решениями 
+\begin_inset Formula $ a $
+\end_inset
+
+, 
+\begin_inset Formula $ b $
+\end_inset
+
+ и 
+\begin_inset Formula $ c $
+\end_inset
+
+, то элементами 
+\begin_inset Formula $ \Delta $
+\end_inset
+
+, например, будут: 
+\begin_inset Formula $ \{ $
+\end_inset
+
+Принять решение 
+\begin_inset Formula $ a\} $
+\end_inset
+
+, 
+\begin_inset Formula $ \{ $
+\end_inset
+
+Принять решение 
+\begin_inset Formula $ b $
+\end_inset
+
+ с вероятностью 0.1 и решение 
+\begin_inset Formula $c$
+\end_inset
+
+ с вероятностью 0.9 
+\begin_inset Formula $ \}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+С математической точки зрения, если у нас 
+\begin_inset Formula $ k $
+\end_inset
+
+ возможных решений, то 
+\begin_inset Formula $ \Delta $
+\end_inset
+
+ --- это все возможные векторы вероятностей: 
+\begin_inset Formula \begin{equation}
+\Delta=\{(p_{1},p_{2},...,p_{k})|\forall p_{i}\geq 0, \sum p_{i}=1 \}
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Можно считать, что $ 
+\backslash
+Delta $ --- это множество случаных величин значением которых является одно из решений.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+В этих обозначениях, например, стратегия 
+\begin_inset Formula $ i $
+\end_inset
+
+-го игрока --- это функция 
+\begin_inset Formula $ s_{i}:T_{i}\to B_{i} $
+\end_inset
+
+. Кстати, равновесие Нэша --- это набор стратегий по одной от каждого игрока, т.е. это функция 
+\begin_inset Formula $ NE:T\to B $
+\end_inset
+
+. Действительно, если заданы типы всех игроков и задано равновесие Нэша, то мы можем понять, какие ходы будут сделаны. Естественно, равновесие Нэша, это не произвольная такая функция --- нужно еще сказать, что никому не будет выгодно отклоняться, если все игроки расскажут друг другу свои стратегии.
+\end_layout
+
+\begin_layout Standard
+
+А механизм --- это правила игры:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Механизм. Описание механизма состоит из трех пунктов: 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+ --- список возможных ходов игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $\winpro:B\to \Delta  $
+\end_inset
+
+ --- правило распределения: фукнция, которая определяет вероятности принятия каждого решения в зависимости от ходов игроков. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $\mu:B\to \mathbb{R}^{n}  $
+\end_inset
+
+ --- правило платежей: функция, которая определяет кто и сколько платит в зависимости от ходов игроков. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Вообще говоря список ходов 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+, предлагаемый игроку 
+\begin_inset Formula $ i $
+\end_inset
+
+ может быть произвольным и никак не связанным со списком 
+\begin_inset Formula $ T_{i} $
+\end_inset
+
+ возможных состояний игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Три игрока и один товар. Для игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+ товар имеет ценность 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+, каждый игрок знает свое 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Величины 
+\begin_inset Formula $ X_{i}  $
+\end_inset
+
+ независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+В этом примере 
+\begin_inset Formula $ T_{i}=[0;1] $
+\end_inset
+
+. Но это никак не ограничивает нас в множестве ходов. Например, мы можем попросить наших трех игроков одновременно в разных комнатах станцевать вальс. В этом случае 
+\begin_inset Formula $B_{i} =\{ $
+\end_inset
+
+Множество возможных вальсов
+\begin_inset Formula $\}$
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Подобные механизмы использует Дед Мороз в детском саду: 
+\begin_inset Quotes ard
+\end_inset
+
+Кто расскажет самый лучший стишок...
+\begin_inset Quotes ald
+\end_inset
+
+ и тамада на свадьбе 
+\begin_inset Quotes ard
+\end_inset
+
+Кто назовет больше всего комплиментов невесте ...
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Мы же ограничимся прямыми механизмами. Прямой механизм прямо спрашивает у каждого игрока: 
+\begin_inset Quotes ard
+\end_inset
+
+Ты кто?
+\begin_inset Quotes ald
+\end_inset
+
+. Точнее говоря, 
+\begin_inset Quotes ard
+\end_inset
+
+Ты какого типа?
+\begin_inset Quotes ald
+\end_inset
+
+ или 
+\begin_inset Quotes ard
+\end_inset
+
+Какой сигнал послала тебе природа?
+\begin_inset Quotes ald
+\end_inset
+
+. Игрок при этом может сказать правду, а может и соврать. В прямом механизме множество возможных ходов совпадает с множеством типов игрока, 
+\begin_inset Formula $ T_{i}=B_{i} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Прямой механизм. В прямом механизме 
+\begin_inset Formula $ B_{i}=T_{i} $
+\end_inset
+
+ и его описание включает в себя: 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ Q:B\to \Delta $
+\end_inset
+
+ --- правило распределения: фукнция, которая определяет вероятности принятия каждого решения в зависимости от объявленных игроками своих типов 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ M:B\to \Delta $
+\end_inset
+
+ --- правило платежей: функция, которая определяет кто и сколько платит в зависимости от объявленных игроками своих типов 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Рассмотрим подробнее простую ситуацию. Три игрока и один товар. Для игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+ товар имеет ценность 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+, каждый игрок знает свое 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Величины 
+\begin_inset Formula $ X_{i}  $
+\end_inset
+
+ независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. В этом случае: 
+\begin_inset Formula $ T_{i}=[0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+В рамках этой ситации рассмотрим наши три аукциона на языке механизмов.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Чтобы разом решить проблему совпадения ставок нам потребуется еще одно несложное обозначение. Пусть игроки сделали ставки $ 
+\backslash
+vec{b} $. 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{mydef}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Обозначим $ players(
+\backslash
+vec{b},k) $ --- вектор из нулей и единиц, где единицы стоят для тех игроков, которые сделали $ k $-ые по величине ставки. Обозначим также $ 
+\backslash
+#players(
+\backslash
+vec{b},k) $ --- количество игроков, сделавших $ k $-ую по величине ставку. Саму $ k $-ую по величине ставку обозначим буквой $ M_{k}(
+\backslash
+vec{b}) $.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{mydef}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{myex} Если $ 
+\backslash
+vec{b}=(2,3,4,5,2,5) $, то  $ players(
+\backslash
+vec{b},1)=(0,0,0,1,0,1) $, $ players(
+\backslash
+vec{b},2)=(0,0,1,0,0,0) $, $ 
+\backslash
+#players(
+\backslash
+vec{b},1)=2 $, $
+\backslash
+#players(
+\backslash
+vec{b},2)=1$. Кроме того, $ M_{1}(
+\backslash
+vec{b})=5 $, $ M_{2}(
+\backslash
+vec{b})=4 $.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{myex}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Можно, например, связать с помощью скалярного произведения:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%M_{1}=
+\backslash
+frac{
+\backslash
+vec{b}
+\backslash
+cdot players(
+\backslash
+vec{b},1) }{
+\backslash
+#players(
+\backslash
+vec{b},1)}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Или:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+#players(
+\backslash
+vec{b},k)=players(
+\backslash
+vec{b},k)
+\backslash
+cdot players(
+\backslash
+vec{b},k)
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Аукцион первой цены. Товар достается тому, кто назвал наибольшую цену. Если таких игроков несколько --- выбираем победителя из них наугад. Победитель платит названную им самим цену.
+\end_layout
+
+\begin_layout Standard
+
+Можно считать, что механизм прямой и множество разрешенных ходов имеет вид 
+\begin_inset Formula $B_{i}=T_{i}=[0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Функция 
+\begin_inset Formula $ \winpro(\vec{b}) $
+\end_inset
+
+ говорит нам, с какой вероятностью побеждает тот или иной игрок при заданном 
+\begin_inset Formula $ \vec{b} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Например пятый игрок назвал цену выше всех: 
+\begin_inset Formula \begin{equation}
+\winpro(1,2,3,4,5)=(0,0,0,0,1)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Или, второй и третий игрок назвали наибольшую цену: 
+\begin_inset Formula \begin{equation}
+\winpro(1,3,3,1,2)=(0,0.5,0.5,0,0)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.е. функция 
+\begin_inset Formula $ \winpro $
+\end_inset
+
+ расставляет равные вероятности для игроков с наибольшей ставкой.
+\end_layout
+
+\begin_layout Standard
+
+А соответственно функция 
+\begin_inset Formula $ \mu(\vec{b}) $
+\end_inset
+
+ говорит, что только победитель платит. Но победитель выбирается наугад среди игроков с наибольшей ставкой, поэтому у всех игроков с наибольшей ставкой есть ожидаемый платеж.
+\end_layout
+
+\begin_layout Standard
+
+Например, если пятый игрок назвал цену выше всех: 
+\begin_inset Formula \begin{equation}
+\mu(1,2,3,4,5)=(0,0,0,0,5)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Или, второй и третий игрок назвали наибольшую цену: 
+\begin_inset Formula \begin{equation}
+\mu(1,3,3,1,2)=(0,1.5,1.5,0,0)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Функция распределения задает вероятности получения товара каждым игроком:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+winpro(
+\backslash
+vec{b})=
+\backslash
+frac{1}{
+\backslash
+#players(
+\backslash
+vec{b},1)}
+\backslash
+cdot players(
+\backslash
+vec{b},1) 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Функция $ 
+\backslash
+mu(
+\backslash
+vec{b}) $ должна описывать какой средний платеж должны сделать игроки, если известны их ставки. В нашем случае %платит только победитель. Но победитель выбирается наугад среди игроков с наибольшей ставкой, поэтому у всех игроков с наибольшей ставкой есть ожидаемый платеж:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+mu(
+\backslash
+vec{b})=
+\backslash
+frac{M_{1}(
+\backslash
+vec{b})}{
+\backslash
+#players(
+\backslash
+vec{b},1)}
+\backslash
+cdot players(
+\backslash
+vec{b},1) 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{equation}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Аукцион второй цены. Товар достается тому, кто назвал наибольшую цену. Если таких игроков несколько --- выбираем победителя из них наугад. Победитель платит вторую по величине цену.
+\end_layout
+
+\begin_layout Standard
+
+Можно считать, что механизм прямой и множество разрешенных ходов имеет вид 
+\begin_inset Formula $B_{i}=T_{i}=[0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Функция 
+\begin_inset Formula $ \winpro(\vec{b}) $
+\end_inset
+
+ точно такая же, как на аукционе первой цены, т.к. победитель --- это тот, кто назвал наибольшую ставку.
+\end_layout
+
+\begin_layout Standard
+
+Функция 
+\begin_inset Formula $ \mu(\vec{b}) $
+\end_inset
+
+ отличается. Она говорит, что победитель платит не свою, а вторую по величине ставку.
+\end_layout
+
+\begin_layout Standard
+
+Например, 
+\begin_inset Formula \begin{equation}
+\mu(1,2,3,4,5)=(0,0,0,0,4)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Или, 
+\begin_inset Formula \begin{equation}
+\mu(1,3,3,1,2)=(0,1,1,0,0)
+\end{equation}
+\end_inset
+
+ Единица --- взялась от деления двойки (второй по величине цены) на двух потенциальных победителей.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Кнопочный аукцион.
+\end_layout
+
+\begin_layout Standard
+
+Кнопочный аукцион не является прямым механизмом, т.к. множество возможных ходов существенно сложнее множества сигналов, которые может получить игрок. Полное описание этого аукциона с выписыванием функций 
+\begin_inset Formula $ \winpro $
+\end_inset
+
+ и 
+\begin_inset Formula $ \mu $
+\end_inset
+
+ в явном виде занудно. Поэтому мы ограничимся описанием множеств 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+. Зная выбор каждого игрока из его 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+ мы можем определить, кто выигрыл и сколько ему нужно платить, значит функции 
+\begin_inset Formula $ \winpro $
+\end_inset
+
+ и 
+\begin_inset Formula $ \mu $
+\end_inset
+
+ существуют.
+\end_layout
+
+\begin_layout Standard
+
+Представим себе, что первый игрок знает значение своего сигнала 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+. Ему нужно решить, до какой цены жать кнопку, пока кнопку жмут трое, т.е. нужно выбрать некое число в диапазоне 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Еще нужно решить до какой цены жать кнопку, когда осталось двое игроков, а самый слабый вышел на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+, т.е. нужно выбрать некую непрерывную на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ функцию.
+\end_layout
+
+\begin_layout Standard
+
+В результате 
+\begin_inset Formula $ B_{i}=[0;1]\times C[0;1] $
+\end_inset
+
+, т.е. 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+ --- это декартово произведение отрезка 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ на множество непрерывных на отрезке 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ функций.
+\end_layout
+
+\begin_layout Standard
+
+Для примера найдем 
+\begin_inset Formula $ \winpro(\vec{b})$
+\end_inset
+
+ и 
+\begin_inset Formula $ \mu(\vec{b}) $
+\end_inset
+
+ в точке 
+\begin_inset Formula $\vec{b}=((0.7,p+p^{2}),(0.5,2p),(0.8,p+p^{3})) $
+\end_inset
+
+. В данных условиях первым выйдет второй игрок, т.к. он жмет кнопку до момента времени 
+\begin_inset Formula $ t=0.5 $
+\end_inset
+
+. Далее останутся первый и третий игрок, которые подставят в свои функции 
+\begin_inset Formula $ p=0.5 $
+\end_inset
+
+. Значит первый будет жать кнопку до 
+\begin_inset Formula $ t=0.75 $
+\end_inset
+
+, а третий --- до 
+\begin_inset Formula $ t=0.625 $
+\end_inset
+
+. Аукцион окончится в 
+\begin_inset Formula $ t=0.625 $
+\end_inset
+
+ победой первого игрока: 
+\begin_inset Formula \begin{equation}
+\winpro((0.7,p+p^{2}),(0.5,2p),(0.8,p+p^{3}))=(1,0,0)
+\end{equation}
+\end_inset
+
+ И 
+\begin_inset Formula \begin{equation}
+\mu((0.7,p+p^{2}),(0.5,2p),(0.8,p+p^{3}))=(0.625,0,0)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Лишний раз стоит подчеркнуть, что 
+\begin_inset Formula $ (0.7,p+p^{2}) $
+\end_inset
+
+ --- это ход первого игрока. А стратегия игрока --- это функция, которая говорит, какой элемент из 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+ выбирать в зависимости от полученного сигнала из 
+\begin_inset Formula $ T_{i} $
+\end_inset
+
+. Т.е. стратегия это правило, которое каждому числу из 
+\begin_inset Formula $ T_{i}=[0;1] $
+\end_inset
+
+ сопоставляет конкретный ход, т.е. пару (число, функция) из 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Мы считаем, что организаторы честно исполняют описанные в механизме функции, даже если после того, как они узнали ставки, им стало выгодно изменить механизм. Это конечно не всегда так и тут уместно сделать небольшое лирическое отступление.
+\end_layout
+
+\begin_layout Standard
+
+В поезде Москва-Амстердам перегонщиком машин из Белоруссии была рассказана следующая история. Он купил машину на аукционе за 1200 евро, перегнал, дал объявление о продаже за 2000. Звонков много, и всем он сказал, что она уже продана. Потом дал новое объявление о продаже за 2500. Звонков много, и всем он сказал, что она уже продана. И т.д. Продал он ее, то ли за 3500, то ли за 3800, не помню.
+\end_layout
+
+\begin_layout Standard
+
+Именно поэтому в реальности на многих аукционах есть стартовая цена, а есть резервная цена и это не одно и тоже. Стартовая цена ---это цена с которой начинаются торги. Естественно, товар не может быть продан ниже стартовой цены. Стартовую цену игроки знают, а резервная цена известна только организаторам аукциона. Если торги не доходят до резервной цены, то товар остается у продавца, но он получает информацию о ставках. А если бы продавец начал торг с резервной цены, то он бы не получил информацию о ставках, т.к. их бы не было.
+\end_layout
+
+\begin_layout Subsection
+
+Правдивость и другие желательные свойства
+\end_layout
+
+\begin_layout Standard
+
+Когда механизм принятия решения объявлен игрокам, игроки будут выбирать свои стратегии. Какой механизм выбрать, чтобы в равновесии Нэша были достигнуты определенные цели?
+\end_layout
+
+\begin_layout Standard
+
+А теперь чудо-замена превращается в чудо-теорему, объясняющую почему можно изучать только прямые механизмы. Оказывается, любой механизм можно изменить так, чтобы он стал прямым, а игрокам было бы выгодно правдиво декларировать свои типы. При этом ни принимаемое решение, ни платежи никак не изменятся:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "revelation_principle"
+
+\end_inset
+
+ Пусть задан произвольный механизм 
+\begin_inset Formula $ (B,\winpro,\mu) $
+\end_inset
+
+ и равновесие Нэша 
+\begin_inset Formula $NE$
+\end_inset
+
+ в нем. Существует прямой механизм 
+\begin_inset Formula $ (Q,M) $
+\end_inset
+
+ и равновесие Нэша 
+\begin_inset Formula $NE'$
+\end_inset
+
+ в нем такое, что: 
+\end_layout
+
+\begin_layout Enumerate
+
+При любых типах игроков вероятностям принятия решений и платежи в 
+\begin_inset Formula $ NE $
+\end_inset
+
+ и 
+\begin_inset Formula $ NE' $
+\end_inset
+
+ совпадают. 
+\end_layout
+
+\begin_layout Enumerate
+
+В 
+\begin_inset Formula $ NE' $
+\end_inset
+
+ игроки правдиво сообщают свои типы 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Давайте вспомним логику нашей чудо-замены. Для конкретности можно представлять себе аукцион первой цены с симметричными игроками, но это нигде в доказательстве не используется.
+\end_layout
+
+\begin_layout Standard
+
+Первый игрок зная 
+\begin_inset Formula $ x $
+\end_inset
+
+ максимизирует функцию 
+\begin_inset Formula $ \winpro_{1}(x,b_{1}) $
+\end_inset
+
+ по 
+\begin_inset Formula $ b_{1} $
+\end_inset
+
+. При этом получается некое оптимальное 
+\begin_inset Formula $ b_{1}^{*} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Мы говорили: давайте заменим 
+\begin_inset Formula $ b_{1}=b(a) $
+\end_inset
+
+. И будем максимизировать по 
+\begin_inset Formula $ a $
+\end_inset
+
+. Неважно, что функция 
+\begin_inset Formula $ b() $
+\end_inset
+
+ пока еще неизвестна. Важно, нам заранее известен результат оптимизации по 
+\begin_inset Formula $ a $
+\end_inset
+
+! С одной стороны должно быть 
+\begin_inset Formula $ b_{1}^{*}=b(a^{*})$
+\end_inset
+
+, а с другой 
+\begin_inset Formula $ b() $
+\end_inset
+
+ --- это равновесная стратегия, поэтому 
+\begin_inset Formula $ b_{1}^{*}=b(x) $
+\end_inset
+
+. И при хороших свойствах 
+\begin_inset Formula $ b() $
+\end_inset
+
+ из этого следует 
+\begin_inset Formula $ a^{*}=x $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Что будет если мы реализуем нашу чудо-замену в реальности? Т.е. продавец обещает игрокам: вы мне говорите 
+\begin_inset Formula $ a $
+\end_inset
+
+, а я за вас сделаю ставку 
+\begin_inset Formula $ b(a) $
+\end_inset
+
+ на аукционе. Что тогда оптимально говорить игрокам? Игрокам оптимально говорить 
+\begin_inset Formula $ a^{*}=x $
+\end_inset
+
+, т.е. правдиво сообщать ценность товара для себя.
+\end_layout
+
+\begin_layout Standard
+
+Если организаторы аукциона будут сначала применять функцию 
+\begin_inset Formula $ b() $
+\end_inset
+
+ к ходам игроков, а затем использовать старый механизм, то игрокам будет выгодно правдиво декларировать свои типы.
+\end_layout
+
+\begin_layout Standard
+
+(картинка ...)
+\end_layout
+
+\begin_layout Standard
+
+Если игроки несимметричны, т.е. старый механизм давал равновесие 
+\begin_inset Formula $ (b_{1}(x),b_{2}(x),...,b_{n}(x)) $
+\end_inset
+
+, то в новом прямом механизме ход первого игрока предварительно обрабатывается функцией 
+\begin_inset Formula $ b_{1}() $
+\end_inset
+
+, ход второго --- функцией 
+\begin_inset Formula $ b_{2}() $
+\end_inset
+
+ и т.д.
+\end_layout
+
+\begin_layout Standard
+
+Более формально: Пусть равновесие 
+\begin_inset Formula $ NE $
+\end_inset
+
+ имеет вид 
+\begin_inset Formula $ \beta: T\to B $
+\end_inset
+
+. Смысл написанного: равновесие --- это функция, которая каждому набору типов игроков ставит в соответствие набор сделанных ими ходов. Если расписывать детально: 
+\begin_inset Formula $ \beta(x_{1},x_{2},...,x_{n})=(b_{1}(x_{1}),b_{2}(x_{2}),...,b_{n}(x_{n})) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Пусть 
+\begin_inset Formula $ \vec{x} $
+\end_inset
+
+ --- произвольный набор типов игроков, 
+\begin_inset Formula $ \vec{x}\in T $
+\end_inset
+
+. Определим прямой механизм по принципу: 
+\begin_inset Formula $ Q(\vec{x}):=\winpro(\beta(\vec{x})) $
+\end_inset
+
+ и 
+\begin_inset Formula $ M(\vec{x}):=\mu(\beta(\vec{x}))  $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+При этом автоматически оказывается, что при новом механизме равновесие Нэша 
+\begin_inset Formula $ NE' $
+\end_inset
+
+ будет иметь вид: 
+\begin_inset Formula $ \beta'(x_{1},x_{2},...,x_{n})=(x_{1},x_{2},...,x_{n}) $
+\end_inset
+
+. Действительно, если бы какому-то игроку не было выгодно правдиво декларировать свой тип 
+\begin_inset Formula $ x_{i} $
+\end_inset
+
+ в этой ситуации, то ему не было бы выгодно использовать стратегию 
+\begin_inset Formula $ b_{i}(x_{i}) $
+\end_inset
+
+ в исходном непрямом механизме.
+\end_layout
+
+\begin_layout Standard
+
+А если все игроки правдиво декларируют свои ценности, то и результат применения прямого механизма совпадает с результатом применения исходного непрямого механизма. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Применим нашу теорему к аукциону первой цены.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Когда мы решали аукцион первой цены в простейшем случае, 
+\begin_inset Formula $ X_{i}=V_{i} $
+\end_inset
+
+, ценности 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ мы установили, что оптимальная стратегия имеет вид 
+\begin_inset Formula $ b(x)=\frac{n-1}{n} x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Теорема говорит нам, что можно так поменять правила аукциона, что никому ни хуже ни лучше не станет, но игроки будут говорить правду. Как это сделать?
+\end_layout
+
+\begin_layout Standard
+
+Изменим правила аукциона. Победителем по прежнему будем считать игрока с наибольшей ставкой. А вот платить он будет не ровно свою ставку, а свою ставку, умноженную на 
+\begin_inset Formula $ \frac{n-1}{n} $
+\end_inset
+
+. Каждый игрок знает, что его ставка будет автоматом помножена на 
+\begin_inset Formula $ \frac{n-1}{n} $
+\end_inset
+
+. Значит теперь каждому выгодно говорить правду. А фактические платежи и победитель не поменялись! 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+На аукционе второй цены игроки говорят правду и без каких-то подправок.
+\end_layout
+
+\begin_layout Standard
+
+Теперь вместо того, чтобы изучать произвольные механизмы и произвольные равновесия Нэша в них, можно ограничиться изучением прямых механизмов и равновесий Нэша в которых игроки правдиво заявляют свой тип. Т.е. можно никогда не делать разницы между множествами 
+\begin_inset Formula $ B_{i} $
+\end_inset
+
+ и 
+\begin_inset Formula $ T_{i} $
+\end_inset
+
+. Кроме как на свадьбе и в детском саду :)
+\end_layout
+
+\begin_layout Standard
+
+Существует несколько свойств, которые мы хотели бы видеть у механизмов:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Правдивость. Прямой механизм называется правдивым, если в равновесии Нэша игроки правдиво декларируют свои сигналы. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Будем считать, что выполнены предпосылки теоремы об одинаковой доходности. Аукцион первой цены --- не правдив, аукцион второй цены --- правдив. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Эффективность. Механизм называется эффективным, если в равновесии Нэша принятое решение максимизирует суммарную полезность всех агентов. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Если выполнены предпосылки теоремы об одинаковой доходности, то аукционы первой и второй цены является эффективными механизмами. Действительно, в этом случае товар достается игроку с максимальной полезностью. Любое другое решение приведет к снижению совокупной полезности. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Нужно подчеркнуть, что эффективность не учитывает правило платежей! Когда мы говорим об эффективности механизма, мы говорим об эффективности правила распределения.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Индивидуальная рациональнасть. Механизм называется индивидуально рациональным, если игроки согласны участвовать в нем добровольно. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Индивидуальная рациональность учитывает правило платежей! Когда мы говорим об индивидуальной рациональности, мы учитываем и правило распределения и правило платежей.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Если выполнены предпосылки теоремы об одинаковой доходности, то аукционы первой и второй цены индивидуально рациональны, т.к. ожидаемый выигрыш каждого игрока неотрицательный. А пример 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sm_posuda"
+
+\end_inset
+
+ с Сашей и Машей, которым нужно помыть пол и посуду не будет индивидуально рациональным, если только мама не предложит им какую-нибудь компенсацию в виде похода в кино. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Оптимальность. Механизм называется оптимальным, если в равновесии Нэша организаторы получают от игроков максимально возможную ожидаемую прибыль. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если у нас есть диктаторские полномочия, т.е. мы можем заставить игроков участвовать в аукционе, то, очевидно, мы можем получить сколь угодно большую прибыль. Для этого просто надо потребовать от каждого заплатить достаточно много. Но такой аукцион не будет индивидуально рациональным. Поэтому обычно выбирают оптимальный механизм среди индивидуально рациональных.
+\end_layout
+
+\begin_layout Standard
+
+Иногда организаторам не нужно заработать денег. Бывает задача состоит в том, чтобы организовать игру так, чтобы в равновесии Нэша было принято некое желательное решение. Скажем, в примере со строительством моста организаторы могут быть заинтересованы в принятии решения 
+\begin_inset Quotes ard
+\end_inset
+
+построить мост
+\begin_inset Quotes ald
+\end_inset
+
+. Т.е. нам интересно принятие нужного решения, а не потоки платежей, которые возникают в связи с этим. В этом случае от механизма может требоваться:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Бюджетная сбалансированность. Механизм имеет сбалансированный бюджет, если в равновесии Нэша сумма платежей всех игроков равна нулю. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Стоит сразу сказать, что не всех этих свойств можно добиться одновременно. Для некоторых задач доказано, что не существует механизма, который был бы эффективен, правдив, индивидуально рационален и бюджетно сбалансирован.
+\end_layout
+
+\begin_layout Subsection
+
+Механизм VCG
+\end_layout
+
+\begin_layout Standard
+
+Есть универсальный механизм, который применим к множеству ситуаций. Этот механизм есть не что иное как аукцион второй цены. Давайте повнимательнее к нему присмотримся... Мы сознательно пока забудем про платежи и сосредоточимся только на полезности от получения товара.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Давайте ответим на очень простой вопрос на аукционе второй цены. 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Конкретный пример. У пяти игроков были ценности равные 
+\begin_inset Formula $ (1,3,7,11,25) $
+\end_inset
+
+. Ровно такие ставки они и сделали. Победил пятый игрок, который поставил 25. При этом он получил от товара полезность равную 25. Остальные четверо получили суммарную полезность 0.
+\end_layout
+
+\begin_layout Standard
+
+А что произошло бы если бы пятый не участвовал в аукционе? Тогда победил бы игрок с ценностью 11. При этом четверо игроков (кроме нынешного пятого) получили бы суммарную полезность равную 11.
+\end_layout
+
+\begin_layout Standard
+
+Заметим, что при удалении любого другого игрока сумма полезностей остальных (без учета платежей) не поменялась бы.
+\end_layout
+
+\begin_layout Standard
+
+Подводим итог. На аукционе второй цены:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Formula \begin{multline}
+\text{Выплата } i\text{-го игрока}=\\
+\text{Максимально достижимая суммарная полезность всех игроков кроме }i\text{-го} \\
+-\\
+\text{Текущая суммарная полезность всех игроков кроме }i\text{-го}
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Механизм Викри-Кларка-Гровса применяет эту идею к любой задаче. А именно он говорит:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+. Механизм VCG. Неформальное определение: 
+\end_layout
+
+\begin_layout Enumerate
+
+Правило распределение: выбрать решение, максимизирующее сумму полезностей. 
+\end_layout
+
+\begin_layout Enumerate
+
+Правило платежей: игрок 
+\begin_inset Formula $ i $
+\end_inset
+
+ платит суммарную потерю полезности остальных игроков от своего участия в игре. 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Опишем идею немножко более формально. Пусть множество возможных типов игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+ --- это числовое множество 
+\begin_inset Formula $ T_{i} $
+\end_inset
+
+, чаще всего отрезок. Мы рассматриваем только прямые механизмы, поэтому множество возможных ходов такое же, 
+\begin_inset Formula $ B_{i}=T_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Полезность игрока зависит от его типа и принятого решения, 
+\begin_inset Formula $ v_{i}(X_{i},w) $
+\end_inset
+
+. Т.е. типовая табличка имеет вид:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Решение 
+\begin_inset Formula $ w_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Решение 
+\begin_inset Formula $ w_{2} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Игрок 1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $v_{1}(X_{1},w_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $v_{1}(X_{1},w_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Игрок 2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $v_{2}(X_{2},w_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $v_{2}(X_{2},w_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Игрок 3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $v_{3}(X_{3},w_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $v_{3}(X_{3},w_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Единственное, что нужно уточнить --- это как трактовать игру без игрока $ i $. Подходящая нам трактовка такова --- сигнал игрока $ i $ имеет наименьшее возможное значение, т.е. $ X_{i}=
+\backslash
+alpha_{i} $.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+В теореме мы используем обозначения:
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ --- ход, сделанный игроком 
+\begin_inset Formula $ i $
+\end_inset
+
+, поскольку механизм прямой, это есть заявленный им тип. 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $w^{*}$
+\end_inset
+
+ --- оптимальное решение при типах 
+\begin_inset Formula $ (b_{1},b_{2},...,b_{n}) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $w_{-i}^{*} $
+\end_inset
+
+ --- оптимальное решение при типах 
+\begin_inset Formula $ (b_{1},...,b_{i-1},-,b_{i+1},...,b_{n}) $
+\end_inset
+
+, т.е. в случае если 
+\begin_inset Formula $ i $
+\end_inset
+
+-ый игрок не участвует. 
+\end_layout
+
+\begin_layout Standard
+
+Итак, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Механизм VCG, механизм Викри-Кларка-Гровса --- это прямой механизм, в котором: 
+\end_layout
+
+\begin_layout Enumerate
+
+Множество 
+\begin_inset Formula $ B_{i}=T_{i} $
+\end_inset
+
+, т.е. каждому игроку предлагают сказать свой тип. 
+\end_layout
+
+\begin_layout Enumerate
+
+Правило распределения: выбирается то решение 
+\begin_inset Formula $ w $
+\end_inset
+
+, которое максимизирует сумму полезностей игроков при задекларированных ходах. Если таких решений несколько, то оно выбирается равновероятно. 
+\begin_inset Formula \begin{equation}
+\max_{w} \sum_{i} v_{i}(b_{i},w) 
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+Правило платежей: платеж 
+\begin_inset Formula $ i $
+\end_inset
+
+-го игрока есть разница между: максимально возможной суммарной полезностью остальных игроков, если 
+\begin_inset Formula $ i $
+\end_inset
+
+-ый не участвует в игре, и суммарной полезностью остальных игроков при текущем решении. 
+\begin_inset Formula \begin{equation}
+M_{i}(\vec{b})=\sum_{j\neq i} v_{j}(b_{j},w_{-i}^{*})-\sum_{j\neq i} v_{j}(b_{j},w^{*})
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Мы сейчас докажем, что в механизме VCG стратегия игрока 
+\begin_inset Quotes ard
+\end_inset
+
+правдиво декларировать свой тип
+\begin_inset Quotes ald
+\end_inset
+
+ нестрого доминирует все остальные. Но перед доказательством разберем пару примеров:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Применение механизма VCG к разносчику пиццы, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pizza"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Сначала определим, какое решение примет механизм VCG. Для этого посчитаем сумму полезностей.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<column alignment="none" valignment="top" width="3cm">
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Ехать сначала к А потом к B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Ехать сначала к B потом к A 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Клиент А 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-a$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-b-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Клиент B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-a-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-b$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Сумма полезностей
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-2a-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-2b-c$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.е. механизм VCG выберет наикратчайший путь. Для определенности будем считать, что 
+\begin_inset Formula $ a<b<c $
+\end_inset
+
+. В этом случае, разносчик пиццы едет сначала к А, потом к В.
+\end_layout
+
+\begin_layout Standard
+
+Теперь определим для случая 
+\begin_inset Formula $ a<b $
+\end_inset
+
+ кто и сколько платит.
+\end_layout
+
+\begin_layout Standard
+
+Сколько платит игрок А? Если бы A не было, то оптимальным был бы путь к В напрямую и тот получил бы полезность 
+\begin_inset Formula $ -b $
+\end_inset
+
+. Сейчас B получает полезность 
+\begin_inset Formula $ -a-c $
+\end_inset
+
+. Стало быть игрок А должен заплатить 
+\begin_inset Formula $ -b-(-a-c)=a+c-b $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Сколько платит игрок В? Если бы B не было, то оптимальным был бы путь к А напрямую и тот получил бы полезность 
+\begin_inset Formula $ -a $
+\end_inset
+
+. Сейчас А получает полезность 
+\begin_inset Formula $ -a $
+\end_inset
+
+. Стало быть игрок В ничего не платит, 
+\begin_inset Formula $ -a-(-a)=0 $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Применение механизма VCG к строительству моста, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "bridge"
+
+\end_inset
+
+. Для примера возьмем конкретные значения 
+\begin_inset Formula $ V_{A} $
+\end_inset
+
+, 
+\begin_inset Formula $ V_{B} $
+\end_inset
+
+ и 
+\begin_inset Formula $ c $
+\end_inset
+
+. Посчитаем сумму полезностей. Зная сумму определим, какое решение примет VCG.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="3">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Построить мост 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Не строить мост 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Жители города A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ +60 $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Жители города B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ +90 $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Администрация 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $-100 $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Сумма 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
++50 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.е. механизм VCG говорит: строим мост.
+\end_layout
+
+\begin_layout Standard
+
+Теперь считаем, кто и сколько платит.
+\end_layout
+
+\begin_layout Standard
+
+Сколько платят жители А? Если бы их не было, то оптимальным было бы решение не строить мост и остальные игроки получили бы полезность 0. Сейчас остальные игроки получают в сумме 
+\begin_inset Formula $ (-10) $
+\end_inset
+
+. Значит жители 
+\begin_inset Formula $ A $
+\end_inset
+
+ платят 
+\begin_inset Formula $ 0-(-10)=10 $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Сколько платят жители В? Если бы их не было, то оптимальным было бы решение не строить мост и остальные игроки получили бы полезность 0. Сейчас остальные игроки получают в сумме 
+\begin_inset Formula $ (-40) $
+\end_inset
+
+. Значит жители В платят 
+\begin_inset Formula $ 0-(-40)=40 $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Тут мы видим существенный недостаток механизма VCG: а именно бюджетную несбалансированность. Чтобы сделать то, что советует VCG, нужно взять откуда-то с потолка еще 50 рублей. И это проблема не конкретно механизма VCG, а именно несовместимость некоторых желательных свойств. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Естественно, возникает вопрос: а как механизм VCG добьется того, чтобы максимизировать суммарную полезность? Ведь для этого надо знать истинные полезности игроков! А вдруг они соврали, когда сообщали свои типы? Ответ, естественно, состоит в том, что игрокам выгодно правдиво сообщать свои типы:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ При использовании механизма VCG стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+Правдиво декларировать свой тип, 
+\begin_inset Formula $ b_{i}(x_{i})=x_{i} $
+\end_inset
+
+
+\begin_inset Quotes ald
+\end_inset
+
+ нестрого доминирует остальные стратегии игрока 
+\begin_inset Formula $ i $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Посчитаем полезность первого игрока полезность в случае, если игроки делают ходы 
+\begin_inset Formula $ (b_{1},...,b_{n}) $
+\end_inset
+
+, не обязательно правдивые.
+\end_layout
+
+\begin_layout Standard
+
+Общая полезность с учетом решения и платежа равна: 
+\begin_inset Formula \begin{multline}
+v_{1}(x_{1},w^{*})-M_{1}=v_{1}(x_{1},w^{*})-\left(\sum_{j=2}^{n}v_{j}(b_{j},w_{-1}^{*})-\sum_{j=2}^{n}v_{j}(b_{j},w^{*})\right)=\\
+=v_{1}(x_{1},w^{*})+\sum_{j=2}v_{j}(b_{j},w^{*})-\sum_{j=2}^{n}v_{j}(b_{j},w_{-1}^{*})
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Первый игрок выбирает 
+\begin_inset Formula $ b_{1} $
+\end_inset
+
+. На что оно влияет? Оно влияет только на исход 
+\begin_inset Formula $ w^{*} $
+\end_inset
+
+! Первый игрок не в силах изменить, ни 
+\begin_inset Formula $ w_{-1}^{*} $
+\end_inset
+
+, т.к. это игра без него, ни ходы 
+\begin_inset Formula $ b_{j} $
+\end_inset
+
+ остальных игроков. Т.е. выбор хода 
+\begin_inset Formula $ b_{1} $
+\end_inset
+
+ не меняет вычитаемого.
+\end_layout
+
+\begin_layout Standard
+
+Оставшиеся два слагаемых, на которые первый игрок может влиять выбором хода 
+\begin_inset Formula $ b_{1} $
+\end_inset
+
+, --- это не что иное, как суммарная полезность всех игроков, если бы их типы были бы равны 
+\begin_inset Formula $ (x_{1},b_{2},b_{3},...,b_{n}) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+А правило распределения 
+\begin_inset Formula $ w^{*} $
+\end_inset
+
+ обеспечивает максимизацию суммарной полезности для задекларированных типов 
+\begin_inset Formula $ (b_{1},b_{2},...,b_{n}) $
+\end_inset
+
+. Значит, если первый игрок сообщит 
+\begin_inset Formula $ b_{1}=x_{1} $
+\end_inset
+
+, то правило 
+\begin_inset Formula $ w^{*} $
+\end_inset
+
+ само максимизирует его полезность.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Из этого, конечно, следует, что профиль стратегий, где все игроки правдиво декларируют свой тип, является равновесием Нэша.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Есть небольшая вариация этого механизма, механизм AVG.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Упражнение:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Опишите механизм AVG для аукциона трех игроков.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Есть и другой подход к обобщению идеи аукциона второй цены. И этот подход также активно используется.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Обобщенный аукцион второй цены, Generalized Second Price auction, GSP.
+\end_layout
+
+\begin_layout Standard
+
+Как Google делает деньги? Около 98% своих денег Google делает на продаже рекламных ссылок. Есть несколько рекламных мест, которые показываются, когда пользователь запрашивает в поисковике какое-нибудь слово, например 
+\begin_inset Quotes ard
+\end_inset
+
+Абрикос
+\begin_inset Quotes ald
+\end_inset
+
+. Эти места отличаются по престижности. А именно, места отличаются по среднему количеству переходов в час, 
+\begin_inset Quotes ard
+\end_inset
+
+кликов
+\begin_inset Quotes ald
+\end_inset
+
+ мышкой по ссылке.
+\end_layout
+
+\begin_layout Standard
+
+У каждого игрока есть мнение о ценности одного 
+\begin_inset Quotes ard
+\end_inset
+
+клика
+\begin_inset Quotes ald
+\end_inset
+
+. Желающие получить эти рекламные места одновременно делают свои ставки.
+\end_layout
+
+\begin_layout Standard
+
+Игрок, сделавший самую большую ставку получает самое престижное место, игрок сделавший вторую по величине ставку, получает второе по престижности место и т.д. При этом победитель платит за каждый 
+\begin_inset Quotes ard
+\end_inset
+
+клик
+\begin_inset Quotes ald
+\end_inset
+
+ не свою ставку, а вторую по величине ставку; игрок получивший второе по престижности место платит за каждый 
+\begin_inset Quotes ard
+\end_inset
+
+клик
+\begin_inset Quotes ald
+\end_inset
+
+ ставку игрока, получившего третье по престижности место и т.д. Игрок выигравший самое непрестижное рекламное место, платит за каждый 
+\begin_inset Quotes ard
+\end_inset
+
+клик
+\begin_inset Quotes ald
+\end_inset
+
+ самую высокую ставку среди игроков, которые ничего не выиграли.
+\end_layout
+
+\begin_layout Standard
+
+Есть еще разные тонкости, но основная идея верна. Желающие могут сами поиграться на 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+adwords.google.com
+\end_layout
+
+\end_inset
+
+. Например, за сумму в несколько долларов можно сделать страницу-сюрприз, которая будет выводиться первой при поиске на фразу 
+\begin_inset Quotes ard
+\end_inset
+
+день рождения Васи Петрова
+\begin_inset Quotes ald
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Но все же общим корнем VCG и GSP является аукцион второй цены.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Оптимальный аукцион
+\end_layout
+
+\begin_layout Standard
+
+А сейчас мы увидим, что в простейшей ситуации аукцион второй цены с резервной ценой оптимален.
+\end_layout
+
+\begin_layout Standard
+
+Пусть каждый покупатель знает ценность товара для себя, т.е. 
+\begin_inset Formula $ X_{i}=V_{i} $
+\end_inset
+
+. Кроме того предположим, что каждая ценность имеет регулярное распределение, описываемое функцией распределения 
+\begin_inset Formula $ F_{i}(x) $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Что произошло бы, если бы никакого аукциона не было, и продавец просто предложил бы каждому покупателю купить у него товар по цене 
+\begin_inset Formula $ x $
+\end_inset
+
+? В этом случае игрок 
+\begin_inset Formula $ i $
+\end_inset
+
+ согласился бы на покупку, если 
+\begin_inset Formula $ X_{i}>x $
+\end_inset
+
+, а вероятность этого равна: 
+\begin_inset Formula \begin{equation}
+P(X_{i}>x)=1-F_{i}(x)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+И при отсутствии аукциона, средний доход продавца от 
+\begin_inset Formula $ i $
+\end_inset
+
+-го игрока был бы равен: 
+\begin_inset Formula \begin{equation}
+TR_{i}=x(1-F_{i}(x))
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+По сравнению с обычной формулой 
+\begin_inset Formula $ TR(Q)=P(Q)\cdot Q $
+\end_inset
+
+: 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ x $
+\end_inset
+
+ --- это аналог цены 
+\begin_inset Formula $ P(Q) $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ 1-F_{i}(x) $
+\end_inset
+
+ --- это аналог количества товара 
+\begin_inset Formula $ Q $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Как обычно в экономике можно определить предельный доход продавца, 
+\begin_inset Formula $ TR'(Q) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{multline}
+MR_{i}(x)=\frac{d TR_{i}(x)}{d(1-F_{i}(x))}=x+(1-F_{i}(x))\frac{dx}{d(1-F_{i}(x))}=\\
+=x+(1-F_{i}(x))\frac{-1}{f(x)}=x-\frac{1-F_{i}(x)}{f_{i}(x)}
+\end{multline}
+\end_inset
+
+ Мы воспользовались тем, что производная обратной функции --- это единица делить на производную исходной.
+\end_layout
+
+\begin_layout Standard
+
+Эта величина --- скорость роста ожидаемого дохода продавца при росте вероятности сделки. Если она положительна, значит продавец заинтересован в росте вероятности сделки, т.е. в снижении 
+\begin_inset Formula $ v $
+\end_inset
+
+. Если она отрицательна, значит продавец заинтересован в снижении вероятности сделки, т.е. в росте 
+\begin_inset Formula $ v $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Оказывается, что величина 
+\begin_inset Formula $ MR_{i} $
+\end_inset
+
+ возникает и при моделировании аукционов. А именно:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula \begin{equation}
+E(pay_{1}(X_{1}))=E(q_{1}(X_{1})MR_{1}(X_{1}))
+\end{equation}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Мы будем изучать первого игрока, и поэтому опустим индекс 
+\begin_inset Formula $ 1 $
+\end_inset
+
+, чтобы было меньше писанины.
+\end_layout
+
+\begin_layout Standard
+
+Для доказательства вспомним формулу из теоремы об одинаковой доходности первой лекции: 
+\begin_inset Formula \begin{equation}
+pay(x)=xq(x)-\int_{0}^{x}q(t)dt 
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Тогда мы считали, что все игроки используют равновесные стратегии. И при этом трактовали функции как:
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ q(x) $
+\end_inset
+
+ --- вероятность того, что первый игрок выиграет, если его ценность равна 
+\begin_inset Formula $ x $
+\end_inset
+
+. 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ pay(x) $
+\end_inset
+
+ --- средняя выплата от первого игрока продавцу, если его ценность равна 
+\begin_inset Formula $ x $
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+Теперь представим себе, что как в теореме 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "revelation_principle"
+
+\end_inset
+
+ мы заменили исходный механизм прямым, т.е. продавец автоматом обрабатывает поступающие к нему сообщения о типах равновесными функциями 
+\begin_inset Formula $ b_{i} $
+\end_inset
+
+. Тогда получается новая трактовка старых функций:
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ q(x) $
+\end_inset
+
+ --- вероятность того, что первый игрок выиграет, если сообщит ценность 
+\begin_inset Formula $ x $
+\end_inset
+
+, а остальные правдиво сообщат свои ценности 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset Formula $ pay(x) $
+\end_inset
+
+ --- средняя выплата от первого игрока, если он сообщит ценность 
+\begin_inset Formula $x$
+\end_inset
+
+, а остальные правдиво сообщат свои ценности 
+\end_layout
+
+\begin_layout Standard
+
+Поехали: 
+\begin_inset Formula \begin{multline}
+E(pay(X_{1})=\int_{0}^{1} pay(x)f(x)dx=\int_{0}^{1} \left( xq(x)-\int_{0}^{x}q(t)dt \right) f(x) dx=\\
+\int_{0}^{1}xq(x)f(x)dx-\int_{0}^{1}\int_{0}^{x}q(t)dt f(x)dx
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Применим к вычитаемому формулу интегрирования по частям: 
+\begin_inset Formula \begin{multline}
+\int_{0}^{1}\int_{0}^{x}q(t)dt f(x)dx=\left. \int_{0}^{x}q(t)dt F(x)\right|_{0}^{1}-\int_{0}^{1}q(x)F(x)dx=\\
+=\int_{0}^{1} q(x)dx-\int_{0}^{1}q(x)F(x)dx=\int_{0}^{1} q(x)(1-F(x))dx
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Подставляем полученный результат в исходную формулу: 
+\begin_inset Formula \begin{multline}
+E(pay(X_{1})=\int_{0}^{1}xq(x)f(x)dx-\int_{0}^{1} q(x)(1-F(x))dx=\\
+=\int_{0}^{1}q(x)f(x)\cdot \left(x-\frac{1-F(x)}{f(x)} \right)dx=E(q(X_{1})\cdot MR(X_{1}))
+\end{multline}
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Польза от этой теоремы в том, что с помощью нее легко определить оптимальный аукцион.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Предположим, что функции 
+\begin_inset Formula $ MR_{i}(x)=x-\frac{1-F_{i}(x)}{f_{i}(x)} $
+\end_inset
+
+ для каждого игрока не убывают. Оптимальный аукцион устроен по принципу: 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+[
+\end_layout
+
+\end_inset
+
+1.1.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+]
+\end_layout
+
+\end_inset
+
+ Товар достается покупателю с наибольшим 
+\begin_inset Formula $ MR_{i}(X_{i}) $
+\end_inset
+
+, если оно неотрицательно. Если таких покупателей несколько, то он выбирается из них равновероятно. 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+[
+\end_layout
+
+\end_inset
+
+1.2.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+]
+\end_layout
+
+\end_inset
+
+ Если наибольшеe 
+\begin_inset Formula $ MR_{i}(x_{i})<0 $
+\end_inset
+
+, то товар остается у продавца 
+\end_layout
+
+\begin_layout Itemize
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+[
+\end_layout
+
+\end_inset
+
+2.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+]
+\end_layout
+
+\end_inset
+
+ Победитель платит минимально возможную ставку, при которой он еще остался бы победителем: 
+\begin_inset Formula \begin{equation}
+M_{i}=\inf\{ t| MR_{i}(t)\geq 0 , MR_{i}(t)\geq MR_{j}(X_{j}) \forall j \}
+\end{equation}
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ Что делает оптимальный аукцион? Он должен максимизировать 
+\begin_inset Formula $ E(R)=E(pay_{1}(X_{1}))+...+ E(pay_{1}(X_{n}))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Как мы только что доказали, 
+\begin_inset Formula $E(pay_{i}(X_{i}))=E(q_{i}(X_{i})MR_{i}(X_{i}))$
+\end_inset
+
+. Выбирая правила аукциона мы не можем влиять на 
+\begin_inset Formula $ MR_{i}(X_{i}) $
+\end_inset
+
+, т.к. это характеристика распределения ценностей. Мы можем только влиять на вероятности получения товара каждым из игроков, т.е. на функцию 
+\begin_inset Formula $ q_{i}() $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Предлагаемое правило распределения сделает максимум возможного! Оно помножит на 0 отрицательные 
+\begin_inset Formula $ MR_{i}(X_{i}) $
+\end_inset
+
+. При наличии положительных 
+\begin_inset Formula $ MR_{i}(X_{i}) $
+\end_inset
+
+, оно помножит на единицу наибольшее из них, а остальные помножит на 0. Значит оно максимизирует ожидаемую прибыль продавца.
+\end_layout
+
+\begin_layout Standard
+
+Остался один вопрос. А сможет ли это правило работать? Ведь, чтобы определить 
+\begin_inset Formula $ MR_{i}(X_{i}) $
+\end_inset
+
+, надо знать настоящее 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+. Т.е. осталось доказать, что при использовании этого правила игроки правдиво декларируют свои ценности.
+\end_layout
+
+\begin_layout Standard
+
+Как и в первой лекции построим сравнительную табличку. Результат аукциона для первого игрока зависит от его собственной ставки и от 
+\begin_inset Formula $ m=\max\{0,MR_{2}(X_{2}),...,MR_{n}(X_{n})\} $
+\end_inset
+
+. 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="4">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ m\leq MR_{1}(X_{1}-\Delta) $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ m\in [MR_{1}(X_{1}-\Delta);MR_{1}(X_{1})] $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ m\geq MR_{1}(X_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ b_{1}=X_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ X_{1}-M_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ X_{1}-M_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $b_{1}=X_{1}-\Delta $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ X_{1}-M_{1} $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Разница только во втором столбце. В этом случае 
+\begin_inset Formula $ MR_{1}(X_{1})\geq MR_{j}(X_{j}) $
+\end_inset
+
+ и 
+\begin_inset Formula $ MR_{1}(X_{1})\geq 0 $
+\end_inset
+
+. Значит величина 
+\begin_inset Formula $ X_{1}-M_{1}\geq 0 $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Аналогично доказывается, что и отклоняться в положительную сторону также невыгодно.
+\end_layout
+
+\begin_layout Standard
+
+Платежи возникающие в матрице неотрицательные. Это означает, что механизм индивидуально рационален и игроков не надо в него затаскивать принудительно. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Применим эту теорему к случаю симметричных игроков.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Если все функции 
+\begin_inset Formula $ MR_{i}(x) $
+\end_inset
+
+ одинаковые и возрастают по 
+\begin_inset Formula $ x $
+\end_inset
+
+, то товар либо достается игроку с наибольшим 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+, либо не достается никому. Товар не достается никому, если 
+\begin_inset Formula \begin{equation}
+MR(\max\{X_{i}\})<0
+\end{equation}
+\end_inset
+
+ Это условие можно записать и как: 
+\begin_inset Formula \begin{equation}
+\max\{X_{i}\}<MR^{-1}(0)
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Т.е. на аукционе есть победитель, если максимальная ставка достигла отметки 
+\begin_inset Formula $ MR^{-1}(0) $
+\end_inset
+
+. Сколько платит победитель? Чтобы остаться победителем, минимальная ставка которую нужно сделать должна удовлетворять условию 
+\begin_inset Formula $ MR(t)\geq 0 $
+\end_inset
+
+ и быть больше других ставок. Действительно: 
+\begin_inset Formula \begin{equation}
+M=\inf\{ t| MR(t)\geq 0 , MR(t)\geq MR(X_{j}) \forall j \} \Longleftrightarrow \inf\{ t| MR(t)\geq 0 , t\geq X_{j} \forall j \}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Таким образом мы доказали, что для симметричных игроков оптимальным аукционом будет аукцион второй цены с резервной ценой равной 
+\begin_inset Formula $ r=MR^{-1}(0) $
+\end_inset
+
+. 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Стоит отметить, что если ценности независимы, но имеют разное распределение, то аукцион второй цены с резервной ценой может не быть оптимальным. Это связано с тем, что на аукционе второй цены побеждает игрок с наибольшей ценностью, а в оптимальном аукционе нужно чтобы победил игрок с наибольшей 
+\begin_inset Formula $ MR_{i} $
+\end_inset
+
+. Если фукнции 
+\begin_inset Formula $ MR_{i} $
+\end_inset
+
+ отличаются, то эти условия могут не совпадать.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ На аукционе 
+\begin_inset Formula $ n $
+\end_inset
+
+ игроков. Ценности независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Какими должны быть правила проведения аукциона, чтобы максимизировать ожидаемую доходность продавца?
+\end_layout
+
+\begin_layout Standard
+
+Находим 
+\begin_inset Formula $ MR(x)$
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+MR(x)=x-\frac{1-x}{1}=2x-1
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Функция монотонно возрастает, поэтому оптимальный аукцион --- это аукцион второй цены с резервной ценой. Находим цену из уравнение 
+\begin_inset Formula $ MR(r)=0 $
+\end_inset
+
+. Получаем 
+\begin_inset Formula $ r=0.5 $
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Спасибо!
+\end_layout
+
+\begin_layout Standard
+
+Вот, пожалуй, и всё. Надеюсь, вам понравилось. Спасибо!
+\end_layout
+
+\begin_layout Subsection
+
+Задачи
+\end_layout
+
+\begin_layout Enumerate
+
+Найдите 
+\begin_inset Formula $ E(MR_{i}(X_{i})) $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+Рассмотрите задачу разносчика пиццы, 
+\begin_inset Formula $ a<b<c<1/4 $
+\end_inset
+
+. Помимо двух основных также есть варианты: 
+\begin_inset Quotes ard
+\end_inset
+
+Ехать только к А
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+Ехать только к В
+\begin_inset Quotes ald
+\end_inset
+
+ и 
+\begin_inset Quotes ard
+\end_inset
+
+Не ехать ни к кому
+\begin_inset Quotes ald
+\end_inset
+
+. Полезность заказчика от доставленной пиццы равна 1. Какое решение будет принято и сколько заплатят игроки при применении механизма VCG?
+\end_layout
+
+\begin_layout Enumerate
+
+Рассмотрите задачу разносчика пиццы с двумя игроками и с учетом самого разносчика пиццы, 
+\begin_inset Formula $ a<b<c<1/4 $
+\end_inset
+
+, где помимо двух основных также есть варианты: 
+\begin_inset Quotes ard
+\end_inset
+
+Ехать только к А
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+Ехать только к В
+\begin_inset Quotes ald
+\end_inset
+
+ и 
+\begin_inset Quotes ard
+\end_inset
+
+Не ехать ни к кому
+\begin_inset Quotes ald
+\end_inset
+
+. Полезность заказчика от доставленной пиццы равна 1. Полезность разносчика пиццы равно времени потраченному на дорогу в одну сторону со знаком минус. Какое решение будет принято и сколько заплатят игроки при применении механизма VCG?
+\end_layout
+
+\begin_layout Enumerate
+
+Какое решение будет принято, сколько заплатят игроки при использовании механизма VCG в задаче про посуду, 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sm_posuda"
+
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Enumerate
+
+Аукцион по продаже интернет-рекламы. Для каждого игрока переход по его рекламной ссылке имеет ценность 
+\begin_inset Formula $ V_{i}=X_{i} $
+\end_inset
+
+. Продаваемые рекламные места отличаются средним количеством кликов в час. Приведите пример, показывающий, что на аукционе GSP в равновесии Нэша игроки не всегда правдиво сообщают свои ценности.
+\end_layout
+
+\begin_layout Enumerate
+
+Аукцион 
+\begin_inset Quotes ard
+\end_inset
+
+Платят все!
+\begin_inset Quotes ald
+\end_inset
+
+. Покупатели одновременно делают ставки. Товар достается тому, кто назвал наибольшую ставку, но платят все игроки. Каждый платит свою ставку. Ценности товара для покупателей имеют независимое регулярное распреде- ление с функцией плотности 
+\begin_inset Formula $ f(x)=2x $
+\end_inset
+
+ на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Как нужно изменить правила этой игры, чтобы игрокам было выгодно правдиво декларировать свои ценности, но при этом ни один игрок не выиграл и не проиграл?
+\end_layout
+
+\begin_layout Standard
+
+Hint: Смотрите список задач к лекции один
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Наследство. Двум сыновьям достался земельный участок в наследство. Отец не хо- тел, чтобы участок был разделен, поэтому по завещанию установлены следущие пра- вила: два брата одновременно делают ставки. Участок получает тот, кто сделал боль- шую ставку. При этом получивший участок выплачивает свою ставку проигравшему. Ценности участка независимы и равномерны на 
+\begin_inset Formula $[0; 1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Как нужно изменить правила этой игры, чтобы игрокам было выгодно правдиво декларировать свои ценности, но при этом ни один игрок не выиграл и не проиграл?
+\end_layout
+
+\begin_layout Standard
+
+Hint: Смотрите список задач к лекции один
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Аукцион «Победитель платит чужую среднюю». Покупатели одновременно делают ставки. Товар достается тому, кто назвал наибольшую ставку. Победитель платит среднюю арифметическую ставок остальных игроков. Ценности товара для покупа- телей независимы и равномерно распределены на [0; 1].
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Как нужно изменить правила этой игры, чтобы игрокам было выгодно правдиво декларировать свои ценности, но при этом ни один игрок не выиграл и не проиграл?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Два игрока. Ценности независимы и имеют экспоненциальные распределения с параметрами 
+\begin_inset Formula $ \lambda_{1}=1 $
+\end_inset
+
+ и 
+\begin_inset Formula $\lambda_{2}=2  $
+\end_inset
+
+. Сигналы совпадают с ценностями, 
+\begin_inset Formula $ X_{i}=V_{i} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Предположим, что аукцион проводится по принципу аукциона второй цены с резервной ценой 
+\begin_inset Formula $ r $
+\end_inset
+
+. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Найдите равновесие Нэша. 
+\end_layout
+
+\begin_layout Enumerate
+
+В осях 
+\begin_inset Formula $ (X_{1},X_{2}) $
+\end_inset
+
+ изобразите три множества: товар достается первому игроку, товар достается второму игроку, товар остается у продавца. 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Разработайте оптимальный аукцион. Будет ли он отличаться от аукциона второй цены? 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Найдите равновесие Нэша. 
+\end_layout
+
+\begin_layout Enumerate
+
+В осях 
+\begin_inset Formula $ (X_{1},X_{2}) $
+\end_inset
+
+ изобразите три множества: товар достается первому игроку, товар достается второму игроку, товар остается у продавца. 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+
+На аукционе первой цены участвуют 
+\begin_inset Formula $ n $
+\end_inset
+
+ потенциальных покупателей. Продается один товар, 
+\begin_inset Formula $ V_{i}=X_{i} $
+\end_inset
+
+, ценности равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ и независимы. Доставка товара по почте стоит 0.1. Доставку оплачивает покупатель. Игроки одновременно решают делать ли ставки, и если делать, то какие.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Найдите равновесные стратегии и ожидаемую прибыль продавца. 
+\end_layout
+
+\begin_layout Enumerate
+
+Как изменится предыдущий ответ, если доставку оплачивает продавец? 
+\end_layout
+
+\begin_layout Enumerate
+
+Решите аналогичную задачу для аукциона второй цены. 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Общественное благо наоборот. (Более корректная сказка). Рассмотрим задачу насильственного выбора поставщика общественного блага. Жители деревни Малое Гадюкино решили проложить к деревне новую освещенную дорогу от шоссе. Есть два варианта. Вариант А: заставить сделать всё местную администрацию по закону. От этого администрация получит ущерб в 100 тыс. рублей. При этом она и дорогу выложит и фонари поставит. Вариант Б: воспользоваться тем, что на территории деревни есть два магазинчика. Заставить владельца более крупного магазина оплатить прокладку дороги (60 тыс. рублей), а владельца более мелкого --- фонари (30 тыс. рублей). Выгода жителей деревни --- случайная величина, 
+\begin_inset Formula $ X $
+\end_inset
+
+ равномерна на 
+\begin_inset Formula $ [80;180] $
+\end_inset
+
+ тыс. рублей:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="5" columns="4">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Не строить 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Строить 
+\begin_inset Quotes ard
+\end_inset
+
+под ключ
+\begin_inset Quotes ald
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Строить по частям 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Администрация 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+-100 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Фирма Б1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+-60
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Фирма Б2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+-30
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Жители 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $X$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $X$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Опишите механизм VCG применительно к этой задаче. Т.е. требуется описать кто и сколько платит, в зависимости от ставок игроков. Общее описание механизма VCG за ответ не засчитывается.
+\end_layout
+
+\begin_layout Standard
+
+С какой вероятностью баланс механизма VCG положительный, т.е. не потребуется вливать в него деньги? 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Какова вероятность того, что у механизма не сойдется баланс? Каков средний баланс от использования VCG?
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Еще чуть продумать условие...
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Рассмотрим аукцион 
+\begin_inset Formula $ n $
+\end_inset
+
+ игроков. Ценности независимы и равномерны на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+, 
+\begin_inset Formula $ X_{i}=V_{i} $
+\end_inset
+
+. Игроки одновременно делают свои ставки 
+\begin_inset Formula $ b_{i} $
+\end_inset
+
+. Продавец считает синус каждой ставки, 
+\begin_inset Formula $ \hat{b}_{i}=\sin (b_{i}) $
+\end_inset
+
+. И проводит обычный аукцион второй цены с реальными ставками равными 
+\begin_inset Formula $\hat{b}_{i}  $
+\end_inset
+
+. Т.е. побеждает тот, у кого 
+\begin_inset Formula $ \hat{b}_{i} $
+\end_inset
+
+ больше, а платит он вторую по величине 
+\begin_inset Formula $ \hat{b}_{i} $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Является ли этот механизм правдивым?
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+
+Решения задач
+\end_layout
+
+\begin_layout Enumerate
+
+По определению 
+\begin_inset Formula $ MR_{i}(x) $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+E(MR_{i}(X_{i}))=E(X_{i})-\int_{0}^{1}(1-F(t))dt
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Далее интегрируем по частям, 
+\begin_inset Formula $ u(t)=1-F(t) $
+\end_inset
+
+, 
+\begin_inset Formula $ v'(t)=1 $
+\end_inset
+
+ и получаем 
+\begin_inset Formula $ E(MR_{i}(X_{i}))=0 $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Табличка:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="6">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to A $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to B $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to A\to B $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to B \to A $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Не ехать 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-b-c $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-a-c $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Будет принято решение: 
+\begin_inset Formula $ \to A\to B $
+\end_inset
+
+. Игрок B не платит ничего (т.к. полезность A не меняется при отсутствии игрока B). Игрок А платит 
+\begin_inset Formula $ (1-b)-(1-a-c)=a+c-b $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="4" columns="6">
+<features>
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to A $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to B $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to A\to B $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ \to B \to A $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Не ехать 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-b-c $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+B 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-a-c $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ 1-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Разносчик 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\begin_inset Formula $ -a-b $
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Будет принято решение: 
+\begin_inset Formula $ \to A\to B $
+\end_inset
+
+. 
+\begin_inset Formula $ A $
+\end_inset
+
+ платит 
+\begin_inset Formula $ 2a+c-b>0 $
+\end_inset
+
+, 
+\begin_inset Formula $ B $
+\end_inset
+
+ платит 
+\begin_inset Formula $ 2b+c-a>0 $
+\end_inset
+
+. Разносчик: ничего не платит.
+\end_layout
+
+\begin_layout Standard
+
+Внимание! Задача 
+\begin_inset Quotes ard
+\end_inset
+
+без разносчика
+\begin_inset Quotes ald
+\end_inset
+
+ не означает, что его нет и никто пиццу не разносит. Задача 
+\begin_inset Quotes ard
+\end_inset
+
+без разносчика
+\begin_inset Quotes ald
+\end_inset
+
+ означает, что о нем никто не заботится!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Поскольку суммарная полезность во всех случаях одинакова, то механизм VCG допускает принятие любого решения. Например, равновероятный выбор из 4-х решений. Или выбор решения 
+\begin_inset Quotes ard
+\end_inset
+
+Саша --- посуда, Маша --- пол
+\begin_inset Quotes ald
+\end_inset
+
+. Рассмотрим вариант с равновероятным выбором любого решения. Сколько должна платить Маша? Сейчас Саша получает полезность 
+\begin_inset Formula $-0.5a-0.5b $
+\end_inset
+
+. Если оставить в игре только Сашу, то при оптимальном решении Саша получает полезность 
+\begin_inset Formula $ 0 $
+\end_inset
+
+. Выплата Маши равна: 
+\begin_inset Formula $0-(-0.5a-0.5b)=0.5a+0.5b$
+\end_inset
+
+. В силу симметрии выплата Саши --- такая же.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Возникает естественный вопрос: это как же так, Саша и Маша не только посуду моют, но еще и платят? Есть два ответа. Во-первых выбор нулевой полезности произволен. Мы с таким же результатом могли увеличить полезность Саши и Маши при каждом исходе на 
+\begin_inset Formula $ a+b $
+\end_inset
+
+. В этом случае Саша и Маша получали бы неотрицательную полезность. Во-вторых, обратите внимание на трактовку игры 
+\begin_inset Quotes ard
+\end_inset
+
+без Маши
+\begin_inset Quotes ald
+\end_inset
+
+. Это не означает, что есть тот же объем работ, но сделать его может только Саша. Игра 
+\begin_inset Quotes ard
+\end_inset
+
+без Маши
+\begin_inset Quotes ald
+\end_inset
+
+ --- это тот же объем работ при тех же игроках, но заботимся мы только о Саше.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Самый простой пример --- с общеизвестными ценностями. Три игрока, ценности кликов для них равны: 20, 10 и 5. Два рекламных места: одно дает 10 кликов в час, другое --- 9 кликов в час. Если все говорят правду, то первый игрок получает полезность: 
+\begin_inset Formula $ 10\cdot (20-10)=100 $
+\end_inset
+
+. Если первый игрок отклонится и сделает ставку 9, то он получит: 
+\begin_inset Formula $ 9\cdot (20-5)=135 $
+\end_inset
+
+. Значит правду говорить не выгодно.
+\end_layout
+
+\begin_layout Enumerate
+
+Мы знаем, что на этом аукционе равновесие Нэша: 
+\begin_inset Formula $ b(x)=\frac{n-1}{n}x^{n} $
+\end_inset
+
+, см. формулу 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "NE_all_pay"
+
+\end_inset
+
+ в задачах к первой лекции.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Поэтому правила новой игры должны иметь вид: Каждый игрок платит не свою ставку, а свою ставку возведенную в степень 
+\begin_inset Formula $ n $
+\end_inset
+
+ и домноженную на 
+\begin_inset Formula $ \frac{n-1}{n} $
+\end_inset
+
+. Товар достается тому, у кого ставка выше.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На этом аукционе равновесие Нэша имеет вид 
+\begin_inset Formula $ b(x)=x/3 $
+\end_inset
+
+. Соответственно, измененные правила игры выглядят так: оба игрока одновременно делают ставки. Участок получает тот, кто сделал большую ставку. Победитель выплачивает проигравшему треть своей ставки.
+\end_layout
+
+\begin_layout Enumerate
+
+Равновесие Нэша при оригинальных правилах имеет вид: 
+\begin_inset Formula $ b(x)=\frac{2(n-1)}{n}x $
+\end_inset
+
+. Измененные правила выглядят так: товар достается игроку с наибольшей ставкой. Победитель платит 
+\begin_inset Formula $ \frac{2(n-1)}{n}\bar{x}_{-i} $
+\end_inset
+
+, где 
+\begin_inset Formula $ \bar{x}_{-i} $
+\end_inset
+
+ --- средняя ставка всех игроков кроме победителя.
+\end_layout
+
+\begin_layout Enumerate
+
+Для аукциона второй цены: Равновесие Нэша --- говорить правду.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Для оптимального аукциона: 
+\begin_inset Formula $ MR(x)=x-\frac{1-(1-\exp(-\lambda x)}{\lambda \exp(-\lambda x)}=x-\frac{1}{\lambda} $
+\end_inset
+
+, 
+\begin_inset Formula $ MR_{1}(x)=x-1 $
+\end_inset
+
+, 
+\begin_inset Formula $ MR_{2}(x)=x-0.5 $
+\end_inset
+
+. Стало быть правила таковы: Если 
+\begin_inset Formula $ b_{1}<1 $
+\end_inset
+
+ и 
+\begin_inset Formula $ b_{2}<0.5 $
+\end_inset
+
+, то товар остается у продавца. Иначе товар достается тому, у кого 
+\begin_inset Formula $ MR $
+\end_inset
+
+ больше, т.е. товар достанется первому если 
+\begin_inset Formula $ b_{1}-1>b_{2}-0.5 $
+\end_inset
+
+ или 
+\begin_inset Formula $ b_{2}<b_{1}-0.5 $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Картинки: 
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Formula $\begin{array}{cc}
+\includegraphics[width=2.5in]{2price_expexp.png} &
+\includegraphics[width=2.5in]{optimal_expexp.png}
+\end{array}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Caption
+
+
+\begin_layout Standard
+
+Слева --- аукцион второй цены, справа --- оптимальный аукцион.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Оплата доставки товара покупателем равносильна плате за участие. Смотрим задачи из лекции 3. Если покупатель оплачивает доставку сам. То для него --- это как плата за участие, но продавец ее не получает. Поэтому равновесные стратегии для покупателей, такие же как в аукционе с платой за вход 
+\begin_inset Formula $ w=0.1 $
+\end_inset
+
+. Величина 
+\begin_inset Formula $ w $
+\end_inset
+
+ продавцу не достается, поэтому его ожидаемый доход уменьшается на 
+\begin_inset Formula $ w(1-\rho) $
+\end_inset
+
+ и равен: 
+\begin_inset Formula \begin{equation}
+E(R)=n(n-1)\left(\frac{1}{n(n+1)}-\frac{\rho^{n}}{n}+\frac{\rho^{n+1}}{n+1}\right),\quad \rho=w^{1/n}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Если же продавец оплачивает доставку сам. То с точки зрения покупателей --- это обычный аукцион. А доход продавца надо уменьшить на 
+\begin_inset Formula $ 0.1 $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+\frac{n-1}{n+1}-0.1
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Если нарисовать эти функции, то при 
+\begin_inset Formula $ n\geq 3 $
+\end_inset
+
+ получается, что продавцу выгоднее обещать бесплатную доставку!
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Механизм VCG: ход делают только жители. Пусть 
+\begin_inset Formula $ X\in[80;180]$
+\end_inset
+
+ --- ход жителей. Принимается решение не строить дорогу, если 
+\begin_inset Formula $ X<90 $
+\end_inset
+
+, и строить дорогу с помощью двух фирм Б1 и Б2, если 
+\begin_inset Formula $ X\geq 90 $
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Администрация платит 90, если дорога строится и 
+\begin_inset Formula $ X $
+\end_inset
+
+ если дорога не строится.
+\end_layout
+
+\begin_layout Standard
+
+Фирма Б1 платит 0, если дорога строится, и 
+\begin_inset Formula $ X-30 $
+\end_inset
+
+, если дорога не строится.
+\end_layout
+
+\begin_layout Standard
+
+Фирма Б2 платит 0, если дорога строится, и 
+\begin_inset Formula $ X-60 $
+\end_inset
+
+, если дорога не строится.
+\end_layout
+
+\begin_layout Standard
+
+Жители получают 90, если дорога строится, и 0, если дорога не строится.
+\end_layout
+
+\begin_layout Standard
+
+Баланс всегда неотрицательный.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На отрезке 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+ синус является монотонно возрастающим. Без применения синуса стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+Говорить правду
+\begin_inset Quotes ald
+\end_inset
+
+ нестрого доминировала остальные, т.е. давала больше денег. С применением синуса стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+Говорить правду
+\begin_inset Quotes ald
+\end_inset
+
+ дает больший синус количества денег. Но это одно и то же. Значит стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+Говорить правду
+\begin_inset Quotes ald
+\end_inset
+
+ по-прежнему нестрого доминирует остальные.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Можно составить табличку для сравнения ходов 
+\begin_inset Formula $ b=x $
+\end_inset
+
+ и 
+\begin_inset Formula $ b=x-\Delta $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

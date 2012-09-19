@@ -1,0 +1,1617 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+
+
+% с ней частично перестает работает поиск в пдф?
+\end_preamble
+\options pdftex
+\use_default_options false
+\language russian
+\inputencoding cp1251
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Задача торга.
+ Снова Нэш.
+ Калаи-Смородински.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+% использовать букву f для выигрыша - исправить в лекции 2 для полноты картины.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Определение задачи торга.
+\end_layout
+
+\begin_layout Standard
+Попробуем разобрать простейший случай, когда полезности не передаются.
+ У нас будет всего 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+indef
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+два
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ игрока.
+ Либо каждый из них работает в одиночку, либо формируется большая коалиция.
+ Большая, в данном случае, - это из обоих игроков.
+\end_layout
+
+\begin_layout Standard
+Соответственно, описание задачи торга состоит из двух объектов:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ точка разногласия (disagreement point) - это вектор платежей, получаемых
+ игроками, если кооперации не будет.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Переговорное множество - это множество возможных платежей, которые могут
+ получить игроки если скооперируются.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(картинка)
+\end_layout
+
+\begin_layout Standard
+С формальной математической точки зрения задача торга задается парой 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+, где 
+\begin_inset Formula $X$
+\end_inset
+
+ - переговорное множество, а 
+\begin_inset Formula $d$
+\end_inset
+
+ - точка разногласия.
+\end_layout
+
+\begin_layout Standard
+Это несколько больше, чем коалиционная игра двух игроков в характеристической
+ форме.
+ Игра в характеристической форме предполагает, что множество 
+\begin_inset Formula $X$
+\end_inset
+
+ имеет вид 
+\begin_inset Formula $X=\{(x_{1},x_{2})|x_{1}+x_{2}\leq v(N)\}$
+\end_inset
+
+.
+ В задаче торга множество 
+\begin_inset Formula $X$
+\end_inset
+
+ в принципе может иметь любую форму.
+ Поэтому можно считать, что это не деньги, а полезность.
+ В этих лекциях полезность измеряется в улыбках.
+\end_layout
+
+\begin_layout Standard
+Впрочем, чаще всего предполагают, что переговорное множество не совсем произволь
+но, а удовлетворяет требованиям:
+\end_layout
+
+\begin_layout Itemize
+Замкнуто;
+\end_layout
+
+\begin_layout Itemize
+Выпукло;
+\end_layout
+
+\begin_layout Itemize
+Ограничено сверху, т.е.
+ существует такая точка 
+\begin_inset Formula $m=(m_{1},m_{2})$
+\end_inset
+
+ на плоскости, что все множество 
+\begin_inset Formula $X$
+\end_inset
+
+ лежит юго-западнее точки 
+\begin_inset Formula $m$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+Содержит точку 
+\begin_inset Formula $d$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Мы будем считать, что эти требования выполнены.
+\end_layout
+
+\begin_layout Standard
+Что означает решить задачу торга? Для данной конкретной задачи это означает
+ выбрать наилучшую точку 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+из 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Но нас интересует не решение конкретной задачи торга, а некое правило которое
+ позволяет решать любую задачу торга.
+ Наше правило каждой задаче торга 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+ сопоставляет некий 
+\begin_inset Quotes ard
+\end_inset
+
+наилучший
+\begin_inset Quotes ald
+\end_inset
+
+ дележ 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+.
+ С математической точки зрения, правило дележа - это функция 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Соответственно, область определения функции 
+\begin_inset Formula $f$
+\end_inset
+
+ - это всевозможные задачи торга, т.е.
+ всевозможные пары 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Пусть 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ - это предлагаемый игрокам дележ, т.е.
+ 
+\begin_inset Formula $x^{*}=f((X,d))$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Чего бы мы хотели от хорошего правила дележа 
+\begin_inset Formula $f$
+\end_inset
+
+?
+\end_layout
+
+\begin_layout Itemize
+Индивидуальная рациональность.
+ Каждый игрок должен получать не меньше, чем в точке разногласия, 
+\begin_inset Formula $x^{*}\geq d$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $x_{1}^{*}\geq d_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $x_{2}^{*}\geq d_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Эффективность.
+ Дележ 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ должен быть Парето-оптимален.
+ Другими словами, не существует такой точки 
+\begin_inset Formula $x^{'}$
+\end_inset
+
+, которая была была бы для обоих игроков не хуже, а кому-то даже лучше.
+ Формально, не существует такая точка 
+\begin_inset Formula $x^{'}\neq x^{*}$
+\end_inset
+
+, что 
+\begin_inset Formula $x^{'}\geq x^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Симметрия.
+ Если игроки одинаковые (т.е.
+ множество 
+\begin_inset Formula $X$
+\end_inset
+
+ симметрично относительно прямой 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+, и в случае разногласия игроки получают одинаковый выигрыш 
+\begin_inset Formula $d_{1}=d_{2}$
+\end_inset
+
+), то 
+\begin_inset Formula $x_{1}^{*}=x_{2}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Нечувствительность к смене масштаба.
+ Пусть есть две задачи торга 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+ и 
+\begin_inset Formula $(X^{'},d^{'})$
+\end_inset
+
+, которые отличаются масштабом.
+ Скажем в первой полезность измерялась в улыбках, а во второй - в улыбочках
+ (одна улыбочка это 
+\begin_inset Formula $10^{-3}$
+\end_inset
+
+ улыбок).
+ В этом случае хотелось бы, чтобы решения этих задач также отличались только
+ сменой масштаба.
+ И более формально: пусть 
+\begin_inset Formula $X'=aX+b$
+\end_inset
+
+ и 
+\begin_inset Formula $d'=ad+b$
+\end_inset
+
+, где 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+ - произвольные константы.
+ Мы говорим, что решение 
+\begin_inset Formula $f$
+\end_inset
+
+ нечувствительно к смене масштаба, если 
+\begin_inset Formula $f(X')=af(X)+b$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Это требование называется у В.И.
+ Данилова скалярной ковариантностью.
+ Страшно, да?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Независимость от третьих альтернатив.
+ Если при доступных точках 
+\begin_inset Formula $x$
+\end_inset
+
+, 
+\begin_inset Formula $y$
+\end_inset
+
+, 
+\begin_inset Formula $z$
+\end_inset
+
+ правило выбирало 
+\begin_inset Formula $x$
+\end_inset
+
+, то при доступных 
+\begin_inset Formula $x$
+\end_inset
+
+ и 
+\begin_inset Formula $y$
+\end_inset
+
+ правило тоже должно выбирать 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Существуют ли решение которое всегда удовлетворяет всем этим требованиям?
+ Правильный ответ в студию!
+\end_layout
+
+\begin_layout Subsection
+Решение Нэша
+\end_layout
+
+\begin_layout Standard
+Для начала введем понятие:
+\end_layout
+
+\begin_layout Standard
+Бонус от кооперации (первого игрока) - это та сумма, которую первый игрок
+ выигрывает от кооперации по сравнению с точкой разногласия, т.е.
+ 
+\begin_inset Formula $(x_{1}^{*}-d_{1})$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Нэш предложил странное на первый взгляд решение: 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+indef
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Решение Нэша
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ - это точка 
+\begin_inset Formula $x_{Nash}$
+\end_inset
+
+, которая лежит в 
+\begin_inset Formula $X$
+\end_inset
+
+ и максимизирует произведение бонусов от кооперации.
+ Т.е.
+ 
+\begin_inset Formula $(x_{1},x_{2})_{Nash}$
+\end_inset
+
+ максимизирует функцию 
+\begin_inset Formula $f(x_{1},x_{2})=(x_{1}-d_{1})(x_{2}-d_{2})$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Давайте попробуем найти решение Нэша в задаче про носки.
+ (напомним текст)
+\end_layout
+
+\begin_layout Standard
+В нашем случае, точка несогласия, 
+\begin_inset Formula $d=(60,120)$
+\end_inset
+
+, а переговорное множество 
+\begin_inset Formula $X=\{(x_{1},x_{2})|x_{1}+x_{2}\leq240\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Обозначим бонус от кооперации буквой 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $y_{i}=x_{i}-d_{i}$
+\end_inset
+
+.
+ Решение Нэша максимизирует величину 
+\begin_inset Formula $y_{1}\cdot y_{2}$
+\end_inset
+
+ при ограничении 
+\begin_inset Formula $y_{1}+y_{2}\leq60$
+\end_inset
+
+.
+ В силу симметрии 
+\begin_inset Formula $y_{1}=y_{2}=30$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Значит Нэша предлагает поделить совокупных доход как 
+\begin_inset Formula $(90,150)$
+\end_inset
+
+.
+ Что, кстати говоря, совпадает с вектором Шепли и интуитивным дележом 
+\begin_inset Formula $3:5$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Оказывается, что:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Решение Нэша - это единственное решение, удовлетворяющиее требованиям индивидуа
+льной рациональности, эффективности, симметрии, нечувствительности к смене
+ масштаба и независимости от третьих альтернатив.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Для начала рассмотрим задачу торга, где 
+\begin_inset Formula $d=(0;0)$
+\end_inset
+
+, а переговорное множество 
+\begin_inset Formula $Y={(x_{1},x_{2})|x_{1}+x_{2}\leq2}$
+\end_inset
+
+.
+ Игроки симметричны, значит должны получить одинаковый выигрыш.
+ Единственное симметричное Парето-оптимальное решение - это 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+.
+ Что совпадает с решением Нэша.
+\end_layout
+
+\begin_layout Standard
+Теперь рассмотрим произвольную задачу торга.
+ В силу ограниченности сверху и замкнутости множества 
+\begin_inset Formula $X$
+\end_inset
+
+ решение Нэша существует.
+ Обозначим его 
+\begin_inset Formula $x_{Nash}.$
+\end_inset
+
+ В силу нечувствительности к смене масштаба можно считать, что 
+\begin_inset Formula $d=(0;0)$
+\end_inset
+
+ и 
+\begin_inset Formula $x_{Nash}=(1;1)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Решение, которое не зависит от третьих альтернатив обязано совпадать с 
+\begin_inset Formula $x_{Nash}.$
+\end_inset
+
+ Почему? Точка 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+ доступна и при переговорном множестве 
+\begin_inset Formula $Y$
+\end_inset
+
+, и при переговорном множестве 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Заметим, что переговорное множество 
+\begin_inset Formula $Y$
+\end_inset
+
+ больше, чем переговорное множество 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ На множестве 
+\begin_inset Formula $Y$
+\end_inset
+
+ мы выбрали точку 
+\begin_inset Formula $(1,1)$
+\end_inset
+
+.
+ Значит ее мы обязаны выбрать и на множестве 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(картинка)
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Решение Калаи-Смородинского
+\end_layout
+
+\begin_layout Standard
+Условие независимости от третьих альтернатив может быть рациональным, но
+ оно зачастую нарушается в реальности.
+ Давайте рассмотрим такой пример.
+\end_layout
+
+\begin_layout Standard
+Вовочка и Петечка долго спорили о том, кто является самой красивой девушкой
+ в их классе, Маша или Аня.
+ После долгого спора они пришли к общему мнению, что самая красивая - Маша.
+ После этого спора Вовочка и Петечка неожиданно вспомнили про Памеллу Андерсон.
+ А вспомнив про Памеллу Андерсон, решили, что все-таки, самая красивая -
+ Аня.
+\end_layout
+
+\begin_layout Standard
+На этот пример можно, конечно, возразить, что Памелла Андерсон не училась
+ в классе Вовочки и Петечки.
+ И это, следовательно, не совсем независимость от третьих альтернатив.
+ Но идея остается.
+ Чтобы сделать выбор между несколькими объектами нужно свести многомерные
+ характеристики объектов к одной единственной лучше-хуже.
+ И вот-это правило сведения оказывается очень неустойчиво.
+ На него влияет реклама или просто упоминание третьей альтернативы.
+\end_layout
+
+\begin_layout Standard
+Еще пример.
+ Вы выбирали мобильный телефон и сомневались между А и Б.
+ И склонились к выбору А.
+ Потом в журнале прочли про то, что есть такая крутая модель С.
+ Крута она своим дизайном.
+ Вам дизайн С понравился.
+ И вы сменили свой выбор в пользу Б, потому, что дизайн Б больше похож на
+ крутой дизайн С.
+ Сама модель С для вас была хуже, чем А и Б, так как у нее существенно выше
+ цена.
+ Но критерий сведения многомерной характеристики телефона к одномерному
+ хуже-лучше поменялся просто из-за самого наличия С.
+\end_layout
+
+\begin_layout Standard
+Решение Калаи-Смородинского заменяет требование независимости от третьих
+ альтернатив на индивидуальную монотонность.
+ К сожалению, индивидуальная монотонность не является особо прозрачным критерием.
+ Чтобы проще описать индивидуальную монотонность определим пару функций:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{1}(X,d)$
+\end_inset
+
+ - это наибольший возможный для первого игрока бонус от кооперации, при
+ котором бонус второго игрока неотрицателен.
+ И, аналогично, 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $m_{2}(X,d)$
+\end_inset
+
+ - это наибольший возможный для второго игрока бонус от кооперации, при
+ котором бонус первого игрока неотрицателей.
+\end_layout
+
+\begin_layout Standard
+Индивидуальная монотонность (для первого игрока).
+ Допустим у нас есть две задачи торга, 
+\begin_inset Formula $(X,d)$
+\end_inset
+
+ и 
+\begin_inset Formula $(X^{'},d^{'})$
+\end_inset
+
+, причем переговорное множество 
+\begin_inset Formula $X$
+\end_inset
+
+ больше, чем 
+\begin_inset Formula $X^{'}$
+\end_inset
+
+.
+ Пусть 
+\begin_inset Formula $m_{1}(X,d)=m_{1}(X^{'},d^{'})$
+\end_inset
+
+.
+ ....
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+Решение Калаи-Смородинского, 
+\begin_inset Formula $x_{KS}$
+\end_inset
+
+ - это единственное Парето-оптимальное решение, которое делит бонусы от
+ кооперации в пропорции 
+\begin_inset Formula $m_{1}(X,d):m_{2}(X,d)$
+\end_inset
+
+.
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+(картинка)
+\end_layout
+
+\begin_layout Standard
+Найдем решение Калаи-Смородинского в задаче про Носки.
+ Точка несогласия, 
+\begin_inset Formula $(60,120)$
+\end_inset
+
+.
+ Общий бонус от кооперации - 
+\begin_inset Formula $60$
+\end_inset
+
+.
+ Поскольку деньги можно передавать, то максимальный бонус каждого игрока
+ от кооперации также равен 
+\begin_inset Formula $60$
+\end_inset
+
+, т.е.
+ 
+\begin_inset Formula $m_{1}=m_{2}=60$
+\end_inset
+
+.
+ Делим общий бонус от кооперации в пропорции 
+\begin_inset Formula $60:60$
+\end_inset
+
+, т.е.
+ поровну.
+ Каждый получает бонус по 
+\begin_inset Formula $30$
+\end_inset
+
+.
+ Итоговый дележ 
+\begin_inset Formula $(90,150).$
+\end_inset
+
+ Что совпадает с решением Нэша, а заодно и с вектором Шепли.
+\end_layout
+
+\begin_layout Subsection
+Связь с некооперативной теорией игр.
+\end_layout
+
+\begin_layout Standard
+Неплохо бы навести какой-то мостик между кооперативной и некооперативной
+ теориями.
+ Иначе они кажутся совершенно оторванными, хотя решают похожие задачи.
+\end_layout
+
+\begin_layout Standard
+Представим себе, что торг проходит так:
+\end_layout
+
+\begin_layout Standard
+Период 1.
+ Игрок А предлагает игроку Б любой дележ из 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Если Б согласен, то игра заканчивается.
+ Если игрок Б не согласен, то начинается период 2.
+\end_layout
+
+\begin_layout Standard
+Период 2.
+ Игрок Б предлагает играку А любой дележ из 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Если А согласен, то игра заканчивается.
+ Если игрок А не согласен, то начинается период 3.
+\end_layout
+
+\begin_layout Standard
+...
+ и так далее.
+\end_layout
+
+\begin_layout Standard
+Дополнительно добавим в игру ураган.
+ Перед началом каждого нового периода с вероятностью 
+\begin_inset Formula $p$
+\end_inset
+
+ начинается ураган.
+ В случае урагана игра принудительно заканчивается и если игроки не успели
+ договориться, то они получают выигрыш из точки несогласия 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ Уточним, что дисконтирования нет.
+\end_layout
+
+\begin_layout Standard
+Зачем нам нужен ураган? Чтобы стимулировать игроков прийти к соглашению
+ побыстрее.
+ В каком-то смысле он заменяет дисконтирование.
+ Рубль сейчас лучше чем обещание рубля завтра, т.к.
+ до завтра может начаться ураган и обещание не будет исполнено.
+\end_layout
+
+\begin_layout Standard
+Найдем равновесие по Нэшу совершенное в подыграх (SPNE) для каждого 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Обозначим вектор платежей, которые получают игроки, как 
+\begin_inset Formula $x_{SPNE}(p)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Оказывается, что:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Решение Нэша в задаче торга является пределом равновесий по Нэшу совершенных
+ в подыграх, 
+\begin_inset Formula $x_{Nash}=\lim_{p\to0}x_{SPNE}(p)$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Как мы уже делали, будем рассматривать бонусы от кооперации.
+ Т.е., например, если начался ураган, то игроки получают 
+\begin_inset Formula $(0;0)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Найдем SPNE для произвольного 
+\begin_inset Formula $p$
+\end_inset
+
+.
+ Если игра дошла до 3-го периода, то она ничем не отличается от изначальной
+ игры.
+ Поэтому сначала найдем совсем простое равновесие, в котором предлагаемый
+ каждым игроком дележ все время один и тот же.
+ Наше равновесие имеет такой вид: При своем ходе первый игрок всегда будет
+ предлагать один и тот же вектор бонусов 
+\begin_inset Formula $x^{*}=(x_{1}^{*},x_{2}^{*})$
+\end_inset
+
+, а второй игрок при своем ходе будет предлагать вектор бонусов 
+\begin_inset Formula $y^{*}=(y_{1}^{*},y_{2}^{*})$
+\end_inset
+
+.
+ При этом 
+\begin_inset Formula $x_{2}^{*}$
+\end_inset
+
+ - это наименьший бонус, одобряемый вторым игроком, а 
+\begin_inset Formula $y_{1}^{*}$
+\end_inset
+
+ - наименьший бонус одобряемый первым игроком.
+\end_layout
+
+\begin_layout Standard
+Кстати, если игра дошла до 2-го периода, то она отличается от изначальной
+ игры только тем, что игроки поменялись ролями.
+ 
+\end_layout
+
+\begin_layout Standard
+Для поиска SPNE применим принцип одноразового отклонения:
+\end_layout
+
+\begin_layout Standard
+Профиль стратегий является равновесием по Нэшу совершенным в подыграх если
+ и только если ни одному игроку ни в одной подыгре не выгодны одноразовые
+ отклонения.
+ Под одноразовым отклонением от стратегии 
+\begin_inset Formula $s$
+\end_inset
+
+ подразумевается любая стратегия 
+\begin_inset Formula $s'$
+\end_inset
+
+, которая отличается от стратегии 
+\begin_inset Formula $s$
+\end_inset
+
+ лишь в один момент времени
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Для тех, кто плохо помнит, что это значит, приведем такой пример.
+ Пусть стратегия 
+\begin_inset Formula $s=\{$
+\end_inset
+
+в первой партии сделать ход 
+\begin_inset Formula $a$
+\end_inset
+
+, в последующих партиях сделать ход, сделанный в первой партии
+\begin_inset Formula $\}$
+\end_inset
+
+.
+ Тогда стратегия 
+\begin_inset Formula $s'=\{$
+\end_inset
+
+в первой партии сделать ход 
+\begin_inset Formula $b$
+\end_inset
+
+, в последующих партиях сделать ход, сделанный в первой партии
+\begin_inset Formula $\}$
+\end_inset
+
+ является одноразовым отклонением от стратегии 
+\begin_inset Formula $s$
+\end_inset
+
+.
+ Напомним также, что проверять нужно не только равновесную траекторию, но
+ и любую другую.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Проверяем возможность неодобрения высокого платежа.
+ Итак, пусть первый игрок предложил дележ 
+\begin_inset Formula $x=(x_{1},x_{2}^{*}+\Delta)$
+\end_inset
+
+, не обязательно равновесный! Если второй соглашается (согласно своей стратегии)
+, то он получает бонус 
+\begin_inset Formula $x_{2}^{*}+\Delta$
+\end_inset
+
+.
+ Если второй игрок делает одноразовое отклонение (и, стало быть, не соглашается)
+, то: С вероятностью 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ игроки получают бонус ноль.
+ С вероятностью 
+\begin_inset Formula $(1-\alpha)$
+\end_inset
+
+ начинается следующий период, в котором второй игрок (вернувшись к своей
+ стратегии) предлагает вектор 
+\begin_inset Formula $y=(y_{1}^{*},y_{2}^{*})$
+\end_inset
+
+ и первый игрок соглашается.
+ 
+\end_layout
+
+\begin_layout Standard
+Чтобы одноразовое отклонение не было выгодно: 
+\begin_inset Formula $x_{2}^{*}+\Delta\geq(1-\alpha)y_{2}^{*}$
+\end_inset
+
+ для всех 
+\begin_inset Formula $\Delta\geq0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Проверяем возможность одобрения низкого платежа.
+ Итак, пусть первый игрок предложил дележ 
+\begin_inset Formula $x=(x_{1},x_{2}^{*}-\Delta)$
+\end_inset
+
+, не обязательно равновесный! Если второй не соглашается (согласно своей
+ стратегии), то он получает ожидаемый бонус 
+\begin_inset Formula $(1-\alpha)y_{2}^{*}$
+\end_inset
+
+.
+ Если второй игрок делает одноразовое отклонение (и, стало быть, соглашается),
+ то он получает 
+\begin_inset Formula $x_{2}^{*}-\Delta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Чтобы одноразовое отклонение не было выгодно: 
+\begin_inset Formula $(1-\alpha)y_{2}^{*}\geq x_{2}^{*}-\Delta$
+\end_inset
+
+ для всех 
+\begin_inset Formula $\Delta<0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Получаем уравнение 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+x_{2}^{*}=(1-\alpha)y_{2}^{*}\]
+
+\end_inset
+
+ Аналогично, 
+\begin_inset Formula \[
+y_{1}^{*}=(1-\alpha)x_{1}^{*}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Пока что мы получили два уравнения на 4 неизвестных.
+ Еще два получить совсем просто: бонусы 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ и 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ в нашем профиле стратегий должны быть парето-оптимальными, т.к.
+ в противном случае первый игрок сменит его на 
+\begin_inset Formula $(x_{1}^{*}+\Delta,x_{2}^{*})$
+\end_inset
+
+, а второй игрок немедленно одобрит такой дележ.
+\end_layout
+
+\begin_layout Standard
+Честно говоря, надо доказывать, что других существенно отличающихся равновесий
+ нет, но сейчас мы этого делать не будем.
+\end_layout
+
+\begin_layout Standard
+Итак, при любой вероятности 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ равновесный (в смысле SPNE) платеж можно найти из условий:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ и 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ Парето-оптимальны, 
+\begin_inset Formula $x_{2}^{*}=(1-\alpha)y_{2}^{*}$
+\end_inset
+
+, 
+\begin_inset Formula $y_{1}^{*}=(1-\alpha)x_{1}^{*}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Это 4 уравнения на 4 неизвестных (Парето-оптимальность означает, что точки
+ лежат на границе переговорного множества).
+ 
+\end_layout
+
+\begin_layout Standard
+Заметим, что 
+\begin_inset Formula $x_{1}^{*}x_{2}^{*}=y_{1}^{*}y_{2}^{*}$
+\end_inset
+
+ при любом 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, т.е.
+ произведения бонусов, получаемых игроками равны.
+ Графически это означает, что предложения 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ и 
+\begin_inset Formula $y^{*}$
+\end_inset
+
+ находятся на пересечении границы переговорного множества и гиперболы 
+\series bold
+
+\begin_inset Formula $b_{1}b_{2}=const$
+\end_inset
+
+.
+ Значение
+\emph on
+ ко
+\emph default
+нстанты 
+\begin_inset Formula $const$
+\end_inset
+
+ определяется значением 
+\begin_inset Formula $\alpha$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Отметим, также что решение Нэша кооперативной игры, максимизирует произведение
+ бонусов.
+ Обозначим его 
+\begin_inset Formula $(z_{1}^{*},z_{2}^{*})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+(картинка)
+\end_layout
+
+\begin_layout Standard
+Что произойдет при 
+\begin_inset Formula $\alpha\to0$
+\end_inset
+
+? Ответ прост: разница 
+\begin_inset Formula $(x_{1}^{*}-y_{1}^{*})\to0$
+\end_inset
+
+ и 
+\begin_inset Formula $(x_{2}^{*}-y_{2}^{*})\to0$
+\end_inset
+
+, т.е.
+ в пределе мы будем иметь одну общую точку у Парето-оптимальной границы
+ и гиперболы.
+ Т.е.
+ 
+\begin_inset Formula $x^{*}\to z^{*}$
+\end_inset
+
+ и 
+\begin_inset Formula $y^{*}\to z^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Задача 1.
+ У первого игрока есть 
+\begin_inset Formula $l$
+\end_inset
+
+ литров левой полуфилософской жидкости.
+ У второго игрока есть 
+\begin_inset Formula $m>l$
+\end_inset
+
+ литров правой полуфилософской жидкости.
+ При смешивании 1 литра левой и одного литра правой полуфилософской жидкостей
+ получается 1 кг золота.
+ Полуфилосовская жидкость стоит 1 рубль за литр, золото - 3 рубля за килограмм.
+ Полезность от денег задана функцией 
+\begin_inset Formula $u(m)=\sqrt{m}$
+\end_inset
+
+.
+ Как поделить полезность между игроками? (найдите и решение Нэша и решение
+ Калаи-Смородински).
+\end_layout
+
+\begin_layout Standard
+Задача 2.
+ Рассмотрим коалиционную игру двух игроков в характеристической форме.
+\end_layout
+
+\begin_layout Standard
+Верно ли, что решение Нэша всегда совпадает с вектором Шепли? Докажите или
+ приведите контр-пример.
+\end_layout
+
+\begin_layout Standard
+Верно ли, что решение Калаи-Смородински всегда совпадает с вектором Шепли?
+ Докажите или приведите контр-пример.
+\end_layout
+
+\begin_layout Standard
+Верно ли, что решение Нэша и Калаи-Смородински всегда совпадают? Докажите
+ или приведите контр-пример.
+\end_layout
+
+\begin_layout Standard
+Задача 3.
+ Пусть имеется задача торга 
+\begin_inset Formula $(X,d).$
+\end_inset
+
+Рассмотрим связанную с ней некооперативную игру.
+\end_layout
+
+\begin_layout Standard
+Первый игрок предлагает дележ 
+\begin_inset Formula $x^{I}\in X$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Второй игрок предлагает дележ 
+\begin_inset Formula $x^{II}\in X$
+\end_inset
+
+ и вероятность 
+\begin_inset Formula $p\in[0;1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+С вероятностью 
+\begin_inset Formula $p$
+\end_inset
+
+ игра заканчивается и игроки получают точку несогласия 
+\begin_inset Formula $d$
+\end_inset
+
+.
+ С вероятностью 
+\begin_inset Formula $(1-p)$
+\end_inset
+
+ игра продолжается:
+\end_layout
+
+\begin_layout Standard
+Первый игрок выбирает в качестве финального дележа либо предложенный им
+ в начале игры дележ 
+\begin_inset Formula $x^{I}$
+\end_inset
+
+, либо лотерею 
+\begin_inset Formula $px^{II}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Верно ли, что совершенное в подыграх равновесие в этой игре совпадает с
+ решением Нэша задачи торга? С решением Калаи-Смородински?
+\end_layout
+
+\begin_layout Standard
+Задача 4.
+ Докажите, что решение Калаи-Смородинского - единственное решение, удовлетворяющ
+ее условиям эффективности, симметрии, нечувствительности к смене масштаба,
+ индивидуальной рациональности и индивидуальной монотонности.
+ 
+\end_layout
+
+\begin_layout Standard
+Задача 5.
+ Какое решение получится, если известно, что оно удовлетворяет условиям
+ индивидуальной рациональности, эффективности, симметрии, индивидуальной
+ монотонности и независимости от третьих альтернатив?
+\end_layout
+
+\end_body
+\end_document

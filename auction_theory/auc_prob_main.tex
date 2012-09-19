@@ -1,0 +1,78 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+%\input{e:/Documents/tex_general/title_bor_utf8}
+%\input{title_bor_utf8}
+\input{/home/boris/Dropbox/Public/tex_general/title_bor_utf8}
+%input{e:/Documents/Dropbox/tex_general/title_bor_utf8}
+
+
+%\usepackage{showkeys} % показывать метки
+
+%\usepackage{verbatim}
+
+\input{/home/boris/Dropbox/Public/tex_general/prob_and_sol_utf8}
+%\input{e:/Documents/Dropbox/tex_general/prob_and_sol_utf8}
+%\input{e:/Documents/tex_general/prob_and_sol_utf8}
+%\input{prob_and_sol_utf8}
+
+
+\newcommand{\winpro}{\phi} % специальный знак для \pi из Кришны
+
+\newcommand{\indef}[1]{\textbf{#1}}
+
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+
+
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;)
+\newtheorem{mydef}[equation]{Определение}
+
+\theoremstyle{definition}
+\newtheorem{myex}[equation]{Пример}
+
+%\newtheorem{assertion}{Утверждение}
+%\newtheorem{lemma}{Лемма}
+
+\theoremstyle{definition}
+\newtheorem*{myproof}{Доказательство}
+
+
+
+
+\title{Моделирование аукционов. Азбука. }
+\author{Борис Демешев}
+\date{\today}
+
+
+
+\makeindex % команда для создания предметного указателя
+\bibliographystyle{plain} % стиль оформления ссылок
+
+
+
+
+\begin{document}
+
+\maketitle
+\tableofcontents{}
+
+
+\input{auc_problems.tex}
+
+
+
+
+\printindex % печать предметного указателя здесь
+
+
+\bibliography{/home/boris/Dropbox/tex_general/opit}
+%\bibliography{e:/Documents/Dropbox/tex_general/opit}
+
+
+
+
+\end{document}
+
+
+

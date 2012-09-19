@@ -1,0 +1,449 @@
+#LyX file created by tex2lyx 2.0.0rc2
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\options pdftex
+\use_default_options false
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\use_hyperref 0
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+
+Техническая задача. 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Известно, что 
+\begin_inset Formula $ f(\vec{x}) $
+\end_inset
+
+ и 
+\begin_inset Formula $ g(\vec{x}) $
+\end_inset
+
+ --- супермодулярные функции, а 
+\begin_inset Formula $ a>0 $
+\end_inset
+
+ и 
+\begin_inset Formula $ b>0 $
+\end_inset
+
+ --- константы. Верно ли, что 
+\begin_inset Formula $ af(\vec{x})+bg(\vec{x}) $
+\end_inset
+
+ --- супермодулярная функция?
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Да. Проверяем два свойства: 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ af(\vec{x}) $
+\end_inset
+
+ --- супермодулярна 
+\end_layout
+
+\begin_layout Enumerate
+
+
+\begin_inset Formula $ f(\vec{x})+g(\vec{x}) $
+\end_inset
+
+ --- супермодулярна 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Пусть 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+,..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+ независимы и имеют функцию плотности 
+\begin_inset Formula $ f(t)=3t^{2} $
+\end_inset
+
+ на 
+\begin_inset Formula $ [0;1] $
+\end_inset
+
+. Случайные 
+\begin_inset Formula $ Y_{1} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ Y_{n-1} $
+\end_inset
+
+ --- это есть упорядоченные по убыванию случайные величины 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+, ..., 
+\begin_inset Formula $ X_{n} $
+\end_inset
+
+. С помощью о-малых или без нее найдите совместную функцию плотности 
+\begin_inset Formula $ f_{Y_{5},Y_{10}}(a,b) $
+\end_inset
+
+. 
+\end_layout
+
+\end_deeper
+\begin_deeper
+\begin_layout Standard
+
+Сразу ответ: 
+\begin_inset Formula $ f(a,b)=(n-1)(n-2)C_{n-3}^{4}C_{n-\textcolor{red}{7}}^{4}3a^{2}3b^{2}(a^{3}-b^{3})^{4}(b^{3})^{n-11}(1-a^{3})^{4} $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Следующие две задачи очень похожи, разница в них только в типе аукциона...
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На аукционе первой цены продается участок. Потенциальных покупателей двое. Ценность участка для каждого игрока определяется его площадью. Первый покупатель знает ширину участка 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, а второй --- длину 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+. Совместная фукнция плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ имеет вид 
+\begin_inset Formula $ f(x_{1},x_{2})=\frac{7}{8}+\frac{1}{2}x_{1}x_{2} $
+\end_inset
+
+. Найдите дифференциальное уравнение, которому подчиняется равновесная стратегия игрока.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Сразу начнем с чудо-замены, 
+\begin_inset Formula $ b_{1}=b(a) $
+\end_inset
+
+. Сначала упростим событие 
+\begin_inset Formula $ W_{1} $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+W_{1}=\{Bid_{2}<b(a)\}=\{b(X_{2})<b(a)\}=\{X_{2}<a\}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+А теперь прибыль: 
+\begin_inset Formula \begin{multline}
+\pi(x,b(a))=E(X_{1}X_{2}1_{W_{1}}|X_{1}=x)-b(a)E(1_{W_{1}}|X_{1}=x)=\\
+=xE(X_{2}1_{X_{2}<a}|X_{1}=x)-b(a)E(1_{X_{2}<a}|X_{1}=x)=\\
+=x\int_{0}^{a}x_{2}\frac{f(x,x_{2})}{f(x)}dx_{2}-b(a)\int_{0}^{a}\frac{f(x,x_{2})}{f(x)}dx_{2}
+\end{multline}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Сокращаем на 
+\begin_inset Formula $ f(x) $
+\end_inset
+
+ и берем производную по 
+\begin_inset Formula $ a $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+\frac{\partial \pi}{\partial a}=xaf(x,a)-b'(a)\int_{0}^{a}f(x,x_{2})dx_{2}-b(a)f(x,a)=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Мы хотим, чтобы оптимальной стратегий первого была 
+\begin_inset Formula $ b_{1}=b(x) $
+\end_inset
+
+, т.е. чтобы 
+\begin_inset Formula $ a=x $
+\end_inset
+
+: 
+\begin_inset Formula \begin{equation}
+\frac{\partial \pi}{\partial a}=x^{2}f(x,x)-b'(x)\int_{0}^{x}f(x,x_{2})dx_{2}-b(x)f(x,x)=0
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Остается подставить: 
+\begin_inset Formula \begin{equation}
+\begin{array}{c}
+f(x,x)=\frac{7}{8}+\frac{1}{2}x^{2} \\
+\int_{0}^{x}f(x,x_{2})dx_{2}=\frac{7}{8}x+\frac{1}{4}x^{3}
+\end{array}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+На аукционе второй цены продается участок. Потенциальных покупателей двое. Ценность участка для каждого игрока определяется его площадью. Первый покупатель знает ширину участка 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+, а второй --- длину 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+. Совместная фукнция плотности 
+\begin_inset Formula $ X_{1} $
+\end_inset
+
+ и 
+\begin_inset Formula $ X_{2} $
+\end_inset
+
+ имеет вид 
+\begin_inset Formula $ f(x_{1},x_{2})=\frac{7}{8}+\frac{1}{2}x_{1}x_{2} $
+\end_inset
+
+. Найдите равновесие Нэша.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Никакой разницы с кнопочным аукционом в данном случае нет. Игроков-то всего два! Значит равновесие Нэша имеет вид 
+\begin_inset Formula $ b(x)=x^{2} $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+Доказательство: Если второй игрок использует такую стратегию и первый выигрывает аукцион, то его прибыль равна: 
+\begin_inset Formula \begin{equation}
+X_{1}X_{2}-X_{2}^{2}=(X_{1}-X_{2})X_{2}
+\end{equation}
+\end_inset
+
+ Мы видим, что прибыль положительна, только если 
+\begin_inset Formula $ X_{1}>X_{2} $
+\end_inset
+
+. Использование первым игроком функции 
+\begin_inset Formula $ b(x)=x^{2} $
+\end_inset
+
+ будет обеспечивать его выигрыш только в ситуации 
+\begin_inset Formula $ X_{1}>X_{2} $
+\end_inset
+
+, значит это и есть равновесие Нэша.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Найдите равновесие Нэша в случае кнопочного аукциона. Сигналы 
+\begin_inset Formula $ X_{i} $
+\end_inset
+
+ игроков имеют совместную функцию плотности 
+\begin_inset Formula $ f(x_{1},x_{2},x_{3})=7/8+x_{1}x_{2}x_{3} $
+\end_inset
+
+ при 
+\begin_inset Formula $ x_{1},x_{2},x_{3}\in[0;1] $
+\end_inset
+
+. Ценности определяеются по формулам: 
+\begin_inset Formula \begin{equation}
+\begin{array}{c}
+V_{1}=X_{1}(X_{2}+X_{3}) \\
+V_{2}=X_{2}(X_{1}+X_{3}) \\
+V_{3}=X_{3}(X_{1}+X_{2}) 
+\end{array}
+\end{equation}
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Стратегия описывается двумя функциями: 
+\begin_inset Formula $ b^{3}(x)=2x^{2} $
+\end_inset
+
+. Если при использовании такой стратегии игрок вышел на цене 
+\begin_inset Formula $ p $
+\end_inset
+
+, значит его 
+\begin_inset Formula $ x=\sqrt{p/2} $
+\end_inset
+
+. Получаем 
+\begin_inset Formula $ b^{2}(x,p)=x^{2}+x\sqrt{p/2}$
+\end_inset
+
+. Доказательство аналогично лекции:
+\end_layout
+
+\begin_layout Standard
+
+Если остальные игроки используют эти стратегии и первый выигрывает аукцион, то его выигрыш равен: 
+\begin_inset Formula \begin{equation}
+X_{1}(X_{2}+X_{3})-b^{2}(Y_{1},b^{3}(Y_{2}))=X_{1}(Y_{1}+Y_{2})-(Y_{1}^{2}+Y_{1}Y_{2})=(X_{1}-Y_{1})(Y_{1}+Y_{2})
+\end{equation}
+\end_inset
+
+ Мы видим, что выигрыш положительный, только если 
+\begin_inset Formula $ X_{1}>Y_{1} $
+\end_inset
+
+. Использование первым игроком правил 
+\begin_inset Formula $ b^{3}() $
+\end_inset
+
+ и 
+\begin_inset Formula $ b^{2}() $
+\end_inset
+
+ приводит к выигрышу только если 
+\begin_inset Formula $ X_{1}>Y_{1} $
+\end_inset
+
+, значит это и есть равновесие.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Ценности игроков одинаково распределены, независимы, распределение ценностей дискретно: 
+\begin_inset Formula $ X_{i}$
+\end_inset
+
+ равновероятно принимает натуральное значение от 1 до 100 включительно. Игроки одновременно делают ставки. 
+\color red
+Значения всех ценностей общеизвестны всем игрокам еще до ставок!
+\color inherit
+ Разрешаются только целые неотрицательные ставки. Товар достается игроку, сделавшему наивысшую ставку. Если таких игроков несколько, то победитель выбирается из них равновероятно. Победитель платит сделанную им ставку. Найдите хотя бы одно равновесие Нэша в чистых стратегиях, в котором игроки не используют нестрого доминируемых стратегий.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Пример равновесия Нэша. Обозначим 
+\begin_inset Formula $ v_{max} $
+\end_inset
+
+ --- максимальную ценность и 
+\begin_inset Formula $ v_{sec} $
+\end_inset
+
+ --- вторую по величине ценность (возможно они совпадают). Те игроки, чья ценность 
+\begin_inset Formula $ v_{i}<v_{max} $
+\end_inset
+
+ делают ставку 
+\begin_inset Formula $ b_{i}=v_{i}-1 $
+\end_inset
+
+. Если лидер один, то он делает ставку 
+\begin_inset Formula $ b=v_{sec} $
+\end_inset
+
+, иначе каждый лидер делает ставку 
+\begin_inset Formula $ b=v_{max}-1 $
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

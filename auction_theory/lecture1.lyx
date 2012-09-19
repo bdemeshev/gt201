@@ -1,0 +1,4532 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{makeidx}
+
+
+
+\usepackage{cmap}
+
+
+
+\usepackage[pdftex]{graphicx} % omit pdftex option if not using pdflatex
+
+
+
+\usepackage[colorlinks,hyperindex,unicode]{hyperref}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc} % с ней частично перестает работает поиск в пдф?
+\usepackage[russian]{babel}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{bm}
+\usepackage{color}
+
+\usepackage{multicol}
+
+
+%моя добавка
+\usepackage{ifpdf}
+\ifpdf
+\DeclareGraphicsRule{*}{mps}{*}{}
+\fi
+% конец добавки
+
+\usepackage{asymptote} % After graphicx!
+
+
+\newcommand{\winpro}{\phi} % специальный знак для \pi из Кришны
+\newcommand{\indef}[1]{\textbf{#1}}
+\numberwithin{equation}{page} % уравнения нумеруются на каждой стр. отдельно
+\newtheorem{myth}[equation]{Теорема} % нумерация сквозная с уравнениями
+\theoremstyle{definition} % убирает курсив и что-то еще наверное делает ;) \newtheorem{mydef}[equation]{Определение}
+\theoremstyle{definition} \newtheorem{myex}[equation]{Пример}
+%\newtheorem{assertion}{Утверждение} %\newtheorem{lemma}{Лемма}
+\theoremstyle{definition} \newtheorem*{myproof}{Доказательство}
+\end_preamble
+\options pdftex
+\use_default_options false
+\maintain_unincluded_children false
+\language russian
+\language_package babel
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize 12
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Аукционы бывают разные и эквивалентность доходности
+\end_layout
+
+\begin_layout Standard
+Что почитать:
+\end_layout
+
+\begin_layout Standard
+Базовый текст: IAT, chapter 3.
+ В IAT поначалу автор использует обозначение 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ для ценностей, а потом меняет обозначение на 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ Мы сразу будем использовать 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Три аукциона и три модели
+\end_layout
+
+\begin_layout Itemize
+Английский аукцион.
+ Именно этот аукцион описан в 
+\begin_inset Quotes ard
+\end_inset
+
+12 стульях
+\begin_inset Quotes ald
+\end_inset
+
+ Ильфа и Петрова.
+ Игроки по очереди называют ставки.
+ Каждая последующая ставка должна быть больше, чем предыдущая.
+ Товар достается тому, кто назвал наибольшую цену.
+ Победитель платит за товар столько, сколько он сам поставил
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Про оплату комиссионого сбора в 12 стульях мы, конечно, помним.
+\end_layout
+
+\end_inset
+
+ .
+ По этому принципу устроен самый крупный современный он-лайн аукцион товаров
+ в Интернете, Ebay, 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.ebay.com/
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Голландский аукцион цветов.
+ Большинство цветов продающихся в России были куплены на аукционе цветов
+ в Голландии.
+ Этот традиционный аукцион отличается от английского.
+ Потенциальные покупатели цветов сидят в общем зале.
+ Перед ними на стене --- большие часы с одной стрелкой.
+ Стрелка показывает текущую цену товара.
+ Изначально цена высока и никто не хочет покупать.
+ С движением стрелки цена опускается.
+ Наступит момент, когда одного из покупателей цена наконец устроит.
+ Он получает товар и платит соответствующую цену.
+\end_layout
+
+\begin_layout Itemize
+Интернет-реклама.
+ Когда пользователь набирает в поисковике (в Яндексе, Гугле или любом другом)
+ какое-нибудь слово, к примеру 
+\begin_inset Quotes ard
+\end_inset
+
+ГУ-ВШЭ
+\begin_inset Quotes ald
+\end_inset
+
+, поисковик выдает найденные страницы и рекламные ссылки.
+ Естественно, рекламодатели платят за то, что поисковик показывает их рекламные
+ ссылки.
+ Более того, рекламные ссылки продаются на аукционе! Представим себе, что
+ поисковик продает одно рекламное место.
+ Желающие рекламодатели независимо друг от друга направляют свои заявки:
+ 
+\begin_inset Quotes ard
+\end_inset
+
+я готов платить за него 5 копеек за клик
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+я готов платить 10 копеек за клик
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+я готов платить 7 копеек за клик
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Побеждает, естественно, тот, кто готов платить больше других.
+ Но платит он не ту сумму, которую заявил в своей заявке! Победитель платит
+ вторую по величине ставку! В нашем примере с тремя заявкам рекламное место
+ достается тому, кто был готов платить 10 копеек за клик, но платить он
+ будет 7 копеек за клик.
+ В реальности все чуть сложнее.
+ Например, рекламных мест может быть несколько, тогда тот, кому досталось
+ второе по притягательности место платит ставку того, кому досталось третье.
+ Гугл продает свои рекламные ссылки на 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+adwords.google.com
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Этим трем реальным примерам мы сопоставим три простых модели.
+\end_layout
+
+\begin_layout Standard
+Общее между тремя моделями:
+\end_layout
+
+\begin_layout Standard
+На аукционе продается единица неделимого товара, скажем одна морковка.
+ За право получить морковку борятся 
+\begin_inset Formula $n$
+\end_inset
+
+ покупателей.
+ Для 
+\begin_inset Formula $i$
+\end_inset
+
+-го покупателя морковка имеет некую ценность 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ Ставку 
+\begin_inset Formula $i$
+\end_inset
+
+-го покупателя будем обозначать 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ (b от слова bid).
+\end_layout
+
+\begin_layout Enumerate
+Кнопочный аукцион.
+ У каждого покупателя есть кнопка.
+ Стартовая цена равна нулю.
+ Изначально все покупатели давят на свои кнопки.
+ Затем цена начинает расти.
+ Как только игрок отпускает свою кнопку, он покидает аукцион.
+ Аукцион прекращается, когда остается лишь один игрок, жмущий на кнопку.
+ Товар достается этому игроку по цене, сложившейся на момент остановки.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Эта модель является упрощением реального английского аукциона.
+ В реальности часто бывает, что игроки начинают активно играть лишь незадолго
+ до окончания аукциона.
+ Эта модель не предназначена для описания такого явления.
+ В реальности игроки могут повышать текущую цену на произвольную величину,
+ здесь же цена меняется непрерывно.
+ Тем не менее, многие свойства английского аукциона кнопочная модель ловит.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Аукцион первой цены.
+ Покупатели одновременно делают свои ставки.
+ Товар достается тому покупателю, который назвал самую высокую цену.
+ Победитель платит продавцу свою ставку.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Такой аукцион лучше всего подходит для моделирования голландского аукциона.
+ Действительно, никакой другой информации, кроме того, по чем был продан
+ товар ни один из игроков не получает.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Аукцион второй цены.
+ Покупатели одновременно делают свои ставки.
+ Товар достается тому покупателю, который назвал самую высокую цену.
+ Победитель платит продавцу вторую по величине ставку, т.е.
+ наибольшую ставку сделанную покупателями за исключением его самого.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Эта модель хорошо подходит для аукциона интернет-рекламы с одним рекламным
+ местом.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Чтобы разграничить реальность и модели, мы будем использовать слова 
+\begin_inset Quotes ard
+\end_inset
+
+Английский аукцион
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+Голландский аукцион
+\begin_inset Quotes ald
+\end_inset
+
+ для описания реальных явлений, а слова 
+\begin_inset Quotes ard
+\end_inset
+
+аукцион первой цены
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+аукцион второй цены
+\begin_inset Quotes ald
+\end_inset
+
+, 
+\begin_inset Quotes ard
+\end_inset
+
+кнопочный аукцион
+\begin_inset Quotes ald
+\end_inset
+
+ --- для описания моделей.
+\end_layout
+
+\begin_layout Standard
+А теперь давайте найдем оптимальные стратегии игроков и средний доход продавца
+ в трех моделях:
+\end_layout
+
+\begin_layout Subsection
+Поиск оптимальных стратегий
+\end_layout
+
+\begin_layout Standard
+Для поиска оптимальной стратегии нужно сделать какие-то предположения о
+ ценностях 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+.
+ Начнем с самого простого случая: ценности 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ будут независимыми и равномерными на 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+ случайными величинами.
+ Мы ограничимся поиском симметричного равновесия, т.е.
+ равновесия, где все игроки используют одинаковую стратегию.
+ Фактические ставки при этом могут отличаться! Стратегия --- это функция
+ 
+\begin_inset Formula $b()$
+\end_inset
+
+ от ценности, и даже если эти фукнции 
+\begin_inset Formula $b()$
+\end_inset
+
+ одиковые, величины 
+\begin_inset Formula $b(X_{i})$
+\end_inset
+
+ будут разными в силу того, что ценности 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ будут разными.
+\end_layout
+
+\begin_layout Standard
+До начала игры игроки ничем не отличаются: у них одинаковый закон распределения
+ ценности товара, поэтому при анализе мы будем изучать поведение первого
+ игрока.
+\end_layout
+
+\begin_layout Standard
+Введем также обозначения 
+\begin_inset Formula $Y_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $Y_{2}$
+\end_inset
+
+, ..., 
+\begin_inset Formula $Y_{n-1}$
+\end_inset
+
+ --- это величины 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $X_{3}$
+\end_inset
+
+, ..., 
+\begin_inset Formula $X_{n}$
+\end_inset
+
+, отсортированные в порядке убывания.
+ В частности, 
+\begin_inset Formula $Y_{1}=\max\{X_{2},...,X_{n}\}$
+\end_inset
+
+ --- наибольшая ставка сделанная всеми игроками кроме первого.
+ Также, 
+\begin_inset Formula $Y_{n-1}=\min\{X_{2},...,X_{n}\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Поехали! 
+\end_layout
+
+\begin_layout Enumerate
+Аукцион первой цены.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Предположим, что есть некая равновесная стратегия 
+\begin_inset Formula $b(x)$
+\end_inset
+
+.
+ Предположим также, что она дифференциируема и возрастает по 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Первый игрок выигрывает, если его ставка больше всех остальных, т.е.
+ 
+\begin_inset Formula $b_{1}>Bid_{i}$
+\end_inset
+
+ для 
+\begin_inset Formula $i\geq2$
+\end_inset
+
+.
+ Обозначим событие, состоящее в том, что первый игрок выиграл буквой 
+\begin_inset Formula $W_{1}$
+\end_inset
+
+.
+ Его ожидаемый выигрыш равен:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}(x,b_{1})=(x-b_{1})P(W_{1}|X_{1}=x;Bid_{1}=b_{1})\label{first_price_eq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вероятность: 
+\begin_inset Formula 
+\begin{equation}
+P(W_{1}|X_{1}=x;Bid_{1}=b_{1})=P(b_{1}>Bid_{2}\cap b_{1}>Bid_{3}\cap\ldots\cap b_{1}>Bid_{n}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Наша задача найти равновесие Нэша, т.е.
+ такую ситуацию, когда использование стратегии 
+\begin_inset Formula $b(x)$
+\end_inset
+
+ является наилучшим действием, если остальные игроки используют такую же
+ стратегию.
+ Поэтому мы предположим, что все игроки кроме первого используют стратегию
+ 
+\begin_inset Formula $b(x)$
+\end_inset
+
+, и найдем условие при котором первому тоже выгодно ее использовать.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(W_{1}|X_{1}=x;Bid_{1}=b_{1})=P(b_{1}>b(X_{2})\cap b_{1}>b(X_{3})\cap\ldots\cap b_{1}>b(X_{n}))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В силу независимости случайныйх величин 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(W_{1}|X_{1}=x;Bid_{1}=b_{1})=P(b_{1}>b(X_{2}))P(b_{1}>b(X_{3}))\ldots P(b_{1}>b(X_{n}))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В силу одинакового закона распределения 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+P(W_{1}|X_{1}=x;Bid_{1}=b_{1})=P(b_{1}>b(X_{2}))^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Далее следует начало красивого трюка! Надеюсь все вы понимаете как делать
+ замену переменных при решении задач.
+ Входит, скажем, в уравнение переменная 
+\begin_inset Formula $k$
+\end_inset
+
+, а мы говорим, что вместо 
+\begin_inset Formula $k$
+\end_inset
+
+ мы будем писать 
+\begin_inset Formula $f(m)$
+\end_inset
+
+.
+ Или наоборот, входит в уравнение 
+\begin_inset Formula $f(m)$
+\end_inset
+
+, а мы говорим, что вместо 
+\begin_inset Formula $f(m)$
+\end_inset
+
+ будем писать 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Так вот сейчас мы сделаем замену.
+ Мы заменим 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ на неизвестную (!) функцию!!!
+\end_layout
+
+\begin_layout Standard
+Итак, мы делаем замену 
+\begin_inset Formula $b_{1}:=b(a)$
+\end_inset
+
+.
+ С помощью этой замены мы упростим вероятность:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+P(b_{1}>b(X_{2}))^{n-1}=P(b(a)>b(X_{2}))^{n-1}=P(a>X_{2})^{n-1}=P(X_{2}<a)^{n-1}=F(a)^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На всякий случай: 
+\begin_inset Formula $F(a)=P(X_{i}<a)$
+\end_inset
+
+ --- это функция распределения.
+\end_layout
+
+\begin_layout Standard
+И наша прибыль имеет вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-b(a))(F(a))^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вместо максимизации по 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ нам придется максимизировать по 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Для нахождения оптимальной стратегии первого игрока приравниваем производную
+ по 
+\begin_inset Formula $a$
+\end_inset
+
+ к нулю:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\pi_{1}}{\partial a}=-b'(a)(F(a))^{n-1}+(x-b(a))(n-1)F(a)^{n-2}f(a)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+После упрощения:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-b'(a)F(a)+(x-b(a))(n-1)f(a)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Завершение красивого трюка! Мы хотим потребовать, чтобы первому игроку тоже
+ было оптимально использовать стратегию 
+\begin_inset Formula $b()$
+\end_inset
+
+.
+ Ценность товара для первого игрока мы обозначили 
+\begin_inset Formula $x$
+\end_inset
+
+, значит оптимальное 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ должно равняться 
+\begin_inset Formula $b(x)$
+\end_inset
+
+.
+ А мы делали замену 
+\begin_inset Formula $b_{1}=b(a)$
+\end_inset
+
+.
+ Значит в точке оптимума 
+\begin_inset Formula $b(x)=b(a)$
+\end_inset
+
+ или 
+\begin_inset Formula $x=a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-b'(x)F(x)+(x-b(x))(n-1)f(x)=0\label{first_price_final_diffeq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Это дифференциальное уравнение можно решить в общем виде, но мы ограничимся
+ нашим равномерным случаем.
+\end_layout
+
+\begin_layout Standard
+Для равномерной случайной на отрезке 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+ получаем 
+\begin_inset Formula $f(x)=1$
+\end_inset
+
+ и 
+\begin_inset Formula $F(x)=x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-b'(x)x+(x-b(x))(n-1)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Это линейное дифференциальное уравнение...
+ Его можно решить стандартными методами, скажем, вариацией постоянной, а
+ можно угадать вид решения.
+ Мы пойдем путем угадывания, но я предполагаю, что все могут решить его
+ честно! Раз фигурирует производная и первая степень 
+\begin_inset Formula $x$
+\end_inset
+
+, попробуем 
+\begin_inset Formula $b(x)=kx+m$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-kx+(x-kx-m)(n-1)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Собираем коэффициенты при 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-m(n-1)+x(-k+(1-k)(n-1))=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Это должно быть тождеством для любого 
+\begin_inset Formula $x$
+\end_inset
+
+, значит 
+\begin_inset Formula $m=0$
+\end_inset
+
+ и 
+\begin_inset Formula $-k+(1-k)(n-1)=0$
+\end_inset
+
+.
+ Находим 
+\begin_inset Formula $k$
+\end_inset
+
+, 
+\begin_inset Formula $k=\frac{n-1}{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Оптимальная стратегия первого, а заодно и всех остальных игроков: 
+\begin_inset Formula $b(x)=\frac{n-1}{n}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Комментарии:
+\end_layout
+
+\begin_layout Enumerate
+Т.к.
+ 
+\begin_inset Formula $\frac{n-1}{n}<1$
+\end_inset
+
+ игроки занижают свою истинную ценность в равновесии Нэша.
+ Причем, чем меньше игроков, тем сильнее занижаются ставки по сравнению
+ с субъективной ценностью товара.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Можно обойтись без красивого трюка.
+ Для этого можно рассмотреть функцию, обратную к функции 
+\begin_inset Formula $b()$
+\end_inset
+
+ и применить ее внутри вероятности.
+ 
+\end_layout
+
+\begin_layout Enumerate
+В равномерном случае можно обойтись и без дифференциальных уравнений.
+ Для этого достаточно сделать удачную догадку до начала решения.
+ Т.е.
+ начать со слов: предположим, что оптимальная стратегия имеет вид 
+\begin_inset Formula $b(x)=kx+m$
+\end_inset
+
+ и максимизировать по 
+\begin_inset Formula $k$
+\end_inset
+
+ и 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Тот, кто попробует честно решить линейное дифференциальное уравнение, обнаружит,
+ что общее решение имеет вид 
+\begin_inset Formula $b(x)=c\cdot x^{-(n-1)}+\frac{n-1}{n}x$
+\end_inset
+
+.
+ Почему мы берем 
+\begin_inset Formula $c=0$
+\end_inset
+
+? Потому, что стратегия игрока должна быть определена при любых 
+\begin_inset Formula $x\in[0;1]$
+\end_inset
+
+, в частности при 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ А за исключением случая 
+\begin_inset Formula $c=0$
+\end_inset
+
+ общее решение не определено при 
+\begin_inset Formula $x=0$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ Решение 
+\begin_inset Quotes ard
+\end_inset
+
+в лоб
+\begin_inset Quotes ald
+\end_inset
+
+, без чудо-подстановки.
+\end_layout
+
+\begin_layout Standard
+Начнем с того, что прибыль представима в виде: 
+\begin_inset Formula 
+\begin{equation}
+\pi(x,b_{1})=(x-b_{1})P(b(X_{2})<b_{1})^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+По нашим предположениям функция 
+\begin_inset Formula $b()$
+\end_inset
+
+ строго возрастает, значит у нее есть обратная.
+ Обозначим ее 
+\begin_inset Formula $b^{-1}()$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi(x,b_{1})=(x-b_{1})P(X_{2}<b^{-1}(b_{1}))^{n-1}=(x-b_{1})F(b^{-1}(b_{1}))^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Берем производную по 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\pi(x,b_{1})}{\partial b_{1}}=-F(b^{-1}(b_{1}))^{n-1}+(x-b_{1})(n-1)F(b^{-1}(b_{1}))^{n-2}f(b^{-1}(b_{1}))\cdot\frac{db^{-1}(b_{1})}{db_{1}}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отсюда как-то неявно выражается 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ как функция от 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Но мы на самом деле знаем ответ! Мы уже предположили, что ситуация, когда
+ все игроки используют функцию 
+\begin_inset Formula $b()$
+\end_inset
+
+ --- это NE.
+ Значит если все игроки кроме первого используют 
+\begin_inset Formula $b()$
+\end_inset
+
+, то и первому игроку оптимально ее использовать! Значит решением должно
+ являться 
+\begin_inset Formula $b_{1}=b(x)$
+\end_inset
+
+.
+ Поэтому при подстановке 
+\begin_inset Formula $b_{1}=b(x)$
+\end_inset
+
+, должно получаться тождество верное при любых 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+При подстановке 
+\begin_inset Formula $b_{1}=b(x)$
+\end_inset
+
+ величина 
+\begin_inset Formula $b^{-1}(b_{1})$
+\end_inset
+
+ превращается в 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Собственно, это и есть 
+\begin_inset Formula $a$
+\end_inset
+
+ при чудо-замене...
+ Получаем дифференциальное уравнение:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-F(x)^{n-1}+(x-b(x))(n-1)F(x)^{n-2}f(x)\left.\frac{db^{-1}(b_{1})}{db_{1}}\right|_{b_{1}=b(x)}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Сокращаем 
+\begin_inset Formula $F^{n-2}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-F(x)+(x-b(x))(n-1)f(x)\left.\frac{db^{-1}(b_{1})}{db_{1}}\right|_{b_{1}=b(x)}=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Остается вспомнить, что производная обратная функции --- это единица делить
+ на производную исходной функции и наше уравнение сопадает с 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "first_price_final_diffeq"
+
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Аукцион второй цены.
+ Раз все игроки одинаковые, ограничимся рассмотрением первого игрока.
+ Результат аукциона для него зависит от его собственной ставки и от максимальной
+ ставки остальных игроков.
+ Ценность товара для первого игрока у нас обозначена 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+.
+ Обозначим максимальную ставку остальных игроков --- 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ Величину 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ игрок знает, а 
+\begin_inset Formula $m$
+\end_inset
+
+ --- нет.
+ В наших обозначениях 
+\begin_inset Formula $m=b(Y_{1})$
+\end_inset
+
+, но это не существенно.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Сравним две стратегии первого игрока: 
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{1}=X_{1}+\Delta$
+\end_inset
+
+.
+ Числа 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ и 
+\begin_inset Formula $X_{1}+\Delta$
+\end_inset
+
+ разбивают числовую прямую на три интервала.
+ Неизвестное 
+\begin_inset Formula $m$
+\end_inset
+
+ попадет в один из этих трех интервалов.
+ Запишем выигрыш первого игрока в табличку.
+ Если 
+\begin_inset Formula $b_{1}<m$
+\end_inset
+
+, то он ничего не платит и не получает товар.
+ Если 
+\begin_inset Formula $b_{1}>m$
+\end_inset
+
+, то игрок получает товар ценностью 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ и платит 
+\begin_inset Formula $m$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m\in(-\infty;X_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m\in(X_{1};X_{1}+\Delta)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m\in(X_{1}+\Delta;+\infty)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}-m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}=X_{1}+\Delta$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}-m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}-m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Мы видим, что в двух случаях из трех стратегии приносят одинаковый выигрыш.
+ Различие есть только если 
+\begin_inset Formula $m\in(X_{1};X_{1}+\Delta)$
+\end_inset
+
+.
+ Стратегия 
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+ приносит нулевой выигрыш, а стратегия 
+\begin_inset Formula $b_{1}=X_{1}+\Delta$
+\end_inset
+
+ приносит выигрыш 
+\begin_inset Formula $X_{1}-m<0$
+\end_inset
+
+.
+ Значит стратегия 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ нестрого доминирует любую стратегию вида 
+\begin_inset Formula $b_{1}=X_{1}+\Delta$
+\end_inset
+
+ при 
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+.
+ Делать ставку выше своей ценности не выгодно!
+\end_layout
+
+\begin_layout Standard
+Аналогично сравним стратегии 
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+ и 
+\begin_inset Formula $b_{1}=X_{1}-\Delta$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="4">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m\in(-\infty;X_{1}-\Delta)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m\in(X_{1}-\Delta;X_{1})$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $m\in(X_{1};+\infty)$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}-m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}-m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $b_{1}=X_{1}-\Delta$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $X_{1}-m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+На этот раз разница в выигрышах возникает если 
+\begin_inset Formula $m\in(X_{1}-\Delta;X_{1})$
+\end_inset
+
+.
+ Стратегия 
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+ приносит выигрыш 
+\begin_inset Formula $X_{1}-m>0$
+\end_inset
+
+.
+ Значит стратегия 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ нестрого доминирует любую стратегию вида 
+\begin_inset Formula $b_{1}=X_{1}-\Delta$
+\end_inset
+
+ при 
+\begin_inset Formula $\Delta>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Вывод.
+ Существует равновесие Нэша, в котором все игроки используют стратегию 
+\begin_inset Formula $b(x)=x$
+\end_inset
+
+, т.е.
+ правдиво декларируют свои ценности.
+\end_layout
+
+\begin_layout Standard
+Заметим, что в наших рассуждениях нигде не использовалось равномерность
+ распределения 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ Значит наше рассуждение проходит для любого непрерывного закона распределения
+ 
+\begin_inset Formula $X$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Почему только для непрерывного? Надеюсь, кто-нибудь обратил внимание, что
+ интервалы для 
+\begin_inset Formula $m$
+\end_inset
+
+ были открытые, мы не рассматривали случай, когда 
+\begin_inset Formula $m$
+\end_inset
+
+ идеально точно попадает в его границу.
+ Если распределение ценностей непрерывно, то вероятность того, что 
+\begin_inset Formula $m$
+\end_inset
+
+ будет равняться конкретному числу равна нулю.
+ Исключив эти случаи из рассмотрения мы не изменили ожидаемую прибыль первого
+ игрока, а значит не изменили его оптимальную стратегию.
+\end_layout
+
+\begin_layout Standard
+В случае дискретного распределения доходностей очень важным становится правило,
+ согласно которому распределяется товар, если ставки совпали.
+ В непрерывном случае вероятность совпадения ставок равна нулю, и никакое
+ правило распределения товара при 
+\begin_inset Quotes ard
+\end_inset
+
+ничьей
+\begin_inset Quotes ald
+\end_inset
+
+ не влияет на оптимальные стратегии.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Кнопочный аукцион.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Снова рассмотрим первого игрока.
+ Если он видит,например, что другие игроки долго давят свои кнопки, он может
+ сделать вывод, что их ценности товара высоки.
+ Наблюдая за другими, он получает информацию о них, но не о себе! Его ценность
+ не зависит от их ценностей! Ситуция резко изменится, когда мы будем рассматрива
+ть зависимые ценности в следующих лекциях.
+ А пока наблюдение за другими не дает нашему игроку никакой полезной информации,
+ кроме того, остался ли он уже один в игре, или еще нет.
+\end_layout
+
+\begin_layout Standard
+Естественно, как только игрок остался один в игре, победитель сразу определен.
+ Значит стратегия игрока не зависит, от того, сколько еще игроков осталось
+ кроме него.
+ Еще двое или трое, или семеро --- никакой разницы.
+ Значит еще до начала аукциона, узнав свою ценность 
+\begin_inset Formula $X$
+\end_inset
+
+, игрок может уже спланировать свои действия: 
+\begin_inset Quotes ard
+\end_inset
+
+я буду давить на кнопку до тех пор, пока цена не дойдет до некоей цены 
+\begin_inset Formula $b$
+\end_inset
+
+ или пока я не выиграю аукцион.
+\begin_inset Quotes ald
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Итак, действия игрока описывается его числом 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+.
+ Представим теперь, что игроки просто пишут свои 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ на бумажках, а на кнопки давят роботы, согласно этим 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+.
+ Кто победит на аукционе? Победит тот, кто написал наибольшее 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+.
+ А сколько он заплатит? Он заплатит вторую по величине 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+!
+\end_layout
+
+\begin_layout Standard
+Получается, что при независимых ценностях, кнопочный аукцион полностью эквивален
+тен аукциону второй цены.
+ А его мы уже решали.
+ Оптимальная стратегия: 
+\begin_inset Formula $b(x)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Когда ценности будут коррелированы, кнопочный аукцион будет отличаться от
+ аукциона второй цены.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Чтобы не повторяться давайте введем для целей наших лекций:
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{mydef}
+\end_layout
+
+\end_inset
+
+ Закон распределения случайной величины 
+\begin_inset Formula $X$
+\end_inset
+
+ назовем 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+indef{
+\end_layout
+
+\end_inset
+
+регулярным
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+, если существуют такие числа 
+\begin_inset Formula $a$
+\end_inset
+
+ и 
+\begin_inset Formula $b$
+\end_inset
+
+, что функция распределения 
+\begin_inset Formula $F$
+\end_inset
+
+ строго возрастает и непрерывна на 
+\begin_inset Formula $[a;b]$
+\end_inset
+
+, 
+\begin_inset Formula $F(a)=0$
+\end_inset
+
+ и 
+\begin_inset Formula $F(b)=1$
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{mydef}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Мы в этом курсе всегда будем рассматривать регулярное распределение на 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+.
+ Это нисколько нас не ограничивает, т.к.
+ вопрос выбора начала и конца отрезка --- это вопрос выбора масштаба, в
+ котором измеряются денежные суммы.
+ Может быть 
+\begin_inset Quotes ard
+\end_inset
+
+один
+\begin_inset Quotes ald
+\end_inset
+
+ --- это один миллион рублей.
+ Зато обозначения становятся проще.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myth}
+\end_layout
+
+\end_inset
+
+ Теорема об одинаковой доходности.
+ Revenue equivalence theorem.
+\end_layout
+
+\begin_layout Standard
+Если:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE1.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ На аукционе выставлен один товар 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE2.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ За право получить товар торгуются 
+\begin_inset Formula $n$
+\end_inset
+
+ игроков 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE3.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Ценности товара для разных игроков одинаково распределенны и независимы
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE4.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Ценности имеют регулярное распределение на отрезке 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE5.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ В равновесии товар достается тому игроку, для которого он ценнее всего
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE6.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ В равновесии средний выигрыш игрока с минимальной ценностью (у нас с ценностью
+ 0) равен 0 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\end_inset
+
+RE7.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\end_inset
+
+ Покупатели нейтральны к риску 
+\end_layout
+
+\begin_layout Standard
+То:
+\end_layout
+
+\begin_layout Standard
+Средний доход продавца не зависит от конкретного механизма проведения аукциона
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myth}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Доказательство состоит из трех шагов.
+ Двух простых и третьего, позапутаннее, --- связанного с теоремой об огибающей...
+\end_layout
+
+\begin_layout Standard
+Шаг 1.
+ Рассмотрим игрока с ценностью 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Какова вероятность того, что он выиграет аукцион? Из требования RE5 следует,
+ что это вероятность того, что ценность остальных игроков ниже 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ Применяя требования RE1-RE4 получаем, что искомая вероятность, обозначим
+ ее 
+\begin_inset Formula $q(x)$
+\end_inset
+
+, равна 
+\begin_inset Formula 
+\[
+q(x)=F(x)^{n-1}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Шаг 2.
+ Заметим, что средняя выручка продавца --- это сумма средних платежей всех
+ игроков.
+\end_layout
+
+\begin_layout Standard
+Шаг 3.
+ Оказывается, что средний платеж игрока однозначно выводится из вероятности,
+ упомянутой в шаге 1 и условия RE6.
+ А именно, вот-вот мы докажем, что средняя выплата игрока определяется по
+ формуле:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pay(x)=xq(x)-\int_{0}^{x}q(t)dt\label{pay_eq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Доказательство на самом деле занимает две или три строчки, но перед ними
+ нужно ввести кучу обозначений.
+ Итак...
+\end_layout
+
+\begin_layout Standard
+Мы выбрали конкретного игрока.
+ Рассмотрим ситуацию, в которой остальные игроки используют равновесные
+ стратегии.
+ Вероятность того, что наш игрок выиграет аукцион зависит только от его
+ ставки 
+\begin_inset Formula $b$
+\end_inset
+
+, так как стратегии остальных зафикисрованы.
+ Обозначим ее 
+\begin_inset Formula $\widehat{q}(b)$
+\end_inset
+
+.
+ Если игрок выигрывает аукцион, то он что-то платит, причем не обязательно
+ свою ставку! Если не выигрывает, то ничего не платит.
+ Среднее значение этого платежа опять же зависит только от его ставки 
+\begin_inset Formula $b$
+\end_inset
+
+, обозначим его 
+\begin_inset Formula $\widehat{pay}(b)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Средний выигрыш игрока, тогда определяется по формуле:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi(x,b)=x\widehat{q}(b)-\widehat{pay}(b)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+У игрока есть равновесная стратегия 
+\begin_inset Formula $b(x)$
+\end_inset
+
+, которая по определению равновесия Нэша, является наилучшим ответом на
+ действия других игроков.
+\end_layout
+
+\begin_layout Standard
+При подстановке этой наилучшей стратегии 
+\begin_inset Formula $b(x)$
+\end_inset
+
+ вместо 
+\begin_inset Formula $b$
+\end_inset
+
+ мы получаем определения трех новых функций:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+q(x):=\widehat{q}(b(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pay(x)=\widehat{pay}(b(x))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\pi^{*}(x)=\pi(x,b(x))=xq(x)-pay(x)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для ясности: единственная разница между функциями 
+\begin_inset Formula $\widehat{q}()$
+\end_inset
+
+ и 
+\begin_inset Formula $q()$
+\end_inset
+
+ состоит в том, что первая зависит от ставки, а вторая --- от ценности.
+ Повесив на стену столько ружей, пора стрелять!
+\end_layout
+
+\begin_layout Standard
+Находим производную:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\pi^{*}(x)}{dx}=\frac{d\pi(x,b(x))}{dx}=\frac{\partial\pi}{\partial x}+\frac{\partial\pi}{\partial b}\frac{db}{dx}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+А теперь вспомним, что оптимальная стратегия 
+\begin_inset Formula $b(x)$
+\end_inset
+
+ находится из условия 
+\begin_inset Formula $\frac{\partial\pi}{\partial b}=0$
+\end_inset
+
+.
+ Значит:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{d\pi^{*}(x)}{dx}=\left.\frac{\partial\pi}{\partial x}\right|_{b=b(x)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Это, между нами говоря, была теорема об огибающей.
+ Упрощаем производную:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left.\frac{\partial\pi(x,b)}{\partial x}\right|_{b=b(x)}=\widehat{q}(b)|_{b=b(x)}=q(x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вот и все! Кстати, это имеет легкую смысловую интерпретацию.
+ Частная производная говорит нам, что случится с ожидаемым выигрышем, если
+ мы будем менять ценность 
+\begin_inset Formula $x$
+\end_inset
+
+, но не будем менять стратегию 
+\begin_inset Formula $b$
+\end_inset
+
+.
+ Не меняя стратегию мы не влияем на вероятность выигрыша и на наш средний
+ платеж организаторам аукциона.
+ Естественно, мы должны получить вероятность выигрыша.
+\end_layout
+
+\begin_layout Standard
+Осталось записать это в интегральной форме:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi^{*}(x)=\pi^{*}(0)+\int_{0}^{x}q(t)dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Условие RE6 говорит, что 
+\begin_inset Formula $\pi^{*}(0)=0$
+\end_inset
+
+ и мы можем увидеть, что:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+xq(x)-pay(x)=\int_{0}^{x}q(t)dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Что и требовалось доказать.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{proof}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Примечания.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Теорема говорит только о равенстве среднего дохода.
+ Она не говорит, что доход продавца при данных конкретных ценностях покупателей
+ не зависит от формы аукциона.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Теорема не говорит, что равновесие, в котором игрок с наивысшей ценностью
+ получает товар, существует.
+ Она, наооборот, опирается на существование такого равновесия: если такое
+ равновесие есть, то средний доход продавца не зависит от формы проведения
+ аукциона.
+ Поэтому использовать теорему нужно аккуратно.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Если в аукционе товар достается тому, кто сделал наибольшую ставку, то часто
+ помогает такая цепочка рассуждений: Предположим, что равновесие, где товар
+ достается игроку с наибольшей ценностью есть.
+ Тогда мы можем использовать теорему.
+ Она нам поможет (сейчас мы на примере это увидим) найти равновесную стратегию.
+ Затем мы проверяем, что эта равновесная стратегия 
+\begin_inset Formula $b(x)$
+\end_inset
+
+ является возрастающей функцией по 
+\begin_inset Formula $X$
+\end_inset
+
+.
+ И мы подобно барону Мюнхаузену вытащили сами себя за волосы! Если по правилам
+ аукциона товар достается сделавшему наибольшую ставку, а наибольшая ставка
+ соответствует наибольшей ценности, значит теорему можно было применять!
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Наши три модели удовлетворяют условиям теоремы, поэтому средний доход продавца
+ в них одинаковый:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+E(R^{B})=E(R^{FP})=E(R^{SP})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Средний доход продавца равен 
+\begin_inset Formula $n$
+\end_inset
+
+ умножить на среднюю выплату от первого игрока продавцу, поэтому воспользуемся
+ формулой для средней выплаты от игрока продавцу:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+pay(x)=xq(x)-\int_{0}^{x}q(t)dt
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+При равномерном распределении ценностей, т.е.
+ 
+\begin_inset Formula $q(x)=F(x)^{n-1}=x^{n-1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pay(x)=\frac{n-1}{n}x^{n}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Воспользуемся равномерностью второй раз:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(pay(X_{1}))=E(\frac{n-1}{n}X_{1}^{n})=\frac{n-1}{n}\int t^{n}dt=\frac{n-1}{n(n+1)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Умножаем на 
+\begin_inset Formula $n$
+\end_inset
+
+ и получаем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(R^{B})=E(R^{FP})=E(R^{SP})=\frac{n-1}{n+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+А сейчас мы с помощью этой теоремы в два счета получим решение аукциона
+ первой цены не только для равномерного случая.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{myex}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "use_ret"
+
+\end_inset
+
+ Решение аукциона первой цены для случай произвольного регулярного распределения
+ ценностей.
+ Предположим, что есть некое равновесие, и теорему об одинаковой доходности
+ можно применять.
+\end_layout
+
+\begin_layout Standard
+На аукционе первой цене средний платеж игрока равен его ставке помноженной
+ на вероятность выигрыша:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pay(x)=b(x)q(x)\label{first_price_pay_eq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Таким образом уравнение 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "pay_eq"
+
+\end_inset
+
+ имеет вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+xq(x)-b(x)q(x)=\int_{0}^{x}q(t)dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Отсюда мы находим оптимальную стратегию:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+b(x)=x-\frac{\int_{0}^{x}q(t)dt}{q(x)}\label{first_price_b_eq}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Напомним, что условия RE1-RE5 говорят нам, что 
+\begin_inset Formula $q(x)=F(x)^{n-1}$
+\end_inset
+
+.
+ Это и есть решение аукциона первой цены для произвольной регулярной 
+\begin_inset Formula $F$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Остается проверить, что теорему можно было применять! Берем производную
+ 
+\begin_inset Formula $\frac{db(x)}{dx}$
+\end_inset
+
+ и убеждаемся, что она строго положительна!
+\end_layout
+
+\begin_layout Standard
+Убедитесь кстати, что при подстановке 
+\begin_inset Formula $F(t)=t$
+\end_inset
+
+ на 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+ мы получаем наш результат для равномерно распределенных ценностей.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{myex}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Пример с коррелированными ценностями
+\end_layout
+
+\begin_layout Standard
+Сравним на примере доходы аукциона первой и второй цены при коррелированных
+ ценностях.
+\end_layout
+
+\begin_layout Standard
+В аукционе участвуют два игрока.
+ Предположим, что совместная функция плотностей на множестве 
+\begin_inset Formula $x_{1},x_{2}\in[0;1]$
+\end_inset
+
+ имеет вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(x_{1},x_{2})=x_{1}+x_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Наша задача найти равновесие Нэша для аукциона первой и для аукциона второй
+ цены, а также среднюю выручку продавца.
+\end_layout
+
+\begin_layout Enumerate
+Аукцион первой цены.
+ Считаем ожидаемый выигрыш первого игрока, если его ценность равна 
+\begin_inset Formula $x$
+\end_inset
+
+, а ставит он 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+.
+ Отличие от формулы 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "first_price_eq"
+
+\end_inset
+
+ состоит в том, что знание 
+\begin_inset Formula $x$
+\end_inset
+
+ содержит в себе информацию о ценности, и следовательно, ставке, второго
+ игрока.
+ Поэтому мы используем условную вероятность:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}(x,b_{1})=(x-b_{1})P(b_{1}>Bid_{2}|X_{1}=x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Предположим, что существует симметричное равновесие Нэша, в котором все
+ игроки делают ставки согласно функции 
+\begin_inset Formula $b(x)$
+\end_inset
+
+.
+ Предположим, что эта функция дифференциируема и возрастает по 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Снова рассмотрим ситуацию, в которой все игроки кроме первого используют
+ функцию 
+\begin_inset Formula $b()$
+\end_inset
+
+ для своих ставок и найдем оптимальное поведение первого игрока.
+ В нашем частном случае 
+\begin_inset Quotes ard
+\end_inset
+
+все остальные
+\begin_inset Quotes ald
+\end_inset
+
+ --- это только второй игрок.
+ Т.е.
+ 
+\begin_inset Formula $Bid_{2}=b(X_{2})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Снова сделаем магическую замену 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ на пока неизвестную функцию 
+\begin_inset Formula $b(a)$
+\end_inset
+
+.
+ В силу предположения о возрастании 
+\begin_inset Formula $b(x)$
+\end_inset
+
+ условие 
+\begin_inset Formula $b(a)>b(X_{2})$
+\end_inset
+
+ равносильны тому, что 
+\begin_inset Formula $a>X_{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+После магической подстановки наша прибыль имеет вид:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-b(a))P(a>X_{2}|X_{1}=x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Чтобы брать производную по 
+\begin_inset Formula $a$
+\end_inset
+
+ вспомним немного теорию вероятностей:
+\end_layout
+
+\begin_layout Standard
+Из совместной функции плотности 
+\begin_inset Formula $f(x_{1},x_{2})$
+\end_inset
+
+ можно получить:
+\end_layout
+
+\begin_layout Standard
+Сначала частную функцию плотности 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f_{X_{1}}(x_{1}):=\int_{0}^{1}f(x_{1},x_{2})dx_{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В нашем случае (интеграл берите сами) 
+\begin_inset Formula $f_{X_{1}}(x_{1})=\frac{1}{2}+x_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+А затем и условную функцию плотности по принципу:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+f(x_{2}|x_{1}):=\frac{f(x_{1},x_{2})}{f_{X_{1}}(x_{1})}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В нашем случае получаем 
+\begin_inset Formula $f(x_{2}|x_{1})=\frac{x_{1}+x_{2}}{1/2+x_{1}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+А из условной функции плотности можно получить условную функцию распределения:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+F(x_{2}|x_{1}):=\int_{0}^{x_{2}}f(t|x_{1})dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В нашем случае получаем 
+\begin_inset Formula $F(x_{2}|x_{1}):=\frac{x_{1}x_{2}+x_{2}^{2}/2}{1/2+x_{1}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Но ведь 
+\begin_inset Formula $P(X_{2}<a|X_{1}=x)$
+\end_inset
+
+ это и есть условная функция распределения, 
+\begin_inset Formula $F_{X_{2}|X_{1}}(a|x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Значит наша прибыль в вероятностных терминах записывается как:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-b(a))F_{X_{2}|X_{1}}(a|x)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Берем производную по 
+\begin_inset Formula $a$
+\end_inset
+
+ и приравниваем к нулю:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{\partial\pi_{1}}{\partial a}=-b'(a)F_{X_{2}|X_{1}}(a|x)+(x-b(a))f_{X_{2}|X_{1}}(a|x)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Снова завершаем магический трюк.
+ Мы должны потребовать, чтобы оптимальной стратегий первого игрока была
+ бы функция 
+\begin_inset Formula $b_{1}=b(x)$
+\end_inset
+
+.
+ Но мы использовали замену 
+\begin_inset Formula $b_{1}=b(a)$
+\end_inset
+
+, значит 
+\begin_inset Formula $x=a$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+-b'(x)F_{X_{2}|X_{1}}(x|x)+(x-b(x))f_{X_{2}|X_{1}}(x|x)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В результате мы получили дифференциальное уравнение:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+b'(x)=(x-b(x))\frac{f_{X_{2}|X_{1}}(x|x)}{F_{X_{2}|X_{1}}(x|x)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В нашем частном случае: 
+\begin_inset Formula $f(x|x)=\frac{2x}{1/2+x}$
+\end_inset
+
+, 
+\begin_inset Formula $F(x|x)=\frac{1.5x^{2}}{1/2+x}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Получаем дифференциальное уравнение:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+b'=(x-b(x))\frac{4}{3x}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Мы же везунчики, правда у него будет линейное решение?
+\end_layout
+
+\begin_layout Standard
+Можно подбором получить 
+\begin_inset Formula $b(x)=\frac{4}{7}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если же решать честно, то общее решение имеет вид 
+\begin_inset Formula $b(x)=c\cdot x^{-4/3}+\frac{4}{7}x$
+\end_inset
+
+.
+ Но мы ищем стратегию, которая подходит для любого 
+\begin_inset Formula $x\in[0;1]$
+\end_inset
+
+, поэтому 
+\begin_inset Formula $c=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Настала очередь дохода продавца.
+ Он равен удвоенной ожидаемой выплате первого игрока.
+ Первый игрок платит 
+\begin_inset Formula $\frac{4}{7}X_{1}$
+\end_inset
+
+ только если 
+\begin_inset Formula $X_{1}>X_{2}$
+\end_inset
+
+.
+ Значит:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(R^{FP})=2E(\frac{4}{7}X_{1}\cdot1_{X_{1}>X_{2}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Задача свелась к двойному интегралу:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(\frac{4}{7}X_{1}\cdot1_{X_{1}>X_{2}})=\int_{0}^{1}\int_{0}^{x_{1}}\frac{4}{7}x_{1}f(x_{1},x_{2})dx_{2}dx_{1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Подставляем функцию плотности и после взятия интеграла получаем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(R^{FP})=\frac{3}{7}\approx0.4286
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Аукцион второй цены.
+ Логика решения такая же, как и в случае независимых ценностей.
+ Рассматриваем поведение первого игрока.
+ Поскольку игроков всего два, 
+\begin_inset Formula $m=b_{2}$
+\end_inset
+
+.
+ Отличие от случая независимыми ценностями состоит в том, что случайные
+ величины 
+\begin_inset Formula $m$
+\end_inset
+
+ и 
+\begin_inset Formula $X_{1}$
+\end_inset
+
+ зависимы.
+ Но этот факт никак не влияет на логику решения.
+ Поэтому снова оказывается, что стратегия 
+\begin_inset Formula $b_{1}=X_{1}$
+\end_inset
+
+ нестрого доминирует любую другую стратегию первого игрока.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Считаем ожидаемый доход продавца.
+ Он равен удвоенной ожидаемой выплате первого игрока.
+ Первый игрок платит 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ только если 
+\begin_inset Formula $X_{1}>X_{2}$
+\end_inset
+
+.
+ Значит:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(R^{SP})=2E(X_{2}\cdot1_{X_{1}>X_{2}})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Задача свелась к двойному интегралу:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(X_{2}\cdot1_{X_{1}>X_{2}})=\int_{0}^{1}\int_{0}^{x_{1}}x_{2}f(x_{1},x_{2})dx_{2}dx_{1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Подставляем функцию плотности и после взятия интеграла получаем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(R^{SP})=5/12\approx0.4167
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Таким образом, для данного совместного распределения доходностей аукционы
+ первой и второй цены не одинаково выгодны для продавца! Мы исследуем подробнее
+ случай связанных доходностей позже.
+\end_layout
+
+\begin_layout Subsection
+Упражнения
+\end_layout
+
+\begin_layout Enumerate
+В моделях аукциона первой и второй цены с независимыми, равномерными на
+ 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+ ценностями покупателей приведите примеры 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Вектора ценностей, при котором для продавца лучше аукцион первой цены 
+\end_layout
+
+\begin_layout Enumerate
+Вектора ценностей, при котором для продавца лучше аукцион второй цены 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Рассмотрите покупателей с независимыми ценностями, имеющими функцию плотности
+ 
+\begin_inset Formula $f(x)=2x$
+\end_inset
+
+ на отрезке 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+.
+ Найдите в явном виде оптимальные стратегии и среднюю прибыль продавца.
+\end_layout
+
+\begin_layout Enumerate
+Докажите, что формулу 
+\begin_inset Formula $pay(x)=xq(x)-\int_{0}^{x}q(t)dt$
+\end_inset
+
+ можно представить в виде:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+pay(x)=pay(0)+\int_{0}^{x}t\cdot\frac{dq(t)}{dt}\cdot dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Аукцион 
+\begin_inset Quotes ard
+\end_inset
+
+Платят все!
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Покупатели одновременно делают ставки.
+ Товар достается тому, кто назвал наибольшую ставку, но платят все игроки.
+ Каждый платит свою ставку.
+ Ценности товара для покупателей имеют независимое регулярное распределение
+ с функцией распределения 
+\begin_inset Formula $F()$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Используя трюк с теоремой об одинаковых доходностях (см.
+ пример 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "use_ret"
+
+\end_inset
+
+) найдите оптимальные стратегии игроков, 
+\begin_inset Formula $b(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Какой вид имеют оптимальные стратегии, если 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ равномерны на 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+? Чему в этом случае будет равен ожидаемый доход продавца?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Наследство.
+ Двум сыновьям достался земельный участок в наследство.
+ Отец не хотел, чтобы участок был разделен, поэтому по завещанию установлены
+ следущие правила: два брата одновременно делают ставки.
+ Участок получает тот, кто сделал большую ставку.
+ При этом получивший участок выплачивает свою ставку проигравшему.
+ Найдите равновесие Нэша, если ценности участка независимы и равномерны
+ на 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Аукцион 
+\begin_inset Quotes ard
+\end_inset
+
+Победитель платит чужую среднюю
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Покупатели одновременно делают ставки.
+ Товар достается тому, кто назвал наибольшую ставку.
+ Победитель платит среднюю арифметическую ставок остальных игроков.
+ Ценности товара для покупателей независимы и равномерно распределены на
+ 
+\begin_inset Formula $[0;1]$
+\end_inset
+
+.
+ Найдите оптимальные стратегии игроков, 
+\begin_inset Formula $b(x)$
+\end_inset
+
+, средний доход продавца.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Hint: А может у дифференциального уравнения простое линейное решение?
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Аукцион с дискретными ценностями.
+ В аукционе участвуют два покупателя.
+ Ценности товара для покупателей независимы и имеют дискретное распределение:
+ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ равновероятно принимает значения 
+\begin_inset Formula $0$
+\end_inset
+
+ и 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ Аукцион проходит по следующим правилам: продавец предлагает товар по цене
+ 
+\begin_inset Formula $a$
+\end_inset
+
+, где 
+\begin_inset Formula $a$
+\end_inset
+
+ --- это некая константа, 
+\begin_inset Formula $a\in(0;2/3)$
+\end_inset
+
+.
+ Игроки одновременно решают, подходит ли им эта цена или нет.
+ Если один сказал 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+, а другой 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, то товар достается тому, кто сказал 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ и он платит 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Если оба сказали 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, то товар отдается бесплатно случайно выбираемому игроку.
+ Если оба сказали 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+, то товар отдается по цене 
+\begin_inset Formula $a$
+\end_inset
+
+ случайно выбираемому игроку.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Найдите равновесие Нэша (хотя бы одно).
+\end_layout
+
+\begin_layout Standard
+Зависит ли равновесный доход аукциониста от 
+\begin_inset Formula $a$
+\end_inset
+
+? Применима ли теорема об одинаковой доходности и почему?
+\end_layout
+
+\begin_layout Standard
+При каком 
+\begin_inset Formula $a$
+\end_inset
+
+ доход продавца будет максимальным?
+\end_layout
+
+\begin_layout Standard
+Hint1: На всякий случай, а то курс теории игр уже кончился :), во-первых,
+ равновесия бывают в смешанных стратегиях, во-вторых, чистых стратегий у
+ каждого игрока здесь четыре.
+ Стратегия --- это функция от ценности, значит у игрока есть, например,
+ стратегия 
+\begin_inset Quotes ard
+\end_inset
+
+если 
+\begin_inset Formula $X=0$
+\end_inset
+
+, то говорю 'нет', если 
+\begin_inset Formula $X=1$
+\end_inset
+
+, то говорю 'да'
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Hint2: если задача кажется слишком сложной, решите ее для конкретного 
+\begin_inset Formula $a$
+\end_inset
+
+, скажем, для 
+\begin_inset Formula $a=0.1$
+\end_inset
+
+, а затем попробуйте снова.
+ Это, кстати, один из немногих универсальных приемов решения всех задач:
+ 
+\begin_inset Quotes ard
+\end_inset
+
+Я не хочу решать эту задачу, поэтому буду решать более простую!
+\begin_inset Quotes ald
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Решения упражнений
+\end_layout
+
+\begin_layout Enumerate
+В качестве примера возьмем аукцион двух игроков.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+а) Если 
+\begin_inset Formula $X_{1}=0.2$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}=0.6$
+\end_inset
+
+, то на аукционе второй цены продавец получит 
+\begin_inset Formula $0.2$
+\end_inset
+
+ (вторую по величине ставку), а на аукционе первой цены продавец получит
+ 
+\begin_inset Formula $0.3$
+\end_inset
+
+ (т.к.
+ оптимальная стратегия имеет вид 
+\begin_inset Formula $b(x)=\frac{n-1}{n}x=\frac{1}{2}x$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+б) Если 
+\begin_inset Formula $X_{1}=0.4$
+\end_inset
+
+, 
+\begin_inset Formula $X_{2}=0.6$
+\end_inset
+
+, то на аукционе второй цены продавец получит 
+\begin_inset Formula $0.4$
+\end_inset
+
+ (вторую по величине ставку), а на аукционе первой цены продавец получит
+ 
+\begin_inset Formula $0.3$
+\end_inset
+
+ (т.к.
+ оптимальная стратегия имеет вид 
+\begin_inset Formula $b(x)=\frac{n-1}{n}x=\frac{1}{2}x$
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Подставляем 
+\begin_inset Formula $F(x)=x^{2}$
+\end_inset
+
+, значит 
+\begin_inset Formula $q(x)=(x^{2})^{n-1}=x^{2n-2}$
+\end_inset
+
+.
+ Подставляем 
+\begin_inset Formula $q(x)$
+\end_inset
+
+ в 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "first_price_b_eq"
+
+\end_inset
+
+.
+ Получаем 
+\begin_inset Formula $b(x)=\frac{2n-2}{2n-1}x$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Полученную 
+\begin_inset Formula $b(x)$
+\end_inset
+
+ подставляем в 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "first_price_pay_eq"
+
+\end_inset
+
+.
+ Получаем 
+\begin_inset Formula $pay(x)=\frac{2n-2}{2n-1}x^{2n-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Считаем ожидаемую выплату первого игрока:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(pay(X_{1})=\int_{0}^{1}pay(t)f(t)dt=\int_{0}^{1}\frac{2n-2}{2n-1}t^{2n-1}\cdot2tdt=\frac{4(n-1)}{(2n-1)(2n+1)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+И умножаем на число игроков:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+E(R^{FP})=\frac{4n(n-1)}{(2n-1)(2n+1)}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Используем формулу интегрирования по частям.
+\end_layout
+
+\begin_layout Enumerate
+Используем уравнение из теоремы об одинаковой доходности
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+xq(x)-pay(x)=\int_{0}^{x}q(t)dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В данном случае 
+\begin_inset Formula $pay(x)=b(x)$
+\end_inset
+
+, так как ставка платится вне зависимости от того, кому достанется товар.
+ Значит:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+b(x)=xq(x)-\int_{0}^{x}q(t)dt\label{NE_all_pay}
+\end{equation}
+
+\end_inset
+
+ где 
+\begin_inset Formula $q(x)=F(x)^{n-1}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Можно решить и подругому --- явно выписав задачу максимизации игрока и получив
+ дифференциальное уравнение.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Эта игра не аукцион в чистом виде, т.к.
+ игрок тоже может получить деньги.
+ Выписываем прибыль первого игрока: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-b_{1})P(b(X_{2})<b_{1})+E(b(X_{2})\cdot1_{b(X_{2})>b_{1}})
+\end{equation}
+
+\end_inset
+
+ Прибавка в прибыли --- это ожидаемый платеж от второго игрока первому.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+После чудо-замены: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-b(a))P(X_{2}<a)+E(b(X_{2})\cdot1_{X_{2}>a})
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Запишем мат.
+ ожидание в виде интеграла: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-b(a))F(a)+\int_{a}^{\overline{x}}b(t)f(t)dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+После взятия производной по 
+\begin_inset Formula $a$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+-b'(a)F(a)+(x-b(a))f(a)-b(a)f(a)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Требуем оптимальности стратегии 
+\begin_inset Formula $b_{1}=b(x)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+-b'(x)F(x)+(x-b(x))f(x)-b(x)f(x)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Для равномерного случая получаем: 
+\begin_inset Formula 
+\begin{equation}
+-b'(x)x+x-b(x)-b(x)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Находим общее решение и замечаем, что 
+\begin_inset Formula $c=0$
+\end_inset
+
+ или сразу подбираем линейное решение 
+\begin_inset Formula $b(x)=kx$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+-kx+x-2kx=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Получаем 
+\begin_inset Formula $k=1/3$
+\end_inset
+
+ и равновесие Нэша вида 
+\begin_inset Formula $b(x)=x/3$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Функция прибыли: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-E\left(\frac{b(X_{2})+\ldots+b(X_{n})}{n-1}|b(X_{2})<b_{1}\cap\ldots b(X_{n})<b_{1})\right)\cdot P(b(X_{2})<b_{1}\cap\ldots b(X_{n})<b_{1}))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+После чудо-замены, 
+\begin_inset Formula $b_{1}=b(a)$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-E\left(\frac{b(X_{2})+\ldots+b(X_{n})}{n-1}|X_{2}<a\cap\ldots X_{n}<a)\right)\cdot P(X_{2}<a\cap\ldots X_{n}<a)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+В силу того, что 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ одинаково распределены и независимы: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-E\left(b(X_{2})|X_{2}<a)\right)\cdot F(a)^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Воспользуемся тем, что 
+\begin_inset Formula $E(b(X_{2})|X_{2}<a)\cdot P(X_{2}<a)=E(b(X_{2})\cdot1_{X_{2}<a})$
+\end_inset
+
+: 
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=x\cdot F(a)^{n-1}-E\left(b(X_{2})\cdot1_{X_{2}<a})\right)\cdot F(a)^{n-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Заметим, что математическое ожидание равно интегралу: 
+\begin_inset Formula 
+\begin{equation}
+E(b(X_{2})\cdot1_{X_{2}<a})=\int_{0}^{a}b(t)f(t)dt
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Стало быть производная от мат.
+ ожидания равна:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\frac{dE(b(X_{2})\cdot1_{X_{2}<a})}{da}=b(a)f(a)
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь легко находим производную прибыли:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=F(a)^{n-1}+x\cdot(n-1)F(a)^{n-2}f(a)-E\left(b(X_{2})\cdot1_{X_{2}<a})\right)\cdot(n-2)F(a)^{n-3}f(a)-b(a)f(a)F(a)^{n-2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Приравняв к нулю и завершив чудо-замену замечанием, что 
+\begin_inset Formula $a=x$
+\end_inset
+
+ получаем уравнение: 
+\begin_inset Formula 
+\begin{equation}
+(n-1)xF(x)f(x)-(n-2)\int_{0}^{x}b(t)f(t)dtf(x)-b(x)f(x)F(x)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вообще-то мы получили интегральное уравнение, т.е.
+ уравнение с интегралами, а не с производными.
+ Но его можно свести к дифференциальному, сделав замену 
+\begin_inset Formula $y(x)=\int_{0}^{x}b(t)f(t)dt$
+\end_inset
+
+, тогда 
+\begin_inset Formula $b(x)f(x)=y'(x)$
+\end_inset
+
+.
+ В общем виде дальше мы его решать не будем, а вспомним, что у нас 
+\begin_inset Formula $f(x)=1$
+\end_inset
+
+ и 
+\begin_inset Formula $F(x)=x$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(n-1)x^{2}-(n-2)\int_{0}^{x}b(t)dt-b(x)x=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Вместо возможной замены 
+\begin_inset Formula $y(x)=\int_{0}^{x}b(t)dt$
+\end_inset
+
+ мы возьмем производную от обеих частей уравнения: 
+\begin_inset Formula 
+\begin{equation}
+(n-1)2x-(n-2)b(x)-b(x)-b'(x)x=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Неленивые могут найти общее решение и заметить, что нужно взять 
+\begin_inset Formula $c=0$
+\end_inset
+
+.
+ Ленивые сразу подбирают линейное решение 
+\begin_inset Formula $b(x)=kx$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(n-1)2x-(n-2)kx-kx-kx=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Получаем 
+\begin_inset Formula $k=\frac{2(n-1)}{n}$
+\end_inset
+
+ и равновесие Нэша со стратегиями вида 
+\begin_inset Formula $b(x)=\frac{2(n-1)}{n}x$
+\end_inset
+
+.
+ Кстати, при 
+\begin_inset Formula $n=2$
+\end_inset
+
+ мы получаем аукцион второй цены, а наше решение, как и следует, дает 
+\begin_inset Formula $b(x)=x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Альтернативное решение по принципу 
+\begin_inset Quotes ard
+\end_inset
+
+Мне повезет и без дифуров
+\begin_inset Quotes ald
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+А вдруг оптимальная стратегия линейна, т.е.
+ имеет вид 
+\begin_inset Formula $b(x)=kx$
+\end_inset
+
+? Подставим эту функцию сразу в прибыль, до чудо-замены:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-E\left(\frac{kX_{2}+\ldots+kX_{n}}{n-1}|kX_{2}<b_{1}\cap\ldots kX_{n}<b_{1})\right)\cdot P(kX_{2}<b_{1}\cap\ldots kX_{n}<b_{1}))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Упрощаем мат.
+ ожидание и вероятность:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-kE\left(X_{2}|X_{2}<b_{1}/k\right)\cdot P(X_{2}<b_{1}/k\cap\ldots\cap X_{n}<b_{1}/k))
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Теперь условное мат.
+ ожидание легко считается.
+ Условие 
+\begin_inset Formula $X_{2}<b_{1}/k$
+\end_inset
+
+ и априорная равномерность 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ равносильны тому, что 
+\begin_inset Formula $X_{2}$
+\end_inset
+
+ равномерно на 
+\begin_inset Formula $[0;b_{1}/k]$
+\end_inset
+
+.
+ Значит условное мат.ожидание равное 
+\begin_inset Formula $\frac{b_{1}}{2k}$
+\end_inset
+
+.
+ Получаем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\pi_{1}=(x-\frac{b_{1}}{2})\cdot(b_{1}/k)^{n-1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Без чудо-замены берем производную по 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+.
+ Т.е.
+ сразу ищем оптимальную ставку:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+k^{1-n}\left((x-\frac{b_{1}}{2})\cdot(n-1)b_{1}^{n-2}-\frac{1}{2}b_{1}^{n-1}\right)=0
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Выражаем 
+\begin_inset Formula $b_{1}$
+\end_inset
+
+ и получаем 
+\begin_inset Formula $b_{1}=\frac{2(n-1)}{n}x$
+\end_inset
+
+.
+ Поскольку она имеет предположенный вид, то все шаги были верными.
+\end_layout
+
+\begin_layout Standard
+Считаем средний доход продавца.
+ Поскольку все условия теоремы об одинаковой доходности выполнены, то ответ
+ совпадает с найденным в лекции для аукциона первой цены: 
+\begin_inset Formula 
+\begin{equation}
+E(R^{MO})=\frac{n-1}{n+1}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Произвольная смешанная стратегия имеет вид:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Если 
+\begin_inset Formula $X=0$
+\end_inset
+
+, то говорить 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ с верояностью 
+\begin_inset Formula $p_{0}$
+\end_inset
+
+; если 
+\begin_inset Formula $X=1$
+\end_inset
+
+, то говорить 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ с верояностью 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Пусть моя ценность равна 0.
+ Если я скажу 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, то ничего не заплачу и возможно получу товар с нулевой для меня ценностью,
+ значит мой ожидаемый выигрыш равен 0.
+ Если я скажу 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+, то с положительной вероятностью мне придется платить 
+\begin_inset Formula $a$
+\end_inset
+
+, и мой ожидаемый выигрыш меньше 0.
+ Значит, если ценность равна нулю, оптимально говорит 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Т.е.
+ 
+\begin_inset Formula $p_{0}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Пусть моя ценность равна 1.
+ Если я скажу 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, то получу в среднем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(1-0.5p_{1})\cdot\frac{1}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если я скажу 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+, то получу в среднем:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+(1-0.5p_{1})\cdot(1-a)+0.5p_{1}\cdot\frac{1-a}{2}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Чтобы смешанная стратегия была оптимальной, мне нужно быть безразличным
+ между чистыми стратегиями, т.к.
+ иначе я выбрал бы чистую.
+ Приравниваем эти два выигрыша и находим 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Формально получается 
+\begin_inset Formula $p_{1}=4-\frac{2}{a}$
+\end_inset
+
+.
+ Возникает несколько случаев...
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a\in(0;1/2)$
+\end_inset
+
+, то равенство достигается только при 
+\begin_inset Formula $p_{1}<0$
+\end_inset
+
+.
+ Это означает, что при всех 
+\begin_inset Formula $p_{1}\in[0;1]$
+\end_inset
+
+ говорить 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ выгоднее, чем 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+.
+ Т.е.
+ в равновесии каждый игрок использует стратегию: Если 
+\begin_inset Formula $x=0$
+\end_inset
+
+, то 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, если 
+\begin_inset Formula $x=1$
+\end_inset
+
+, то 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a\in(1/2;2/3)$
+\end_inset
+
+, то равенство достигается только при 
+\begin_inset Formula $p_{1}=4-\frac{2}{a}$
+\end_inset
+
+.
+ В равновесии каждый игрок использует стратегию: Если 
+\begin_inset Formula $x=0$
+\end_inset
+
+, то 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, если 
+\begin_inset Formula $x=1$
+\end_inset
+
+, то 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ с вероятностью 
+\begin_inset Formula $p_{1}=4-\frac{2}{a}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Если 
+\begin_inset Formula $a=1/2$
+\end_inset
+
+, то при 
+\begin_inset Formula $x=1$
+\end_inset
+
+ 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ лучше чем 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+ при 
+\begin_inset Formula $p_{1}\in(0;1]$
+\end_inset
+
+ и игрок безразличен между 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+ и 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+ при 
+\begin_inset Formula $p_{1}=0$
+\end_inset
+
+.
+ Получаем равновесие с парой стратегий: Если 
+\begin_inset Formula $x=0$
+\end_inset
+
+, то 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+, если 
+\begin_inset Formula $x=1$
+\end_inset
+
+, то 
+\begin_inset Quotes ard
+\end_inset
+
+да
+\begin_inset Quotes ald
+\end_inset
+
+.
+ И еще одно равновесий с парой стратегий: Всегда 
+\begin_inset Quotes ard
+\end_inset
+
+нет
+\begin_inset Quotes ald
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
