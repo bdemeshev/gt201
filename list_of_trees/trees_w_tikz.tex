@@ -157,7 +157,7 @@
                 	child {	node[mydot, label=below: {$4,4$}] {}
                 	edge from parent node[left] {$a$}}
                 	child {	node[mydot, label=right: {I}] {}
-                    child { node[mydot, label=below: {$1,5$}] {}
+                    child { node[mydot, label=below: {$2,5$}] {}
                     edge from parent node[left] {$x$} }
                     child { node[mydot, label=below: {$0,7$}] {}
                     edge from parent node[right] {$y$} }                	
@@ -208,10 +208,10 @@
                 	child {	node[mydot, label=below: {$-1,-1$}] {}
                 	edge from parent node[right] {$b$}  }
     edge from parent node[above left] {$l$} }
-    child { node[mydot, label=right: {II}] {}        
+    child { node[mydot, label=right: {N}] {}        
                 	child {	node[mydot, label=below: {$4,4$}] {}
                 	edge from parent node[left] {$a$}}
-                	child {	node[mydot, label=right: {I}] {}
+                	child {	node[mydot, label=right: {II}] {}
                     child { node[mydot, label=below: {$1,4$}] {}
                     edge from parent node[left] {$x$} }
                     child { node[mydot, label=below: {$0,7$}] {}
@@ -221,10 +221,65 @@
 \end{tikzpicture}
 
 
+\item 13
+\begin{tikzpicture}[grow=down] % дерево
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % starting node style
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{level 1}=[sibling distance=2cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 2}=[sibling distance=1.2cm]
+\tikzstyle{level 3}=[sibling distance=2cm]
+
+\node[mystart, label=above: {I}] {} % создаем узел типа mydot, с пометкой "N" сверху и пустым текстом внутри узла
+    child { node[mydot, label=left: {II}] {}        
+                	child {	node[mydot, label=below: {$0,3$}] {}
+                	edge from parent node[left] {$c$}}
+                	child {	node[mydot, label=below: {$0,0$}] {}
+                	edge from parent node[right] {$d$}  }
+    edge from parent node[above left] {$l$} }
+    child { node[mydot, label=left: {II}] (a) {}        
+                	child {	node[mydot, label=below: {$0,4$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$3,1$}] {}
+                	edge from parent node[right] {$y$}  }
+    edge from parent node[above left] {$m$} }
+    child { node[mydot, label=right: {II}] (b) {}        
+                	child {	node[mydot, label=below: {$0,1$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$1,0$}] {}
+                	edge from parent node[right] {$y$}  }
+    edge from parent node[above right] {$r$} } ;
+\draw[dashed] (a)--(b);
+\end{tikzpicture}
 
 
+\item 14
+\begin{tikzpicture}[grow=down] % дерево
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % starting node style
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{level 1}=[sibling distance=2.5cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 2}=[sibling distance=1.2cm]
+\tikzstyle{level 3}=[sibling distance=2cm]
 
-\item
+\node[mystart, label=above: {I}] {} % создаем узел типа mydot, с пометкой "N" сверху и пустым текстом внутри узла
+    child { node[mydot, label=below: {$0,2$}] {}        
+    edge from parent node[above left] {$l$} }
+    child { node[mydot, label=left: {II}] (a) {}        
+                	child {	node[mydot, label=below: {$-3,-1$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$1,-2$}] {}
+                	edge from parent node[right] {$y$}  }
+    edge from parent node[above left] {$m$} }
+    child { node[mydot, label=right: {II}] (b) {}        
+                	child {	node[mydot, label=below: {$-2,-1$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$3,1$}] {}
+                	edge from parent node[right] {$y$}  }
+    edge from parent node[above right] {$r$} } ;
+\draw[dashed] (a)--(b);
+\end{tikzpicture}
+
+
+\item 15
 \begin{tikzpicture}[grow=down] % дерево
 \tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % starting node style
 \tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
@@ -244,6 +299,33 @@
                 	edge from parent node[right] {$y$}  }
         edge from parent node[right] {$d$} }
     edge from parent node[right] {$r$} };
+\end{tikzpicture}
+
+\item 16
+\begin{tikzpicture}[grow=down] % дерево
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % starting node style
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{level 1}=[sibling distance=2.5cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 2}=[sibling distance=1.3cm]
+\tikzstyle{level 3}=[sibling distance=1.3cm]
+\node[mystart, label=above: {I}] {} % создаем узел типа mydot, с пометкой "N" сверху и пустым текстом внутри узла
+    child { node[mydot, label=left: {II}] (a) {}        
+        child { node[mydot, label=below: {$3,2$}] {} 
+        edge from parent node[left] {$c$} }
+        child { node[mydot, label=below: {$-1,-1$}] (b) {}
+        edge from parent node[right] {$d$} }
+    edge from parent node[left] {$l$} }
+    child { node[mydot ] (b) {}        
+        child { node[mydot, label=below: {$4,4$}] {} 
+        edge from parent node[left] {$c$} }
+        child { node[mydot, label=right: {I}] {}
+                	child {	node[mydot, label=below: {$1,5$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$0,7$}] {}
+                	edge from parent node[right] {$y$}  }
+        edge from parent node[right] {$d$} }
+    edge from parent node[right] {$r$} };
+\draw[dashed] (a)--(b);
 \end{tikzpicture}
 
 
