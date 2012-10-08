@@ -708,9 +708,34 @@ $[$IGT$]$ - главы 5,6,7; $[$Slantchev$]$ - глава Perfect Equilibria in
 \item Найдите все равновесия Нэша в чистых стратегиях; Подсказка: нарисуйте две матрицы; первый игрок выбирает матрицу, второй – строку, третий – столбец
 \item Найдите все равновесия в чистых стратегиях, совершенные в подыграх;
 \end{enumerate}
-\begin{figure}[!htbp]
-    \includegraphics{game.21}
-\end{figure}
+\begin{tikzpicture} % три игрока с выходом первого
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % strating node style
+\tikzstyle{level 1}=[level distance=1.5cm] % длина линии
+\tikzstyle{level 2}=[level distance=1.5cm] % длина линии
+\tikzstyle{level 3}=[level distance=1.5cm] % длина линии
+\tikzstyle{level 1}=[sibling distance=3cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 2}=[sibling distance=3cm]
+\tikzstyle{level 3}=[sibling distance=1.5cm]
+\node[mystart, label=above: {I}] {} % создаем узел типа mydot, с пометкой "I" сверху и пустым текстом внутри узла
+    child { node[mydot, label=below: {$2,2,2$}] {}        
+    edge from parent node[left] {$l$} }
+    child { node[mydot, label=above: {II} ] {}        
+        child { node[mydot] (a) {} 
+                	child {	node[mydot, label=below: {$0,3,3$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$0,0,2$}] {}
+                	edge from parent node[right] {$y$}  }
+        edge from parent node[left] {$c$} }
+        child { node[mydot] (b) {}
+                	child {	node[mydot, label=below: {$0,4,0$}] {}
+                	edge from parent node[left] {$x$}}
+                	child {	node[mydot, label=below: {$3,1,1$}] {}
+                	edge from parent node[right] {$y$}  }
+        edge from parent node[right] {$d$} }
+    edge from parent node[right] {$r$} };
+\draw[dashed] (a)--node[label=above: {III}] {}(b);
+\end{tikzpicture}
 
 \item Судья и потерпевший\\
 Ущерб – случайная величина $v$, равновероятно принимающая любое значение из $\left\{ {0;1;...;99} \right\}$. Потерпевший точно знает величину ущерба $v$, а судья знает лишь распределение. Потерпевший выбирает один из двух вариантов: честно задекларировать величину ущерба или не говорить ничего. Судья выбирает величину компенсации $R$.\\
@@ -1203,9 +1228,35 @@ SE отличается от WSE усилением первого требов�
 
 
 
-\begin{figure}[!htbp]
-    \includegraphics{game.28}
-\end{figure} 
+\begin{tikzpicture}[grow=down] % дерево
+\tikzstyle{mydot} = [circle, minimum width=3pt,fill, inner sep=0pt] % размеры точки в центре узла
+\tikzstyle{level 1}=[sibling distance=4cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 2}=[sibling distance=1.5cm]
+\tikzstyle{level 3}=[sibling distance=1.5cm]
+
+\node[mydot, label=above: {N}] {}
+	child { node[mydot, label=above: {I}] {}
+			child { node[mydot, label=below: {$2,10$}] {}
+     		edge from parent node[left] {$a$} }
+			child { node[mydot, label=left: {II} ] (a) {}
+					child { node[mydot, label=below: {$5,10$}] {}
+					edge from parent node[left] {$e$} }
+					child { node[mydot, label=below: {$0,5$}] {}
+					edge from parent node[left] {$f$} }
+	    	edge from parent node[right] {$b$} }
+	edge from parent node[left] {$p_1=0.5$} }
+	child { node[mydot, label=above: {I}] {}
+			child { node[mydot] (b) {}
+					child {	node[mydot, label=below: {$5,2$}] {}
+					edge from parent node[left] {$e$} }
+  					child {	node[mydot, label=below: {$0,5$}] {}
+					edge from parent node[left] {$f$} }
+			edge from parent node[left] {$c$} }
+			child {	node[mydot, label=below: {$2,10$}] {}
+			edge from parent node[right] {$d$} }
+	edge from parent node[right] {$p_2=0.5$} } ;
+\draw[dashed] (a)--(b);
+\end{tikzpicture}
 
 
 \begin{figure}[!htbp]
@@ -1229,13 +1280,55 @@ SE отличается от WSE усилением первого требов�
 \end{enumerate}
 
 \item Настоящие ковбои заказывают бифштекс!\\
-У первого игрока два типа: настоящий ковбой () и сладкоежка ($W$
-), которые природа выбирает с вероятностями 0,9 и 0,1 соответственно. Оба игрока знают эти вероятности, но только первый игрок видит ход Природы. Первый игрок делает заказ у стойки бара в тот момент, когда в бар входит второй игрок.\\
-Второй игрок - довольно буйный тип. \textit{Тигр: тип не в смысле теории игр, а просто тип.} Он заходит в бар, чтобы подраться, однако он трус и не хотел бы встретиться с настоящим ковбоем. У второго игрока есть выбор: завязывать драку (F) или не завязывать (N). Перед своим ходом второй игрок видит выбор первого игрока. 
-Первый игрок может заказать бифштекс (S) или пудинг (P). Настоящие ковбои предпочитают бифштекс, а сладкоежки - пудинг.\\
-\begin{figure}[htbp]
-    \includegraphics{game.30}
-\end{figure} \\
+У первого игрока два типа: настоящий ковбой и сладкоежка, которые природа выбирает с вероятностями 0,9 и 0,1 соответственно. Оба игрока знают эти вероятности, но только первый игрок видит ход Природы. Первый игрок делает заказ у стойки бара в тот момент, когда в бар входит второй игрок.\\
+Второй игрок --- довольно буйный тип. \textit{Тигр: тип не в смысле теории игр, а просто тип.} Он заходит в бар, чтобы подраться, однако он трус и не хотел бы встретиться с настоящим ковбоем. У второго игрока есть выбор: завязывать драку, $l$, или не завязывать, $r$. Перед своим ходом второй игрок видит выбор первого игрока. 
+Первый игрок может заказать бифштекс, $u$, или пудинг, $d$. Настоящие ковбои предпочитают бифштекс, а сладкоежки --- пудинг.\\
+
+\begin{tikzpicture} % Паук
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % strating node style
+\tikzstyle{level 1}=[sibling distance=2cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 1}=[level distance=1.8cm] % длина веточки на первом уровне
+\tikzstyle{level 2}=[sibling distance=2cm]
+\tikzstyle{level 2}=[level distance=1cm]
+\tikzstyle{level 3}=[sibling distance=2cm]
+\tikzstyle{level 3}=[level distance=1cm]
+
+%
+\node[mystart, label=above: {N}] {}
+	child[grow=left] {node[mydot, label=left: {I}] {} % left side of the spider
+		child[grow=up] {node[mydot] (U1) {} [grow=up]
+			child {node[mydot, label=above: {$3,1$}] {}
+			edge from parent node[right] {r} }
+			child {node[mydot, label=above: {$1,0$}] {}
+			edge from parent node[left] {l} }
+		edge from parent node[left] {u} }
+		child[grow=down] {node[mydot] (D1) {} [grow=down]
+			child {node[mydot, label=below: {$0,0$}] {}
+			edge from parent node[left] {l} }
+			child {node[mydot, label=below: {$2,1$}] {}
+			edge from parent node[right] {r} }
+		edge from parent node[left] {d} }
+    edge from parent node[below] {$p_1=0.9$} }
+%
+	child[grow=right] {node[mydot, label=right: {I}] {} % right side of the spider
+		child[grow=up] {node[mydot] (U2) {} [grow=up]
+			child {node[mydot, label=above: {$2,0$}] {}
+			edge from parent node[right] {r} }
+			child {node[mydot, label=above: {$0,1$}] {}
+			edge from parent node[left] {l} }
+		edge from parent node[right] {u} }
+		child[grow=down] {node[mydot] (D2) {} [grow=down]
+			child {node[mydot, label=below: {$1,1$}] {}
+			edge from parent node[left] {l} }
+			child {node[mydot, label=below: {$3,0$}] {}
+			edge from parent node[right] {r} }
+		edge from parent node[right] {d} }
+    edge from parent node[below] {$p_2=0.1$} } ;
+\draw[dashed] (U1)--node[label=above:II] {}(U2);
+\draw[dashed] (D1)--node[label=above:II] {}(D2);
+\end{tikzpicture}
+
 Найдите слабое секвенциальное равновесие.
 
 \item Это война!\\
@@ -1478,10 +1571,53 @@ U_{2}=-x_{2}^{2}+x_{1}x_{2}+x_{2}
 
 \item Найдите слабые секвенциальные равновесия в чистых стратегиях в игре: \\
 
-\begin{figure}[htbp]
-    \includegraphics{game.39}
-\end{figure}
-Ответ: $\left\{(lL,uD); p=0.2; q\in [0;1]\right\}$, $\left\{(rR,dD);p\ge \frac{1}{4} ;q=0.2\right\}$
+\begin{tikzpicture} % Паук
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % strating node style
+\tikzstyle{level 1}=[sibling distance=2cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 1}=[level distance=1.8cm] % длина веточки на первом уровне
+\tikzstyle{level 2}=[sibling distance=2cm]
+\tikzstyle{level 2}=[level distance=1cm]
+\tikzstyle{level 3}=[sibling distance=2cm]
+\tikzstyle{level 3}=[level distance=1cm]
+
+%
+\node[mystart, label=above: {N}] {}
+	child[grow=left] {node[mydot, label=left: {I}] {} % left side of the spider
+		child[grow=up] {node[mydot] (U1) {} [grow=up]
+			child {node[mydot, label=above: {$2,2$}] {}
+			edge from parent node[right] {r} }
+			child {node[mydot, label=above: {$1,1$}] {}
+			edge from parent node[left] {l} }
+		edge from parent node[left] {u} }
+		child[grow=down] {node[mydot] (D1) {} [grow=down]
+			child {node[mydot, label=below: {$2,3$}] {}
+			edge from parent node[left] {l} }
+			child {node[mydot, label=below: {$0,1$}] {}
+			edge from parent node[right] {r} }
+		edge from parent node[left] {d} }
+    edge from parent node[below] {$p_1=0.8$} }
+%
+	child[grow=right] {node[mydot, label=right: {I}] {} % right side of the spider
+		child[grow=up] {node[mydot] (U2) {} [grow=up]
+			child {node[mydot, label=above: {$4,0$}] {}
+			edge from parent node[right] {r} }
+			child {node[mydot, label=above: {$1,3$}] {}
+			edge from parent node[left] {l} }
+		edge from parent node[right] {u} }
+		child[grow=down] {node[mydot] (D2) {} [grow=down]
+			child {node[mydot, label=below: {$2,2$}] {}
+			edge from parent node[left] {l} }
+			child {node[mydot, label=below: {$3,1$}] {}
+			edge from parent node[right] {r} }
+		edge from parent node[right] {d} }
+    edge from parent node[below] {$p_2=0.2$} } ;
+\draw[dashed] (U1)--node[label=above:II] {}(U2);
+\draw[dashed] (D1)--node[label=above:II] {}(D2);
+\end{tikzpicture}
+
+
+Ответ: $\left\{(uu,rl); p=0.2; q\in [0;1]\right\}$, $\left\{(dd,ll);p\ge \frac{1}{4} ;q=0.2\right\}$
 
 \item Найдите слабые секвенциальные равновесия в чистых стратегиях в игре: \\
 
@@ -1508,10 +1644,6 @@ U_{2}=-x_{2}^{2}+x_{1}x_{2}+x_{2}
 \draw[dashed] (c)--node[label=above:I] {}(d);
 \end{tikzpicture}
 
-
-\begin{figure}[htbp]
-    \includegraphics{game.40}
-\end{figure}
 
 Ответ: $\left\{(a,d); \mu=\frac{3}{5}; \nu=0\right\}$, 
 $\left\{(b,c); \mu=\frac{3}{5}; \nu=\frac{2}{7}\right\}$
