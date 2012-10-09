@@ -142,7 +142,7 @@ $[$Slantchev$]$ - глава Elements of basic models, $[$IGT$]$ - глава 2,
     child { node[mydot, label=below: {$-1,1$}] {}        
     edge from parent node[left] {$l$} }
     child { node[mydot, label=above: {II} ] {}        
-        child { node[label=above: {I}] (a) {} 
+        child { node[mydot, label=above: {I}] (a) {} 
                 child { node[mydot, label=below: {$1,5$}] {}
                	edge from parent node[left] {$x$}}
                 child { node[mydot, label=below: {$0,7$}] {}
@@ -1258,10 +1258,31 @@ SE отличается от WSE усилением первого требов�
 \draw[dashed] (a)--(b);
 \end{tikzpicture}
 
+\begin{tikzpicture}[grow=down] % дерево
+\tikzstyle{mydot} = [circle, minimum width=3pt,fill, inner sep=0pt] % размеры точки в центре узла
+\tikzstyle{level 1}=[sibling distance=4cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 2}=[sibling distance=1.5cm]
+\tikzstyle{level 3}=[sibling distance=1.5cm]
 
-\begin{figure}[!htbp]
-    \includegraphics{game.31}
-\end{figure} 
+\node[mydot, label=above: {I}] {}
+	child { node[mydot, label=above: {II}] {}
+			child { node[mydot, label=below: {$3,3,0$}] {}
+     		edge from parent node[left] {$c$} }
+			child { node[mydot, label=left: {III} ] (a) {}
+					child { node[mydot, label=below: {$5,5,0$}] {}
+					edge from parent node[left] {$l$} }
+					child { node[mydot, label=below: {$2,2,2$}] {}
+					edge from parent node[right] {$r$} }
+	    	    edge from parent node[right] {$d$} }
+	edge from parent node[left] {$a$} }
+	child { node[mydot, label=above: {III}] (b) {}
+			child { node[mydot, label=below: {$4,4,4$}]  {}
+			edge from parent node[left] {$l$} }
+			child {	node[mydot, label=below: {$1,1,1$}] {}
+			edge from parent node[right] {$r$} }
+	edge from parent node[right] {$b$} } ;
+\draw[dashed] (a)--node[label=above: {III}] {} (b);
+\end{tikzpicture}
 
 
 \begin{figure}[!htbp]
