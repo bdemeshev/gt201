@@ -1285,6 +1285,45 @@ SE отличается от WSE усилением первого требов�
 \end{tikzpicture}
 
 
+
+\begin{tikzpicture} % укороченный паук
+\tikzstyle{mydot} = [circle, minimum width=2pt,fill, inner sep=0pt] % decision node style
+\tikzstyle{mystart} = [circle, minimum width=3pt,fill, inner sep=0pt] % strating node style
+\tikzstyle{level 1}=[sibling distance=2cm] % расстояние между соседними узлами на одном уровне
+\tikzstyle{level 1}=[level distance=1.8cm] % длина веточки на первом уровне
+\tikzstyle{level 2}=[sibling distance=2cm]
+\tikzstyle{level 2}=[level distance=2cm]
+\tikzstyle{level 3}=[sibling distance=2cm]
+\tikzstyle{level 3}=[level distance=1cm]
+
+%
+\node[mystart, label=above: {N}] {}
+	child[grow=up] {node[mydot] (ia) {} % left side of the spider
+		child[grow=left] {node[mydot,label=left: {$1,2$}] {} [grow=up] 
+		edge from parent node[up] {u} }
+		child[grow=right] {node[mydot] (iib) {} [grow=right]
+			child {node[mydot, label=right: {$2,3$}] {}
+			edge from parent node[down] {l} }
+			child {node[mydot, label=right: {$5,5$}] {}
+			edge from parent node[down] {r} }
+		edge from parent node[up] {d} }
+    edge from parent node[right] {$p_1=0.4$} }
+%
+	child[grow=down] {node[mydot] (iia) {} % right side of the spider
+		child[grow=left] {node[mydot] (ib) {} [grow=left]
+			child {node[mydot, label=left: {$2,4$}] {}
+			edge from parent node[up] {u} }
+			child {node[mydot, label=left: {$2,3$}] {}
+			edge from parent node[down] {d} }
+		edge from parent node[down] {l} }
+		child[grow=right] {node[mydot,label=below: {$4,4$}] {} [grow=down] 
+		edge from parent node[right] {r} }
+    edge from parent node[left] {$p_2=0.6$} } ;
+\draw[dashed] (ia)--node[label=above:I] {}(ib);
+\draw[dashed] (iia)--node[label=above:II] {}(iib);
+\end{tikzpicture}
+
+
 \begin{figure}[!htbp]
     \includegraphics{game.32}
 \end{figure} 
