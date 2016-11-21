@@ -1,0 +1,65 @@
+\RequirePackage[l2tabu, orthodox]{nag} % проверка плохого стиля, но что-то она не очень пашет
+
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{booktabs}
+
+\usepackage{amsmath}
+
+\begin{document}
+
+1.1.
+
+\begin{tabular}{c|ccc}
+ & $L$ & $C$ & $R$ \\
+\midrule
+$u$ & 4;1 & 0;0 & 0;3 \\
+$s$ & 1;6 & 5;5 & 4;3 \\
+$d$ & 2;5 & 7;3 & 6;0
+\end{tabular}
+
+Стратегия $d$ сильно доминирует стратегию $s$. После вычеркивания $s$ стратегия $L$ сильно доминирует стратегию $C$. Получаем матрицу
+
+\begin{tabular}{c|cc}
+ & $L$ & $R$ \\
+\midrule
+$u$ & 4;1 & 0;3 \\
+$d$ & 2;5 & 6;0
+\end{tabular}
+
+Полезности:
+\[
+u_1(p,q) = 4pq + 2(1-p)q + 6(1-p)(1-q) = p(8q - 6) + 6 - 4q
+\]
+
+\[
+u_2(p,q) = pq + 5(1-p)q + 3p(1-q) = q(5-7p)+3p
+\]
+
+Функции оптимального ответа:
+
+\[
+\check{p}(q) =
+\begin{cases}
+0, \; q < 3/4 \\
+[0;1], \; q = 3/4 \\
+1, \; q > 3/4
+\end{cases}
+\]
+
+\[
+\check{q}(p) =
+\begin{cases}
+0, \; p > 5/7 \\
+[0;1], \; p = 5/7 \\
+1, \; p < 5/7
+\end{cases}
+\]
+
+Ответ: единственное равновесие в смешанных стратегиях, $(p=5/7, q = 3/4)$
+
+
+
+\end{document}

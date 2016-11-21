@@ -1,0 +1,56 @@
+---
+title: "Entry Game (Midterm 2013)"
+fontsize: 12pt
+output: pdf_document
+header-includes: 
+  - \renewcommand{\a}{\alpha}
+---
+
+Let's consider two very special cases which can be solved using backward induction:
+
+1. $\a=0$. In this spetial case one may consider the game with only two strategies for the first player. Using backward induction: II fights (F), I stays (S).
+2. $\a=1$. In this spetial case one may consider the game with only two strategies for the first player. Using backward induction: II quits (Q), I enters (E).
+
+Interesting case $0 < \a < 1$. First player has 4 strategies (EE, ES, SE, SS), first letter corresponds to the efficient case. If the player I is efficient then it is optimal to enter no matter how the second player plays. Indeed, $0.5$ or $1$ is better than $0$. So strategies SS and SE are strictly dominated by ES and EE correspondingly. 
+
+
+Let's build the matrix of the game (without strictly dominated strategies):
+
+Case ES,F: $\a (0.5,-0.5)+(1-\a)(0,1)=(\frac{\a}{2},\frac{2-3\a}{2})$
+
+Case EE,F: $\a (0.5,-0.5)+(1-\a)(-0.5,0.5)=(\frac{2\a-1}{2},\frac{1-2\a}{2})$
+
+
+Case ES,Q: $\a (1,0) + (1-\a)(0,1)=(\a,1-\a)$
+
+Case EE,Q: $1,0$
+
+
+
+I \\ II  | F            |   Q 
+------------- | -------------|--------
+ES | $\frac{\a}{2}, \frac{2-3\a}{2}$ | $\a,1-\a$
+EE  | $\frac{2\a-1}{2},\frac{1-2\a}{2}$ | $1,0$
+
+
+If $\a \geq 0.5$ then $EE,Q$ is the only pure NE. In this case beliefs are given by probabilities $\a, 1-\a$.
+
+
+If $\a < 0.5$ no pure NE exists. Let's find mixed NE. 
+
+Indifference condition for the first player: 
+\[
+\frac{\a}{2}q + \a (1-q)=\frac{2\a-1}{2}q+(1-q)
+\]
+
+and $q=2/3$.
+
+Indifference condition for the first player: 
+\[
+p\frac{2-3\a}{2}+(1-p)\frac{1-2\a}{2}=p(1-\a)
+\]
+
+and $p=\frac{1-2\a}{1-\a}$.
+
+
+The total probability of entering for the Ist player is $\a + (1-\a)(1-p)=\a+\a=2\a$. So the beliefs are $(0.5,0.5)$.
