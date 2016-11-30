@@ -1,22 +1,17 @@
-\documentclass[pdftex, 12pt, a4paper]{article}
+\documentclass[12pt, a4paper]{article}
 
 
-\input{/home/boris/science/tex_general/title_bor_utf8}
-
+\input{preamble}
 %\usepackage{showkeys} % показывать метки
 \usepackage{chessboard}
 %\usepackage{verbatim}
 
-%\input{prob_and_sol_utf8}
-\input{/home/boris/science/tex_general/prob_and_sol_utf8}
 
-\title{Задачник для тигров\footnote{Можно всегда скачать c \url{http://demeshev.wordpress.com/materials}}}
+\title{Задачник для тигров}
 \author{Тигр и все-все-все}
 \date{\today}
 
-
-\newcommand{\source}[1]{\problemtext{\par Источник: #1. \par}}
-
+\newenvironment{source}{}{}
 
 \makeindex % команда для создания предметного указателя
 \bibliographystyle{plain} % стиль оформления ссылок
@@ -30,6 +25,24 @@
 \def\st{{\rm st}\,}
 \def\Par{Pareto} % сам дописал, как правильно это Парето обозначать? ...
 \def\hence{\Rightarrow} % чтобы работал кусок из БЗИ
+
+
+
+
+\usepackage{answers}
+
+\newtheorem{problem}{Задача}
+\numberwithin{problem}{section}
+
+\Newassociation{sol}{solution}{solution_file}
+% sol --- имя окружения внутри задач
+% solution --- имя окружения внутри solution_file
+% solution_file --- имя файла в который будет идти запись решений
+% можно изменить далее по ходу
+\Opensolutionfile{solution_file}[all_solutions]
+% в квадратных скобках фактическое имя файла
+
+
 
 
 
@@ -47,19 +60,16 @@
 \parindent=0 pt % отступ равен 0
 
 \section{Introduction}
-\input{gt_intro_utf8}
+\input{introduction}
 
-\problemonly
-\input{gt_problems_utf8}
 
-\restoresection
+\input{problems_bank}
+
+
+\Closesolutionfile{solution_file}
 \section{Решения}
-\solutiononly
-\addtocounter{secsolution}{1} % 1 - число section до команды \problemonly
-\input{gt_problems_utf8}
+\input{all_solutions}
 
-
-\restoresection
 
 \section{Названия концепций решения (Коковин+)}
 \textbf{Максимин (ММ)} - исход игры (профиль
@@ -105,10 +115,7 @@
 (SPE} = SPNE) - это равновесие Нэша в развернутой
 форме игры, являющееся также равновесием Нэша во
 всех ее подыграх.
-% бред какой-то
-%(Внимание: оно может не являться
-%NE этой же игры в нормальной форме, поэтому не
-%всегда $SPE\subseteq NE$!)
+
 \vspace{2mm}
 
 
@@ -168,9 +175,9 @@ Core. \vspace{2mm}
 
  $a^{t} $  - исход базовой игры с номером  $t$ ;
 
- $a_{i}^{t} $  - ход сделанный  $i$ -ым игроком в базовой игре с номером  $t$ .
+ $a_{i}^{t} $  - ход сделанный  $i$-ым игроком в базовой игре с номером  $t$ .
 
- $s_{i} $  - стратегия  $i$ -го игрока;
+ $s_{i} $  - стратегия  $i$-го игрока;
 
  $h^{t} $  - предыстория игры к моменту времени  $t$ :  $h^{t} =\left\{a^{1} ,a^{2} ,...a^{t-1} \right\}$ ;
 
@@ -205,9 +212,13 @@ Core. \vspace{2mm}
 Фаза 3: пока  $\tau \le k$ , положить  $\tau :=\tau +1$  и играть ход  $d$ , иначе переключиться в фазу 1.
 
 
+\section{Источники мудрости}
+\bibliography{opit}
 
-\bibliography{/home/boris/Dropbox/Public/tex_general/opit}
 
+
+\section{Косяки!!!}
+\listoftodos % печатает все поставленные тудушки
 
 \printindex % печать предметного указателя здесь
 
@@ -217,9 +228,3 @@ Core. \vspace{2mm}
 
 
 \end{document}
-
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
