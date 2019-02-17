@@ -1,4 +1,4 @@
 gt201
 =====
 
-game theory, 2 course, hse
+[Страничка курса](https://bdemeshev.github.io/gt201/)
