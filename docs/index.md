@@ -28,10 +28,10 @@
 * Замечательный [курс Йельского университета](http://oyc.yale.edu/economics/econ-159): видео и задачи к семинарам
 * Захаров, [Теория игр в общественных науках](http://www.polit-econ.ru/zakharov/teaching.html). Лекции, задачи. Раньше тут был pdf, но теперь опубликована книжка :)
 * Данилов, [Лекции по теориЯ игр](http://www.nes.ru/dataupload/files/programs/econ/preprints/2002/GameTheory.pdf). Лекции магистерского уровня.
-* Николенко, [Разработка механизмов (mechanism design)](http://logic.pdmi.ras.ru/~sergey/index.php?page=auctions)
+* Николенко, [Разработка механизмов (mechanism design)](http://logic.pdmi.ras.ru/~sergey/index.php?page=auctions) |не работает|
 * Шень, [Игры и стратегии с точки зрения математики](http://www.mccme.ru/free-books/). Учебник школьного уровня по мат. играм.
 * Савватеев, [Теория игр для математиков](http://www.mccme.ru/ium/s04/games.html). Лекции НМУ.
-* Бремзен, Сонин, [Теория игр](http://www.nes.ru/~ksonin/games06.htm)
+* Бремзен, Сонин, [Теория игр](http://www.nes.ru/~ksonin/games06.htm) |не работает|
 * Коковин, [Лекции и другие материалы](http://www.math.nsc.ru/~mathecon/Kokovin/kokurs3.html)
 * Дагаев, [Теория игр](http://math-hse.info/2012-13/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B8%D0%B3%D1%80), 3 курс факультет политологии ВШЭ
 
