@@ -34,6 +34,7 @@
 * Бремзен, Сонин, [Теория игр](http://www.nes.ru/~ksonin/games06.htm) |не работает|
 * Коковин, [Лекции и другие материалы](http://www.math.nsc.ru/~mathecon/Kokovin/kokurs3.html)
 * Дагаев, [Теория игр](http://math-hse.info/2012-13/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D0%B8%D0%B3%D1%80), 3 курс факультет политологии ВШЭ
+* Эволюция кооперации [на русском :)](https://notdotteam.github.io/trust/) и [in english](https://ncase.me/trust/)
 
 ## Лицензия
 Созданные мной для данного курса материалы распространяются по лицензии [Creative Commons Attribution-NonCommercial-ShareAlike](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.ru)
